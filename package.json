@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:registry": "tsx scripts/registry-build.ts"
+    "build:registry": "tsx scripts/registry-build.ts",
+    "docs:build": "next build && next export -o out"
   },
   "dependencies": {
     "@code-hike/mdx": "^0.9.0",

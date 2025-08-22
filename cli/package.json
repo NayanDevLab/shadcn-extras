@@ -1,10 +1,11 @@
 {
   "name": "shadcn-extras",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI to add shadcn-extras components to your app",
   "bin": {
     "shadcn-extras": "./dist/index.js"
   },
+  "type": "commonjs",
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
