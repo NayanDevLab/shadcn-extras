@@ -13,10 +13,10 @@ const packageJson = JSON.parse(
 );
 
 const MOTION_PRIMITIVES_REGISTRY_URL =
-  'https://raw.githubusercontent.com/ibelick/motion-primitives/main/public/c/registry.json';
+  'https://raw.githubusercontent.com/nayanrdeveloper/shadcn-extras/dev/public/c/registry.json';
 const MOTION_PRIMITIVES_BASE_URL =
-  'https://raw.githubusercontent.com/ibelick/motion-primitives/main/';
-const TARGET_DIR = 'components/motion-primitives';
+  'https://raw.githubusercontent.com/nayanrdeveloper/shadcn-extras/dev/';
+const TARGET_DIR = 'components/shadcn-extras';
 
 interface FileEntry {
   path: string;

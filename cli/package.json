@@ -1,9 +1,9 @@
 {
-  "name": "motion-primitives",
+  "name": "shadcn-extras",
   "version": "0.1.0",
-  "description": "CLI to add beautiful, animated components to your app",
+  "description": "CLI to add shadcn-extras components to your app",
   "bin": {
-    "motion-primitives": "./dist/index.js"
+    "shadcn-extras": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ibelick/motion-primitives.git",
+    "url": "https://github.com/nayanrdeveloper/shadcn-extras.git",
     "directory": "cli"
   },
   "keywords": [

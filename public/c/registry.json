@@ -1,0 +1,70 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "motion-primitives",
+  "homepage": "https://motion-primitives.com",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "A collapsible content component with smooth animations for showing and hiding content.",
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/core/accordion.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "motion-primitives"
+      ]
+    },
+    {
+      "name": "animated-background",
+      "type": "registry:ui",
+      "title": "Animated Background",
+      "description": "A component that provides animated background effects for UI elements.",
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/core/animated-background.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "motion-primitives"
+      ]
+    },
+    {
+      "name": "animated-group",
+      "type": "registry:ui",
+      "title": "Animated Group",
+      "description": "A container component that applies coordinated animations to a group of child elements.",
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/core/animated-group.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "motion-primitives"
+      ]
+    }
+  ]
+}
