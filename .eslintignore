@@ -1,0 +1,4 @@
+cli/**
+dist/**
+.out/**
+.next/**

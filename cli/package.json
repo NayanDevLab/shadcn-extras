@@ -5,6 +5,7 @@
   "bin": {
     "shadcn-extras": "./dist/index.js"
   },
+  "files": ["dist"],
   "type": "commonjs",
   "scripts": {
     "build": "tsc",
