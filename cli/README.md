@@ -1,4 +1,4 @@
-# Motion Primitives CLI
+# Shadcn Extras CLI
 
 A command-line interface for easily adding beautiful, animated components to your React project.
 

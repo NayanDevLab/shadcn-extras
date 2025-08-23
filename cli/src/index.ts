@@ -102,7 +102,7 @@ function displayBanner() {
   console.log(`
 ┌────────────────────────────────────────────┐
 │                                            │
-│           Motion Primitives CLI            │
+│           Shadcn Extras CLI                │
 │                                            │
 │      Beautiful, animated components        │
 │          for your React projects           │
