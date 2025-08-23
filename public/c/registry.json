@@ -86,6 +86,27 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "leaderboard-card",
+      "type": "registry:ui",
+      "title": "Leaderboard Card",
+      "description": "Profile score card with avatar, crown/rank badge, amount pill and progress bar.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\leaderboard-card.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }

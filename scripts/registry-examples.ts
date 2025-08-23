@@ -215,5 +215,24 @@ export const examples: ExampleDefinition[] = [
     { name: 'kpi-card.tsx', path: path.join(__dirname, '../components/core/kpi-card.tsx'), type: 'registry:ui' },
   ],
 },
+{
+  name: 'leaderboard-first',
+  path: path.join(__dirname, '../app/docs/leaderboard-card/lb-first.tsx'),
+  description: 'First place card using emerald tone and crown.',
+  componentName: 'leaderboard-first',
+  files: [
+    { name: 'leaderboard-card.tsx', path: path.join(__dirname, '../components/core/leaderboard-card.tsx'), type: 'registry:ui' },
+  ],
+},
+{
+  name: 'leaderboard-second',
+  path: path.join(__dirname, '../app/docs/leaderboard-card/lb-second.tsx'),
+  description: 'Second place card using blue tone.',
+  componentName: 'leaderboard-second',
+  files: [
+    { name: 'leaderboard-card.tsx', path: path.join(__dirname, '../components/core/leaderboard-card.tsx'), type: 'registry:ui' },
+  ],
+},
+
 
 ];
