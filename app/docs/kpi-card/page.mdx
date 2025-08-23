@@ -1,0 +1,59 @@
+export const metadata = {
+  title: 'KPI Card - Shadcn-Extras',
+  description:
+    'Compact metric card with label, value, delta, and trend indicator. Built for React, Next.js, and Tailwind CSS.',
+}
+
+import ComponentCodePreview from '@/components/website/component-code-preview'
+import { KpiBasic } from './kpi-basic'
+import { KpiNegative } from './kpi-negative'
+import { KpiFlat } from './kpi-flat'
+
+# KPI Card
+
+A compact, highly legible card for key metrics. Supports tones, sizes, trend arrows and delta percentages.
+
+## Examples
+
+### Basic
+<ComponentCodePreview component={<KpiBasic />} filePath='app/docs/kpi-card/kpi-basic.tsx' />
+
+### Negative trend
+<ComponentCodePreview component={<KpiNegative />} filePath='app/docs/kpi-card/kpi-negative.tsx' />
+
+### Flat trend
+<ComponentCodePreview component={<KpiFlat />} filePath='app/docs/kpi-card/kpi-flat.tsx' />
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value='cli'>CLI</TabsTrigger>
+    <TabsTrigger value='manual'>Manual</TabsTrigger>
+  </TabsList>
+
+  <TabsContent value="cli">
+    <InstallationCli value='kpi-card' />
+  </TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Copy and paste the component into <code>components/core/kpi-card.tsx</code>.</Step>
+      <CodeBlock filePath='components/core/kpi-card.tsx' />
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop     | Type                                            | Default   | Description                           |
+|--------- |-------------------------------------------------|-----------|---------------------------------------|
+| label    | string                                          |           | Small title above the value.          |
+| value    | string \| number                                |           | Main metric.                          |
+| delta    | number \| string                                |           | % delta (formatted if string).        |
+| trend    | 'up' \| 'down' \| 'flat'                        | 'flat'    | Which arrow/color to show.            |
+| caption  | string                                          |           | Text under the value.                 |
+| icon     | ReactNode                                       |           | Optional top-right icon.              |
+| tone     | 'default' \| 'primary' \| 'success' \| 'warning' \| 'danger' | 'primary' | Visual theme.                         |
+| size     | 'sm' \| 'md' \| 'lg'                            | 'md'      | Density/scale.                        |
+| compact  | boolean                                         | false     | Reduce min-height/padding.            |

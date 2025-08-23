@@ -46,4 +46,12 @@ export const components: ComponentDefinition[] = [
     description:
       'A container component that applies coordinated animations to a group of child elements.',
   },
+  {
+  name: 'kpi-card',
+  path: path.join(__dirname, '../components/core/kpi-card.tsx'),
+  registryDependencies: [],
+  dependencies: ['lucide-react'], // used for optional icons
+  description: 'Compact metric card with tone, delta and trend indicator.',
+},
+
 ];

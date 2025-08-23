@@ -188,4 +188,32 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+  name: 'kpi-basic',
+  path: path.join(__dirname, '../app/docs/kpi-card/kpi-basic.tsx'),
+  description: 'Basic KPI Card.',
+  componentName: 'kpi-basic',
+  files: [
+    { name: 'kpi-card.tsx', path: path.join(__dirname, '../components/core/kpi-card.tsx'), type: 'registry:ui' },
+  ],
+},
+{
+  name: 'kpi-negative',
+  path: path.join(__dirname, '../app/docs/kpi-card/kpi-negative.tsx'),
+  description: 'Negative trend KPI Card.',
+  componentName: 'kpi-negative',
+  files: [
+    { name: 'kpi-card.tsx', path: path.join(__dirname, '../components/core/kpi-card.tsx'), type: 'registry:ui' },
+  ],
+},
+{
+  name: 'kpi-flat',
+  path: path.join(__dirname, '../app/docs/kpi-card/kpi-flat.tsx'),
+  description: 'Flat trend KPI Card.',
+  componentName: 'kpi-flat',
+  files: [
+    { name: 'kpi-card.tsx', path: path.join(__dirname, '../components/core/kpi-card.tsx'), type: 'registry:ui' },
+  ],
+},
+
 ];
