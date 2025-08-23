@@ -1,12 +1,12 @@
 {
-  "name": "animated-card-background-hover",
+  "name": "segmented-control",
   "type": "registry:ui",
-  "componentName": "animated-background",
-  "description": "Card component with animated background effects on hover.",
+  "componentName": "segmented-control",
+  "description": "Segmented control UI element with animated background transitions.",
   "files": [
     {
-      "path": "animated-card-background-hover.tsx",
-      "content": "import { AnimatedBackground } from '@/components/core/animated-background';\r\n\r\nexport function AnimatedCardBackgroundHover() {\r\n  const ITEMS = [\r\n    {\r\n      id: 1,\r\n      title: 'Dialog',\r\n      description: 'Enhances modal presentations.',\r\n    },\r\n    {\r\n      id: 2,\r\n      title: 'Popover',\r\n      description: 'For small interactive overlays.',\r\n    },\r\n    {\r\n      id: 3,\r\n      title: 'Accordion',\r\n      description: 'Collapsible sections for more content.',\r\n    },\r\n    {\r\n      id: 4,\r\n      title: 'Collapsible',\r\n      description: 'Collapsible sections for more content.',\r\n    },\r\n    {\r\n      id: 5,\r\n      title: 'Drag to Reorder',\r\n      description: 'Reorder items with drag and drop.',\r\n    },\r\n    {\r\n      id: 6,\r\n      title: 'Swipe to Delete',\r\n      description: 'Delete items with swipe gestures.',\r\n    },\r\n  ];\r\n\r\n  return (\r\n    <div className='grid grid-cols-2 p-10 md:grid-cols-3'>\r\n      <AnimatedBackground\r\n        className='rounded-lg bg-zinc-100 dark:bg-zinc-800'\r\n        transition={{\r\n          type: 'spring',\r\n          bounce: 0.2,\r\n          duration: 0.6,\r\n        }}\r\n        enableHover\r\n      >\r\n        {ITEMS.map((item, index) => (\r\n          <div key={index} data-id={`card-${index}`}>\r\n            <div className='flex select-none flex-col space-y-1 p-4'>\r\n              <h3 className='text-base font-medium text-zinc-800 dark:text-zinc-50'>\r\n                {item.title}\r\n              </h3>\r\n              <p className='text-base text-zinc-600 dark:text-zinc-400'>\r\n                {item.description}\r\n              </p>\r\n            </div>\r\n          </div>\r\n        ))}\r\n      </AnimatedBackground>\r\n    </div>\r\n  );\r\n}\r\n",
+      "path": "segmented-control.tsx",
+      "content": "import { AnimatedBackground } from '@/components/core/animated-background';\r\n\r\nexport function SegmentedControl() {\r\n  return (\r\n    <div className='rounded-[8px] bg-gray-100 p-[2px] dark:bg-zinc-800'>\r\n      <AnimatedBackground\r\n        defaultValue='Day'\r\n        className='rounded-lg bg-white dark:bg-zinc-700'\r\n        transition={{\r\n          ease: 'easeInOut',\r\n          duration: 0.2,\r\n        }}\r\n      >\r\n        {['Day', 'Week', 'Month', 'Year'].map((label, index) => {\r\n          return (\r\n            <button\r\n              key={index}\r\n              data-id={label}\r\n              type='button'\r\n              aria-label={`${label} view`}\r\n              className='inline-flex w-20 items-center justify-center text-center text-zinc-800 transition-transform active:scale-[0.98] dark:text-zinc-50'\r\n            >\r\n              {label}\r\n            </button>\r\n          );\r\n        })}\r\n      </AnimatedBackground>\r\n    </div>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     },
     {

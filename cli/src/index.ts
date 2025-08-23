@@ -2,7 +2,7 @@
 
 import { program } from 'commander';
 import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'fs';
-import { join } from 'path';
+import { join, normalize, dirname  } from 'path';
 import ora from 'ora';
 import fetch from 'node-fetch';
 import { execSync } from 'child_process';
@@ -154,8 +154,8 @@ program
         const content =
           file.content ||
           (await fetchFile(`${MOTION_PRIMITIVES_BASE_URL}${file.path}`));
-        const fileName = file.path.split('/').pop()!;
-        allFiles.push({ path: fileName, content });
+        const relPath = normalize(file.path)
+        allFiles.push({ path: relPath, content })
       }
 
       // Create target directory if it doesn't exist
@@ -166,7 +166,8 @@ program
       // Write all files to components/shadcn-extras/
       for (const { path, content } of allFiles) {
         const filePath = join(TARGET_DIR, path);
-        writeFileSync(filePath, content);
+        mkdirSync(dirname(filePath), { recursive: true })
+        writeFileSync(filePath, content)
         console.log(`✓ Added ${path} to ${filePath}`);
       }
 
