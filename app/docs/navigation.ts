@@ -41,6 +41,12 @@ export const NAVIGATION: NavigationGroup[] = [
         href: '/docs/animated-group',
         isUpdated: true,
       },
+      {
+  name: 'KPI Card',
+  href: '/docs/kpi-card',
+  isNew: true,
+},
+
     ],
   },
 ];

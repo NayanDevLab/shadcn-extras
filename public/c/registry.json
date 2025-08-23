@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "shadcn-extras",
-  "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/",
+  "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/docs/",
   "items": [
     {
       "name": "accordion",
@@ -15,7 +15,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/core/accordion.tsx",
+          "path": "\\components\\core\\accordion.tsx",
           "type": "registry:component"
         }
       ],
@@ -36,7 +36,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/core/animated-background.tsx",
+          "path": "\\components\\core\\animated-background.tsx",
           "type": "registry:component"
         }
       ],
@@ -57,7 +57,28 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "components/core/animated-group.tsx",
+          "path": "\\components\\core\\animated-group.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "kpi-card",
+      "type": "registry:ui",
+      "title": "Kpi Card",
+      "description": "Compact metric card with tone, delta and trend indicator.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\kpi-card.tsx",
           "type": "registry:component"
         }
       ],
