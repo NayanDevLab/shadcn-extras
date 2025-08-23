@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "motion-primitives",
-  "homepage": "https://motion-primitives.com",
+  "name": "shadcn-extras",
+  "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/",
   "items": [
     {
       "name": "accordion",
@@ -21,7 +21,7 @@
       ],
       "categories": [
         "ui",
-        "motion-primitives"
+        "shadcn-extras"
       ]
     },
     {
@@ -42,7 +42,7 @@
       ],
       "categories": [
         "ui",
-        "motion-primitives"
+        "shadcn-extras"
       ]
     },
     {
@@ -63,7 +63,7 @@
       ],
       "categories": [
         "ui",
-        "motion-primitives"
+        "shadcn-extras"
       ]
     }
   ]

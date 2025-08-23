@@ -22,7 +22,7 @@ export default function ComponentPreview({
   const [reTriggerKey, setReTriggerKey] = useState<number>(Date.now());
 
   const componentName = filePath?.split('/').pop()?.split('.').shift();
-  const registryUrl = `https://motion-primitives.com/e/${componentName}.json`;
+  const registryUrl = `https://nayanrdeveloper.github.io/shadcn-extras/e/${componentName}.json`;
 
   const reTrigger = () => {
     setReTriggerKey(Date.now());

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { MPLogo } from './icons/motion-primitives-logo';
+import { MPLogo } from './icons/shadcn-extras-logo';
 import { ShadcnLogo } from './icons/shadcn-logo';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -22,14 +22,14 @@ export type InstallationCliProps = {
 export function InstallationCli({ value, className }: InstallationCliProps) {
   const commands: Command[] = [
     {
-      label: 'motion-primitives',
+      label: 'shadcn-extras',
       icon: <MPLogo className='size-4' />,
-      code: `npx motion-primitives@latest add ${value}`,
+      code: `npx shadcn-extras@latest add ${value}`,
     },
     {
       label: 'shadcn',
       icon: <ShadcnLogo className='size-4' />,
-      code: `npx shadcn@latest add "https://motion-primitives.com/c/${value}.json"`,
+      code: `npx shadcn@latest add "https://nayanrdeveloper.github.io/shadcn-extras/c/${value}.json"`,
     },
   ];
 

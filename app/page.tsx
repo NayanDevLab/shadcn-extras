@@ -7,7 +7,7 @@ import { ChevronRight } from 'lucide-react';
 import { CardExampleLanding } from '@/components/website/card-example-landing';
 import { AnimatedGroupPreset } from '@/app/docs/animated-group/animated-group-preset';
 import { SegmentedControl } from '@/app/docs/animated-background/segmented-control';
-import { MPLogo } from '@/components/website/icons/motion-primitives-logo';
+import { MPLogo } from '@/components/website/icons/shadcn-extras-logo';
 
 function Button({
   children,
@@ -66,7 +66,7 @@ function Header() {
               <XIcon className='h-4 w-4 fill-zinc-950 dark:fill-white' />
             </a>
             <a
-              href='https://github.com/ibelick/motion-primitives'
+              href='https://github.com/nayanrdeveloper/shadcn-extras'
               target='_blank'
               rel='noopener noreferrer'
               className='inline-flex h-9 w-9 items-center justify-center'
@@ -104,7 +104,7 @@ export default function Motion() {
               </Button>
             </Link>
             <a
-              href='https://github.com/ibelick/motion-primitives'
+              href='https://github.com/nayanrdeveloper/shadcn-extras'
               target='_blank'
               rel='noopener noreferrer'
             >

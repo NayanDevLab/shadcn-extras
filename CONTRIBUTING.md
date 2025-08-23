@@ -21,13 +21,13 @@ You can fork this repo by clicking the fork button in the top right corner of th
 ### Clone on your local machine
 
 ```bash
-git clone https://github.com/ibelick/motion-primitives.git
+git clone https://github.com/nayanrdeveloper/shadcn-extras.git
 ```
 
 ### Navigate to project directory
 
 ```bash
-cd motion-primitives
+cd shadcn-extras
 ```
 
 ### Create a new Branch

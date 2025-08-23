@@ -181,7 +181,7 @@ const registryItems = components.map((component) => {
 const registry = {
   $schema: 'https://ui.shadcn.com/schema/registry.json',
   name: 'shadcn-extras',
-  homepage: 'https://motion-primitives.com',
+  homepage: 'https://nayanrdeveloper.github.io/shadcn-extras/docs/',
   items: registryItems,
 };
 

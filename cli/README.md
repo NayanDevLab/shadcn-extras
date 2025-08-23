@@ -7,14 +7,14 @@ A command-line interface for easily adding beautiful, animated components to you
 You can use the CLI directly with npx:
 
 ```bash
-npx motion-primitives <command>
+npx shadcn-extras <command>
 ```
 
 Or install it globally:
 
 ```bash
-npm install -g motion-primitives
-motion-primitives <command>
+npm install -g shadcn-extras
+shadcn-extras <command>
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ motion-primitives <command>
 To see all available animated components:
 
 ```bash
-npx motion-primitives list
+npx shadcn-extras list
 ```
 
 This will display a list of all available components along with descriptions and required dependencies.
@@ -34,18 +34,18 @@ This will display a list of all available components along with descriptions and
 To add a specific component to your project:
 
 ```bash
-npx motion-primitives add <component-name>
+npx shadcn-extras add <component-name>
 ```
 
 For example:
 
 ```bash
-npx motion-primitives add text-morph
+npx shadcn-extras add text-morph
 ```
 
 This will:
 
-1. Create a `components/motion-primitives` directory in your project (if it doesn't exist)
+1. Create a `components/shadcn-extras` directory in your project (if it doesn't exist)
 2. Download and add the component files
 3. Automatically install any required dependencies using your preferred package manager (npm, yarn, or pnpm)
 
@@ -60,7 +60,7 @@ Motion Primitives offers a variety of beautiful and performant animated componen
 - **Text Animations**: Text morphing, Text loops, Text scramble effects, Spinning text
 - **And many more!**
 
-For the complete list, run `npx motion-primitives list`.
+For the complete list, run `npx shadcn-extras list`.
 
 ## Dependencies
 

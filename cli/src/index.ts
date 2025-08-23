@@ -114,19 +114,19 @@ function displayBanner() {
 }
 
 program
-  .name('motion-primitives')
+  .name('shadcn-extras')
   .description('CLI to add beautiful, animated components to your app')
   .version(packageJson.version);
 
 program
   .command('add')
   .argument('<component>', 'The component to add (e.g., accordion, text-morph)')
-  .description('Add a motion-primitives component to your project')
+  .description('Add a shadcn-extras component to your project')
   .action(async (component: string) => {
     const spinner = ora(`Adding ${component}...`).start();
 
     try {
-      // Fetch the motion-primitives registry
+      // Fetch the shadcn-extras registry
       const motionPrimitivesRegistry = await fetchRegistry(
         MOTION_PRIMITIVES_REGISTRY_URL
       );
@@ -135,10 +135,10 @@ program
       );
       if (!componentEntry) {
         spinner.fail(
-          `Component "${component}" not found in motion-primitives registry`
+          `Component "${component}" not found in shadcn-extras registry`
         );
         console.log(
-          '\nRun "npx motion-primitives list" to see all available components'
+          '\nRun "npx shadcn-extras list" to see all available components'
         );
         process.exit(1);
       }
@@ -163,7 +163,7 @@ program
         mkdirSync(TARGET_DIR, { recursive: true });
       }
 
-      // Write all files to components/motion-primitives/
+      // Write all files to components/shadcn-extras/
       for (const { path, content } of allFiles) {
         const filePath = join(TARGET_DIR, path);
         writeFileSync(filePath, content);
@@ -187,7 +187,7 @@ program
           console.log('\nExample usage:');
           console.log('```jsx');
           console.log(
-            `import { ${pascalCaseName} } from '@/components/motion-primitives/${component}';`
+            `import { ${pascalCaseName} } from '@/components/shadcn-extras/${component}';`
           );
           console.log('\n// Then in your JSX:');
           console.log(`<${pascalCaseName} />`);
@@ -204,12 +204,12 @@ program
 
 program
   .command('list')
-  .description('List all available motion-primitives components')
+  .description('List all available shadcn-extras components')
   .action(async () => {
     const spinner = ora('Fetching components...').start();
 
     try {
-      // Fetch the motion-primitives registry
+      // Fetch the shadcn-extras registry
       const motionPrimitivesRegistry = await fetchRegistry(
         MOTION_PRIMITIVES_REGISTRY_URL
       );
@@ -233,7 +233,7 @@ program
       });
 
       console.log('\nTo add a component run:');
-      console.log('  npx motion-primitives add <component-name>');
+      console.log('  npx shadcn-extras add <component-name>');
     } catch (error: any) {
       spinner.fail(`Error: ${error.message || error}`);
       process.exit(1);
@@ -248,11 +248,11 @@ program.action(() => {
   );
   console.log('Available commands:');
   console.log('  add <component>  - Add a component to your project');
-  console.log('    Example: npx motion-primitives add text-morph');
+  console.log('    Example: npx shadcn-extras add text-morph');
   console.log('\n  list             - List all available components');
-  console.log('    Example: npx motion-primitives list');
+  console.log('    Example: npx shadcn-extras list');
   console.log('\n  --help           - Show help information');
-  console.log('\nDocumentation: https://github.com/ibelick/motion-primitives');
+  console.log('\nDocumentation: https://github.com/nayanrdeveloper/shadcn-extras');
 });
 
 program.parse(process.argv);

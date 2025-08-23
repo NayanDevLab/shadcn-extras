@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MPLogo } from './icons/motion-primitives-logo';
+import { MPLogo } from './icons/shadcn-extras-logo';
 import XIcon from './icons/x';
 import GitHubIcon from './icons/github';
 import ThemeSwitch from './theme-switch';
@@ -39,7 +39,7 @@ export function Header() {
               <XIcon className='h-4 w-4 fill-zinc-950 dark:fill-white' />
             </a>
             <a
-              href='https://github.com/ibelick/motion-primitives'
+              href='https://github.com/nayanrdeveloper/shadcn-extras'
               target='_blank'
               rel='noopener noreferrer'
               className='inline-flex h-9 w-9 items-center justify-center'

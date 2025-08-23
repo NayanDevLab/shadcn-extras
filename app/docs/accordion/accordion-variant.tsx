@@ -27,13 +27,13 @@ export function AccordionVariant() {
           <div className='flex items-center'>
             <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
             <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
-              How do I start with Motion-Primitives?
+              How do I start with Shadcn-Extras?
             </div>
           </div>
         </AccordionTrigger>
         <AccordionContent className='origin-left'>
           <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
-            Kick off your experience by setting up Motion-Primitives. This
+            Kick off your experience by setting up Shadcn-Extras. This
             section covers the basics of installation and how to add animations
             to your projects. You’ll get familiar with the initial setup and the
             core features quickly.
@@ -69,7 +69,7 @@ export function AccordionVariant() {
         <AccordionContent className='origin-left'>
           <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
             Advance your skills by using more complex functions of
-            Motion-Primitives. Explore how to link animations together, create
+            Shadcn-Extras. Explore how to link animations together, create
             intricate sequences, and interact with motion sensors for dynamic
             effects.
           </p>
@@ -86,7 +86,7 @@ export function AccordionVariant() {
         </AccordionTrigger>
         <AccordionContent className='origin-left'>
           <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
-            Connect with the Motion-Primitives community for support and
+            Connect with the Shadcn-Extras community for support and
             collaboration. Learn how to contribute, share knowledge, and access
             helpful resources. Stay updated on new updates and collective
             insights.

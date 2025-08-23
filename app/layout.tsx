@@ -10,9 +10,9 @@ const geistMono = GeistMono;
 
 export const metadata: Metadata = {
   title:
-    'Motion-Primitives - UI kit to make beautiful, animated interfaces, faster.',
+    'Shadcn-Extras - UI kit to make beautiful, animated interfaces, faster.',
   description:
-    'Motion-Primitives is an open-source UI kit to make beautiful, animated interfaces, faster. Built for React, Next.js, and Tailwind CSS.',
+    'Shadcn-Extras is an open-source UI kit to make beautiful, animated interfaces, faster. Built for React, Next.js, and Tailwind CSS.',
 };
 
 export default function RootLayout({

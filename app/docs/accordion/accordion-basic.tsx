@@ -14,7 +14,7 @@ export function AccordionBasic() {
         </AccordionTrigger>
         <AccordionContent>
           <p className='text-zinc-500 dark:text-zinc-400'>
-            Discover the fundamental concepts of Motion-Primitives. This section
+            Discover the fundamental concepts of Shadcn-Extras. This section
             guides you through the installation process and provides an overview
             of how to integrate these components into your projects. Learn about
             the core functionalities and how to set up your first animation
@@ -29,7 +29,7 @@ export function AccordionBasic() {
         <AccordionContent>
           <p className='text-zinc-500 dark:text-zinc-400'>
             Explore the comprehensive range of animation properties available in
-            Motion-Primitives. Understand how to manipulate timing, easing, and
+            Shadcn-Extras. Understand how to manipulate timing, easing, and
             delays to create smooth, dynamic animations. This segment also
             covers the customization of animations to fit the flow and style of
             your web applications.
@@ -43,7 +43,7 @@ export function AccordionBasic() {
         <AccordionContent>
           <p className='text-zinc-500 dark:text-zinc-400'>
             Dive deeper into advanced techniques and features of
-            Motion-Primitives. Learn about chaining animations, creating complex
+            Shadcn-Extras. Learn about chaining animations, creating complex
             sequences, and utilizing motion sensors for interactive animations.
             Gain insights on how to leverage these advanced features to enhance
             user experience and engagement.
@@ -56,7 +56,7 @@ export function AccordionBasic() {
         </AccordionTrigger>
         <AccordionContent>
           <p className='text-zinc-500 dark:text-zinc-400'>
-            Engage with the Motion-Primitives community to gain additional
+            Engage with the Shadcn-Extras community to gain additional
             support and insight. Find out how to participate in discussions,
             contribute to the project, and access a wealth of shared knowledge
             and resources. Learn about upcoming features, best practices, and
