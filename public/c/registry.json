@@ -126,6 +126,25 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "concentric-rings-spinner",
+      "type": "registry:ui",
+      "title": "Concentric Rings Spinner",
+      "description": "Dotted rings spinner (SVG). Customizable rings, dots, gap, taper, speed, and direction.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\concentric-rings-spinner.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }
