@@ -1,9 +1,9 @@
-'use client'
-import { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinner'
+'use client';
+import { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinner';
 
 export function CrsPerspective() {
   return (
-    <div className="flex min-h-64 items-center justify-center rounded-xl bg-zinc-900">
+    <div className='min-h-64 flex items-center justify-center rounded-xl bg-zinc-900'>
       <ConcentricRingsSpinner
         size={220}
         rings={18}
@@ -14,8 +14,8 @@ export function CrsPerspective() {
         dotRadius={{ inner: 4, outer: 2.2 }}
         alternate={true}
         speed={2.2}
-        className="text-white"
+        className='text-white'
       />
     </div>
-  )
+  );
 }

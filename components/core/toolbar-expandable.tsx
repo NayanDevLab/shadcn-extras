@@ -21,7 +21,7 @@ const ITEMS = [
     content: (
       <div className='flex flex-col space-y-4'>
         <div className='flex flex-col space-y-1 text-zinc-700'>
-          <div className='h-8 w-8 rounded-full bg-linear-to-br from-blue-500 to-blue-400' />
+          <div className='bg-linear-to-br h-8 w-8 rounded-full from-blue-500 to-blue-400' />
           <span>Ibelick</span>
         </div>
         <button

@@ -2,12 +2,12 @@ export const metadata = {
   title: 'Concentric Rings Spinner - Shadcn-Extras',
   description:
     'Animated loader made of multiple dotted rings. Pure SVG, tintable with Tailwind color and highly configurable.',
-}
+};
 
-import ComponentCodePreview from '@/components/website/component-code-preview'
-import { CrsBasic } from './crs-basic'
-import { CrsDense } from './crs-dense'
-import { CrsPerspective } from './crs-perspective'
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { CrsBasic } from './crs-basic';
+import { CrsDense } from './crs-dense';
+import { CrsPerspective } from './crs-perspective';
 
 # Concentric Rings Spinner
 
@@ -17,24 +17,27 @@ Use Tailwind’s `text-*` to color; tweak ring count, density, gap, radius taper
 ## Examples
 
 ### Basic
+
 <ComponentCodePreview
-  classNameComponentContainer="min-h-0 p-10"
+  classNameComponentContainer='min-h-0 p-10'
   component={<CrsBasic />}
-  filePath="app/docs/concentric-rings-spinner/crs-basic.tsx"
+  filePath='app/docs/concentric-rings-spinner/crs-basic.tsx'
 />
 
 ### Dense
+
 <ComponentCodePreview
-  classNameComponentContainer="min-h-0 p-10"
+  classNameComponentContainer='min-h-0 p-10'
   component={<CrsDense />}
-  filePath="app/docs/concentric-rings-spinner/crs-dense.tsx"
+  filePath='app/docs/concentric-rings-spinner/crs-dense.tsx'
 />
 
 ### Perspective (outer fade + taper)
+
 <ComponentCodePreview
-  classNameComponentContainer="min-h-0 p-10"
+  classNameComponentContainer='min-h-0 p-10'
   component={<CrsPerspective />}
-  filePath="app/docs/concentric-rings-spinner/crs-perspective.tsx"
+  filePath='app/docs/concentric-rings-spinner/crs-perspective.tsx'
 />
 
 ## Installation
@@ -45,9 +48,9 @@ Use Tailwind’s `text-*` to color; tweak ring count, density, gap, radius taper
     <TabsTrigger value="manual">Manual</TabsTrigger>
   </TabsList>
 
-  <TabsContent value="cli">
-    <InstallationCli value="concentric-rings-spinner" />
-  </TabsContent>
+<TabsContent value='cli'>
+  <InstallationCli value='concentric-rings-spinner' />
+</TabsContent>
 
   <TabsContent value="manual">
     <Steps>
@@ -59,20 +62,20 @@ Use Tailwind’s `text-*` to color; tweak ring count, density, gap, radius taper
 
 ## Props
 
-| Prop         | Type                                            | Default | Description                                               |
-|--------------|-------------------------------------------------|---------|-----------------------------------------------------------|
-| size         | number                                          | 200     | Square size                                               |
-| rings        | number                                          | 12      | Number of rings                                           |
-| dotsPerRing  | number                                          | 36      | Dots per ring                                             |
-| innerRadius  | number                                          | 10      | Radius of first ring                                      |
-| ringGap      | number                                          | 8       | Gap between rings                                         |
-| dotRadius    | number     | {2,4}   | Dot size or taper from inner → outer                                                           |
-| speed        | number                                          | 2       | Seconds per revolution (middle ring)                      |
-| direction    | 1 | -1                                          | 1       | CW or CCW                                                 |
-| alternate    | boolean                                         | true    | Alternate direction every ring                            |
-| fadeCenter   | number                                          | 0.15    | Fade around middle                                        |
-| fadeEdge     | number                                          | 0.35    | Fade outer edge                                           |
-| pulse        | boolean                                         | true    | Subtle per‑dot opacity pulsing                            |
-| className    | string                                          |         | Wrapper classes (use for color via `text-*`)              |
-| dotClassName | string                                          |         | Extra class applied to each dot                           |
-| label        | string                                          | Loading…| aria-label                                                |
+| Prop         | Type    | Default  | Description                                  |
+| ------------ | ------- | -------- | -------------------------------------------- | --------- |
+| size         | number  | 200      | Square size                                  |
+| rings        | number  | 12       | Number of rings                              |
+| dotsPerRing  | number  | 36       | Dots per ring                                |
+| innerRadius  | number  | 10       | Radius of first ring                         |
+| ringGap      | number  | 8        | Gap between rings                            |
+| dotRadius    | number  | {2,4}    | Dot size or taper from inner → outer         |
+| speed        | number  | 2        | Seconds per revolution (middle ring)         |
+| direction    | 1       | -1       | 1                                            | CW or CCW |
+| alternate    | boolean | true     | Alternate direction every ring               |
+| fadeCenter   | number  | 0.15     | Fade around middle                           |
+| fadeEdge     | number  | 0.35     | Fade outer edge                              |
+| pulse        | boolean | true     | Subtle per‑dot opacity pulsing               |
+| className    | string  |          | Wrapper classes (use for color via `text-*`) |
+| dotClassName | string  |          | Extra class applied to each dot              |
+| label        | string  | Loading… | aria-label                                   |

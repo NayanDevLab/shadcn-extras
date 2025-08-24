@@ -25,7 +25,7 @@ export function AccordionVariant() {
       <AccordionItem value='getting-started' className='py-2'>
         <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
           <div className='flex items-center'>
-            <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
+            <ChevronRight className='group-data-expanded:rotate-90 h-4 w-4 text-zinc-950 transition-transform duration-200 dark:text-zinc-50' />
             <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
               How do I start with Shadcn-Extras?
             </div>
@@ -33,17 +33,17 @@ export function AccordionVariant() {
         </AccordionTrigger>
         <AccordionContent className='origin-left'>
           <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
-            Kick off your experience by setting up Shadcn-Extras. This
-            section covers the basics of installation and how to add animations
-            to your projects. You’ll get familiar with the initial setup and the
-            core features quickly.
+            Kick off your experience by setting up Shadcn-Extras. This section
+            covers the basics of installation and how to add animations to your
+            projects. You’ll get familiar with the initial setup and the core
+            features quickly.
           </p>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value='animation-properties' className='py-2'>
         <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
           <div className='flex items-center'>
-            <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
+            <ChevronRight className='group-data-expanded:rotate-90 h-4 w-4 text-zinc-950 transition-transform duration-200 dark:text-zinc-50' />
             <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
               What are the key animation properties?
             </div>
@@ -60,7 +60,7 @@ export function AccordionVariant() {
       <AccordionItem value='advanced-features' className='py-2'>
         <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
           <div className='flex items-center'>
-            <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
+            <ChevronRight className='group-data-expanded:rotate-90 h-4 w-4 text-zinc-950 transition-transform duration-200 dark:text-zinc-50' />
             <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
               How do I use advanced features?
             </div>
@@ -78,7 +78,7 @@ export function AccordionVariant() {
       <AccordionItem value='community-support' className='py-2'>
         <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
           <div className='flex items-center'>
-            <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
+            <ChevronRight className='group-data-expanded:rotate-90 h-4 w-4 text-zinc-950 transition-transform duration-200 dark:text-zinc-50' />
             <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
               How do I engage with the community?
             </div>
