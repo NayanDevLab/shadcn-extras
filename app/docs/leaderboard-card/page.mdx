@@ -2,12 +2,12 @@ export const metadata = {
   title: 'Leaderboard Card - Shadcn-Extras',
   description:
     'Profile score card with avatar, crown/rank badge, amount pill and progress bar.',
-}
+};
 
-import ComponentCodePreview from '@/components/website/component-code-preview'
+import ComponentCodePreview from '@/components/website/component-code-preview';
 
-import { LbFirst } from './lb-first'
-import { LbSecond } from './lb-second'
+import { LbFirst } from './lb-first';
+import { LbSecond } from './lb-second';
 
 # Leaderboard Card
 
@@ -16,10 +16,18 @@ Compact card showing user avatar, name, amount and a progress score with rank/cr
 ## Examples
 
 ### First place
-<ComponentCodePreview component={<LbFirst />} filePath="app/docs/leaderboard-card/lb-first.tsx" />
+
+<ComponentCodePreview
+  component={<LbFirst />}
+  filePath='app/docs/leaderboard-card/lb-first.tsx'
+/>
 
 ### Second place
-<ComponentCodePreview component={<LbSecond />} filePath="app/docs/leaderboard-card/lb-second.tsx" />
+
+<ComponentCodePreview
+  component={<LbSecond />}
+  filePath='app/docs/leaderboard-card/lb-second.tsx'
+/>
 
 ## Installation
 
@@ -29,9 +37,9 @@ Compact card showing user avatar, name, amount and a progress score with rank/cr
     <TabsTrigger value="manual">Manual</TabsTrigger>
   </TabsList>
 
-  <TabsContent value="cli">
-    <InstallationCli value="leaderboard-card" />
-  </TabsContent>
+<TabsContent value='cli'>
+  <InstallationCli value='leaderboard-card' />
+</TabsContent>
 
   <TabsContent value="manual">
     <Steps>
@@ -43,20 +51,20 @@ Compact card showing user avatar, name, amount and a progress score with rank/cr
 
 ## Props
 
-| Prop | Type | Default | Description |
-| --- | --- | --- | --- |
-| name | string |  | Display name |
-| amount | number \| string |  | Main amount. If number, it’s formatted with `amountPrefix`. |
-| amountPrefix | string | `$` | Prefix when formatting numeric amount |
-| avatarSrc | string |  | Avatar image URL |
-| avatarAlt | string | name | Alt text |
-| rank | number |  | Small circular badge bottom‑right of avatar |
-| showCrown | boolean | rank===1 | Shows crown above avatar |
-| score | number | 0 | Progress 0–100 |
-| label | string | "Score" | Left label above progress bar |
-| tone | 'emerald' \| 'blue' \| 'zinc' | 'emerald' | Theme palette |
-| size | 'sm' \| 'md' \| 'lg' | 'md' | Density |
-| avatarRingClassName | string |  | Custom avatar ring/outline class |
-| progressClassName | string |  | Custom progress fill class |
-| pillClassName | string |  | Custom class for amount pill |
-| className | string |  | Wrapper classes |
+| Prop                | Type                          | Default   | Description                                                 |
+| ------------------- | ----------------------------- | --------- | ----------------------------------------------------------- |
+| name                | string                        |           | Display name                                                |
+| amount              | number \| string              |           | Main amount. If number, it’s formatted with `amountPrefix`. |
+| amountPrefix        | string                        | `$`       | Prefix when formatting numeric amount                       |
+| avatarSrc           | string                        |           | Avatar image URL                                            |
+| avatarAlt           | string                        | name      | Alt text                                                    |
+| rank                | number                        |           | Small circular badge bottom‑right of avatar                 |
+| showCrown           | boolean                       | rank===1  | Shows crown above avatar                                    |
+| score               | number                        | 0         | Progress 0–100                                              |
+| label               | string                        | "Score"   | Left label above progress bar                               |
+| tone                | 'emerald' \| 'blue' \| 'zinc' | 'emerald' | Theme palette                                               |
+| size                | 'sm' \| 'md' \| 'lg'          | 'md'      | Density                                                     |
+| avatarRingClassName | string                        |           | Custom avatar ring/outline class                            |
+| progressClassName   | string                        |           | Custom progress fill class                                  |
+| pillClassName       | string                        |           | Custom class for amount pill                                |
+| className           | string                        |           | Wrapper classes                                             |

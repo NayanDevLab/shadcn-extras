@@ -42,11 +42,11 @@ export function AccordionBasic() {
         </AccordionTrigger>
         <AccordionContent>
           <p className='text-zinc-500 dark:text-zinc-400'>
-            Dive deeper into advanced techniques and features of
-            Shadcn-Extras. Learn about chaining animations, creating complex
-            sequences, and utilizing motion sensors for interactive animations.
-            Gain insights on how to leverage these advanced features to enhance
-            user experience and engagement.
+            Dive deeper into advanced techniques and features of Shadcn-Extras.
+            Learn about chaining animations, creating complex sequences, and
+            utilizing motion sensors for interactive animations. Gain insights
+            on how to leverage these advanced features to enhance user
+            experience and engagement.
           </p>
         </AccordionContent>
       </AccordionItem>
@@ -56,11 +56,11 @@ export function AccordionBasic() {
         </AccordionTrigger>
         <AccordionContent>
           <p className='text-zinc-500 dark:text-zinc-400'>
-            Engage with the Shadcn-Extras community to gain additional
-            support and insight. Find out how to participate in discussions,
-            contribute to the project, and access a wealth of shared knowledge
-            and resources. Learn about upcoming features, best practices, and
-            how to get help with your specific use cases.
+            Engage with the Shadcn-Extras community to gain additional support
+            and insight. Find out how to participate in discussions, contribute
+            to the project, and access a wealth of shared knowledge and
+            resources. Learn about upcoming features, best practices, and how to
+            get help with your specific use cases.
           </p>
         </AccordionContent>
       </AccordionItem>

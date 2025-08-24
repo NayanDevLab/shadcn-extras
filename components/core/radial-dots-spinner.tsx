@@ -1,41 +1,41 @@
-'use client'
+'use client';
 
-import * as React from 'react'
-import { cn } from '@/lib/utils'
+import * as React from 'react';
+import { cn } from '@/lib/utils';
 
 export type RadialDotsSpinnerProps = {
   /** Overall square size (px) */
-  size?: number
+  size?: number;
   /** Number of radial spokes */
-  spokes?: number
+  spokes?: number;
   /** Dots per spoke (excluding center rings) */
-  dotsPerSpoke?: number
+  dotsPerSpoke?: number;
   /** Inner radius where spokes start (px) */
-  innerRadius?: number
+  innerRadius?: number;
   /** Outer radius (px). Default: size/2 - 6 */
-  outerRadius?: number
+  outerRadius?: number;
   /** Dot radius across spokes. Either fixed number or { inner, outer } to taper. */
-  dotRadius?: number | { inner: number; outer: number }
+  dotRadius?: number | { inner: number; outer: number };
   /** How many dotted rings around the center (0–3 works well) */
-  centerRings?: number
+  centerRings?: number;
   /** Radius of the first ring (px) */
-  centerRingRadius?: number
+  centerRingRadius?: number;
   /** Gap between center rings (px) */
-  centerRingGap?: number
+  centerRingGap?: number;
   /** Dots on each center ring */
-  centerRingDots?: number
+  centerRingDots?: number;
   /** Seconds per full rotation (set 0 or falsey to disable spin) */
-  speed?: number
+  speed?: number;
   /** Extra classes (use to set color: text-white, text-zinc-900, etc.) */
-  className?: string
+  className?: string;
   /** Extra classes applied to each dot (e.g. drop-shadow) */
-  dotClassName?: string
+  dotClassName?: string;
   /** Accessible label */
-  label?: string
-}
+  label?: string;
+};
 
 function lerp(a: number, b: number, t: number) {
-  return a + (b - a) * t
+  return a + (b - a) * t;
 }
 
 export function RadialDotsSpinner({
@@ -54,30 +54,30 @@ export function RadialDotsSpinner({
   dotClassName,
   label = 'Loading…',
 }: RadialDotsSpinnerProps) {
-  const w = size
-  const h = size
-  const cx = w / 2
-  const cy = h / 2
-  const R = outerRadius ?? Math.floor(size / 2) - 6
-  const step = dotsPerSpoke > 1 ? (R - innerRadius) / (dotsPerSpoke - 1) : 0
+  const w = size;
+  const h = size;
+  const cx = w / 2;
+  const cy = h / 2;
+  const R = outerRadius ?? Math.floor(size / 2) - 6;
+  const step = dotsPerSpoke > 1 ? (R - innerRadius) / (dotsPerSpoke - 1) : 0;
 
   const getDotR = (idx: number) => {
-    if (typeof dotRadius === 'number') return dotRadius
-    const t = dotsPerSpoke <= 1 ? 0 : idx / (dotsPerSpoke - 1)
-    return lerp(dotRadius.inner, dotRadius.outer, t)
-  }
+    if (typeof dotRadius === 'number') return dotRadius;
+    const t = dotsPerSpoke <= 1 ? 0 : idx / (dotsPerSpoke - 1);
+    return lerp(dotRadius.inner, dotRadius.outer, t);
+  };
 
   // build center rings (array of arrays of points)
   const rings = Array.from({ length: Math.max(0, centerRings) }, (_, r) => {
-    const radius = centerRingRadius + r * centerRingGap
+    const radius = centerRingRadius + r * centerRingGap;
     return Array.from({ length: centerRingDots }, (_, i) => {
-      const a = (i / centerRingDots) * Math.PI * 2
+      const a = (i / centerRingDots) * Math.PI * 2;
       return {
         x: cx + Math.cos(a) * radius,
         y: cy + Math.sin(a) * radius,
-      }
-    })
-  })
+      };
+    });
+  });
 
   // styles for rotation that work inside SVG everywhere
   const spinStyle: React.CSSProperties | undefined =
@@ -86,11 +86,11 @@ export function RadialDotsSpinner({
           transformOrigin: '50% 50%',
           animation: `rds-rotate ${speed}s linear infinite`,
         }
-      : undefined
+      : undefined;
 
   return (
     <svg
-      role="status"
+      role='status'
       aria-label={label}
       width={w}
       height={h}
@@ -121,15 +121,15 @@ export function RadialDotsSpinner({
 
         {/* spokes */}
         {Array.from({ length: spokes }, (_, s) => {
-          const angle = (s / spokes) * Math.PI * 2
-          const dx = Math.cos(angle)
-          const dy = Math.sin(angle)
+          const angle = (s / spokes) * Math.PI * 2;
+          const dx = Math.cos(angle);
+          const dy = Math.sin(angle);
 
           return Array.from({ length: dotsPerSpoke }, (_, j) => {
-            const r = innerRadius + j * step
-            const x = cx + dx * r
-            const y = cy + dy * r
-            const rr = getDotR(j)
+            const r = innerRadius + j * step;
+            const x = cx + dx * r;
+            const y = cy + dy * r;
+            const rr = getDotR(j);
             return (
               <circle
                 key={`sp-${s}-${j}`}
@@ -138,10 +138,10 @@ export function RadialDotsSpinner({
                 r={rr}
                 className={cn('fill-current', dotClassName)}
               />
-            )
-          })
+            );
+          });
         })}
       </g>
     </svg>
-  )
+  );
 }

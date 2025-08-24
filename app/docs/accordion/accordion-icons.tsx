@@ -16,7 +16,7 @@ export function AccordionIcons() {
         <AccordionTrigger className='w-full text-left text-zinc-950 dark:text-zinc-50'>
           <div className='flex items-center justify-between'>
             <div>Getting Started</div>
-            <ChevronUp className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50' />
+            <ChevronUp className='group-data-expanded:-rotate-180 h-4 w-4 text-zinc-950 transition-transform duration-200 dark:text-zinc-50' />
           </div>
         </AccordionTrigger>
         <AccordionContent>
@@ -33,7 +33,7 @@ export function AccordionIcons() {
         <AccordionTrigger className='w-full text-left text-zinc-950 dark:text-zinc-50'>
           <div className='flex items-center justify-between'>
             <div>Animation Properties</div>
-            <ChevronUp className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50' />
+            <ChevronUp className='group-data-expanded:-rotate-180 h-4 w-4 text-zinc-950 transition-transform duration-200 dark:text-zinc-50' />
           </div>
         </AccordionTrigger>
         <AccordionContent>
@@ -50,16 +50,16 @@ export function AccordionIcons() {
         <AccordionTrigger className='w-full text-left text-zinc-950 dark:text-zinc-50'>
           <div className='flex items-center justify-between'>
             <div>Advanced Usage</div>
-            <ChevronUp className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50' />
+            <ChevronUp className='group-data-expanded:-rotate-180 h-4 w-4 text-zinc-950 transition-transform duration-200 dark:text-zinc-50' />
           </div>
         </AccordionTrigger>
         <AccordionContent>
           <p className='text-zinc-500 dark:text-zinc-400'>
-            Dive deeper into advanced techniques and features of
-            Shadcn-Extras. Learn about chaining animations, creating complex
-            sequences, and utilizing motion sensors for interactive animations.
-            Gain insights on how to leverage these advanced features to enhance
-            user experience and engagement.
+            Dive deeper into advanced techniques and features of Shadcn-Extras.
+            Learn about chaining animations, creating complex sequences, and
+            utilizing motion sensors for interactive animations. Gain insights
+            on how to leverage these advanced features to enhance user
+            experience and engagement.
           </p>
         </AccordionContent>
       </AccordionItem>
@@ -67,16 +67,16 @@ export function AccordionIcons() {
         <AccordionTrigger className='w-full text-left text-zinc-950 dark:text-zinc-50'>
           <div className='flex items-center justify-between'>
             <div>Community and Support</div>
-            <ChevronUp className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:-rotate-180 dark:text-zinc-50' />
+            <ChevronUp className='group-data-expanded:-rotate-180 h-4 w-4 text-zinc-950 transition-transform duration-200 dark:text-zinc-50' />
           </div>
         </AccordionTrigger>
         <AccordionContent>
           <p className='text-zinc-500 dark:text-zinc-400'>
-            Engage with the Shadcn-Extras community to gain additional
-            support and insight. Find out how to participate in discussions,
-            contribute to the project, and access a wealth of shared knowledge
-            and resources. Learn about upcoming features, best practices, and
-            how to get help with your specific use cases.
+            Engage with the Shadcn-Extras community to gain additional support
+            and insight. Find out how to participate in discussions, contribute
+            to the project, and access a wealth of shared knowledge and
+            resources. Learn about upcoming features, best practices, and how to
+            get help with your specific use cases.
           </p>
         </AccordionContent>
       </AccordionItem>

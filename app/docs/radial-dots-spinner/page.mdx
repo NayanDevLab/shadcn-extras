@@ -2,13 +2,13 @@ export const metadata = {
   title: 'Radial Dots Spinner - Shadcn-Extras',
   description:
     'Animated dotted sunburst/spinner. Pure SVG, customizable via props and Tailwind color.',
-}
+};
 
-import ComponentCodePreview from '@/components/website/component-code-preview'
+import ComponentCodePreview from '@/components/website/component-code-preview';
 
-import { RdsBasic } from './rds-basic'
-import { RdsSlowBlue } from './rds-slow-blue'
-import { RdsCompact } from './rds-compact'
+import { RdsBasic } from './rds-basic';
+import { RdsSlowBlue } from './rds-slow-blue';
+import { RdsCompact } from './rds-compact';
 
 # Radial Dots Spinner
 
@@ -18,24 +18,27 @@ Tint it with `text-*` utilities and control density/size/speed via props.
 ## Examples
 
 ### Basic
+
 <ComponentCodePreview
-  classNameComponentContainer="min-h-0 p-10"
+  classNameComponentContainer='min-h-0 p-10'
   component={<RdsBasic />}
-  filePath="app/docs/radial-dots-spinner/rds-basic.tsx"
+  filePath='app/docs/radial-dots-spinner/rds-basic.tsx'
 />
 
 ### Slow blue
+
 <ComponentCodePreview
-  classNameComponentContainer="min-h-0 p-10"
+  classNameComponentContainer='min-h-0 p-10'
   component={<RdsSlowBlue />}
-  filePath="app/docs/radial-dots-spinner/rds-slow-blue.tsx"
+  filePath='app/docs/radial-dots-spinner/rds-slow-blue.tsx'
 />
 
 ### Compact
+
 <ComponentCodePreview
-  classNameComponentContainer="min-h-0 p-10"
+  classNameComponentContainer='min-h-0 p-10'
   component={<RdsCompact />}
-  filePath="app/docs/radial-dots-spinner/rds-compact.tsx"
+  filePath='app/docs/radial-dots-spinner/rds-compact.tsx'
 />
 
 ## Installation
@@ -46,9 +49,9 @@ Tint it with `text-*` utilities and control density/size/speed via props.
     <TabsTrigger value="manual">Manual</TabsTrigger>
   </TabsList>
 
-  <TabsContent value="cli">
-    <InstallationCli value="radial-dots-spinner" />
-  </TabsContent>
+<TabsContent value='cli'>
+  <InstallationCli value='radial-dots-spinner' />
+</TabsContent>
 
   <TabsContent value="manual">
     <Steps>
@@ -60,19 +63,19 @@ Tint it with `text-*` utilities and control density/size/speed via props.
 
 ## Props
 
-| Prop              | Type                                              | Default  | Description                                        |
-|-------------------|---------------------------------------------------|----------|----------------------------------------------------|
-| size              | number                                            | 160      | Square size in px                                  |
-| spokes            | number                                            | 12       | Number of rays                                     |
-| dotsPerSpoke      | number                                            | 10       | Dots per ray                                       |
-| innerRadius       | number                                            | 14       | Start radius of rays                               |
-| outerRadius       | number                                            | size/2-6 | End radius                                         |
-| dotRadius         | number                                            | {2,3.5}  | Dot size or taper                                  |
-| centerRings       | number                                            | 2        | Dotted rings around center                         |
-| centerRingRadius  | number                                            | 10       | Radius of first ring                               |
-| centerRingGap     | number                                            | 6        | Gap between rings                                  |
-| centerRingDots    | number                                            | 16       | Dots per center ring                               |
-| speed             | number                                            | 1.6      | Seconds per rotation (set 0 to disable spin)       |
-| className         | string                                            |          | Wrapper classes (use for color via `text-*`)       |
-| dotClassName      | string                                            |          | Extra class for each dot                           |
-| label             | string                                            | Loading… | aria-label                                         |
+| Prop             | Type   | Default  | Description                                  |
+| ---------------- | ------ | -------- | -------------------------------------------- |
+| size             | number | 160      | Square size in px                            |
+| spokes           | number | 12       | Number of rays                               |
+| dotsPerSpoke     | number | 10       | Dots per ray                                 |
+| innerRadius      | number | 14       | Start radius of rays                         |
+| outerRadius      | number | size/2-6 | End radius                                   |
+| dotRadius        | number | {2,3.5}  | Dot size or taper                            |
+| centerRings      | number | 2        | Dotted rings around center                   |
+| centerRingRadius | number | 10       | Radius of first ring                         |
+| centerRingGap    | number | 6        | Gap between rings                            |
+| centerRingDots   | number | 16       | Dots per center ring                         |
+| speed            | number | 1.6      | Seconds per rotation (set 0 to disable spin) |
+| className        | string |          | Wrapper classes (use for color via `text-*`) |
+| dotClassName     | string |          | Extra class for each dot                     |
+| label            | string | Loading… | aria-label                                   |

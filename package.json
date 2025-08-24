@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "build:registry": "tsx scripts/registry-build.ts",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
     "docs:build": "next build"
   },
   "dependencies": {
@@ -48,7 +50,7 @@
     "eslint-config-next": "14.2.4",
     "eslint-config-prettier": "^10.1.8",
     "postcss": "^8",
-    "prettier": "^3.3.3",
+    "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.0.0-insiders.6d3fa07",
     "tailwindcss": "^4.0.0",
     "tsx": "^4.19.2",

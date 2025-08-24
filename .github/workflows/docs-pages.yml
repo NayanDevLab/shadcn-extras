@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -34,7 +34,7 @@ jobs:
         run: npm run build:registry
 
       - name: Build static docs
-        run: NEXT_DISABLE_ESLINT=1 npm run docs:build   # -> out/
+        run: NEXT_DISABLE_ESLINT=1 npm run docs:build # -> out/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
