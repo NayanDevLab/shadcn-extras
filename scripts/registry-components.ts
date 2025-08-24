@@ -68,6 +68,15 @@ export const components: ComponentDefinition[] = [
   description:
     'Animated dotted spinner (SVG). Customizable spokes, rings, size and speed.',
 },
+{
+  name: 'concentric-rings-spinner',
+  path: path.join(__dirname, '../components/core/concentric-rings-spinner.tsx'),
+  registryDependencies: [],
+  dependencies: [],
+  description:
+    'Dotted rings spinner (SVG). Customizable rings, dots, gap, taper, speed, and direction.',
+},
+
 
 
 

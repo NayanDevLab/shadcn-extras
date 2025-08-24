@@ -51,13 +51,22 @@ export const NAVIGATION: NavigationGroup[] = [
   href: '/docs/leaderboard-card',
   isNew: true,
 },
-{
-  name: 'Radial Dots Spinner',
+
+    ],
+  },
+  {
+    name: 'Spinners',
+    children: [
+      {
+  name: 'Radial Dots',
   href: '/docs/radial-dots-spinner',
   isNew: true,
 },
-
-
+      {
+  name: 'Concentric Rings',
+  href: '/docs/concentric-rings-spinner',
+  isNew: true,
+},
 
     ],
   },

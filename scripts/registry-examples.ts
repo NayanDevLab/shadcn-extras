@@ -274,6 +274,47 @@ export const examples: ExampleDefinition[] = [
   ],
 },
 
+{
+  name: 'crs-basic',
+  path: path.join(__dirname, '../app/docs/concentric-rings-spinner/crs-basic.tsx'),
+  description: 'Basic spinner on dark background.',
+  componentName: 'crs-basic',
+  files: [
+    {
+      name: 'concentric-rings-spinner.tsx',
+      path: path.join(__dirname, '../components/core/concentric-rings-spinner.tsx'),
+      type: 'registry:ui',
+    },
+  ],
+},
+{
+  name: 'crs-dense',
+  path: path.join(__dirname, '../app/docs/concentric-rings-spinner/crs-dense.tsx'),
+  description: 'Higher density variant.',
+  componentName: 'crs-dense',
+  files: [
+    {
+      name: 'concentric-rings-spinner.tsx',
+      path: path.join(__dirname, '../components/core/concentric-rings-spinner.tsx'),
+      type: 'registry:ui',
+    },
+  ],
+},
+{
+  name: 'crs-perspective',
+  path: path.join(__dirname, '../app/docs/concentric-rings-spinner/crs-perspective.tsx'),
+  description: 'Tapered radii + outer fade for depth.',
+  componentName: 'crs-perspective',
+  files: [
+    {
+      name: 'concentric-rings-spinner.tsx',
+      path: path.join(__dirname, '../components/core/concentric-rings-spinner.tsx'),
+      type: 'registry:ui',
+    },
+  ],
+},
+
+
 
 
 ];
