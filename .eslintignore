@@ -1,4 +1,11 @@
-cli/**
-dist/**
-.out/**
+node_modules/**
 .next/**
+out/**
+dist/**
+build/**
+coverage/**
+public/**
+cli/**
+
+# misc editor + lock files (optional)
+*.lock
