@@ -1,21 +1,98 @@
 # shadcn-extras
 
-Beautifully designed, easy-to-integrate motion components for engineers and designers, built with [motion](https://motion.dev/) and [Tailwind CSS](https://tailwindcss.com/).
+✨ Beautiful, animated UI components for React & Next.js, built with [Motion](https://motion.dev/) and [Tailwind CSS](https://tailwindcss.com/).  
+Easy to use. Customizable. Open Source.
 
-**This project is in beta. Expect new components to be released regularly and significant updates to the code.**
+**Note:** This project is in active development — new components and improvements are added regularly.
 
-<p align="center">
-<img src="https://github.com/nayanrdeveloper/shadcn-extras/blob/dev/app/opengraph-image.jpg" alt="hero" width="80%" />
-</p>
+---
 
-## Documentation
+## 🚀 Features
 
-Visit [nayanrdeveloper.github.io/shadcn-extras/docs](https://nayanrdeveloper.github.io/shadcn-extras/docs/) to view the full documentation.
+- 🎨 Ready-to-use **animated UI components**
+- ⚡ Built with **Motion** for smooth animations
+- 🎯 **Tailwind CSS friendly** and easy to theme
+- 🔧 Works seamlessly with **shadcn/ui**
+- 📚 Detailed **documentation** & code examples
+- 🛠️ Extensible — copy, customize, and adapt
 
-## Contributing
+---
 
-Please read the [contributing guide](/CONTRIBUTING.md).
+## 📖 Documentation
 
-## License
+Full documentation and examples are available at:  
+👉 [nayanrdeveloper.github.io/shadcn-extras/docs](https://nayanrdeveloper.github.io/shadcn-extras/docs/)
 
-Licensed under the [MIT license](/LICENSE.md).
+---
+
+## 📦 Installation
+
+```bash
+# Using npm
+npm install shadcn-extras
+
+# Or with pnpm
+pnpm add shadcn-extras
+
+# Or with yarn
+yarn add shadcn-extras
+```
+
+### Requirements
+
+- React 18+
+- Tailwind CSS
+- [Motion](https://motion.dev/) (installed automatically via CLI or manually)
+
+If you are already using **shadcn/ui**, you don’t need to create a `lib/utils.ts` file.  
+Otherwise, make sure to install helpers:
+
+```bash
+npm install clsx tailwind-merge
+```
+
+and add `lib/utils.ts`:
+
+```ts
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+
+---
+
+## 🧩 Usage
+
+Example: Add a component via the CLI
+
+```bash
+npx shadcn-extras add kpi-card
+```
+
+Then import it into your project:
+
+```tsx
+import { KpiCard } from '@/components/shadcn-extras/kpi-card';
+
+export default function Example() {
+  return <KpiCard label='Revenue' value='$24.5k' trend='up' delta='+12%' />;
+}
+```
+
+Check the [docs](https://nayanrdeveloper.github.io/shadcn-extras/docs/) for full examples.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!  
+Please read our [Contributing Guide](./CONTRIBUTING.md) to learn how to set up the repo, add components, run lint/format, and submit PRs.
+
+---
+
+## 📜 License
+
+Licensed under the [MIT License](./LICENCE.md).

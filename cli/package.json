@@ -1,12 +1,14 @@
 {
   "name": "shadcn-extras",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "CLI to add shadcn-extras components to your app",
   "bin": {
     "shadcn-extras": "./dist/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE.md"
   ],
   "type": "commonjs",
   "scripts": {
@@ -31,14 +33,22 @@
     "url": "https://github.com/nayanrdeveloper/shadcn-extras.git",
     "directory": "cli"
   },
+  "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/",
+  "bugs": {
+    "url": "https://github.com/nayanrdeveloper/shadcn-extras/issues"
+  },
   "keywords": [
+    "shadcn",
+    "tailwindcss",
+    "motion",
     "animation",
     "components",
-    "motion",
-    "ui",
     "react",
     "cli"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Nayan Radadiya",
   "license": "MIT"
 }
