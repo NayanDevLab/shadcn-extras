@@ -1,78 +1,279 @@
-# Contributing
+# Contributing to Shadcn-Extras
 
-Thanks for your interest in contributing to motion-primitive. We're happy to have you here.
+Thanks for your interest in contributing to **shadcn-extras**! 🎉  
+This library provides reusable **animated UI components** (React + Motion + Tailwind) with copy-paste and CLI install. Contributions of all kinds are welcome—components, docs, fixes, or tooling.
 
-Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull request to see if someone else is working on something similar.
+If you need help, reach out to [@nayan_radadiya6](https://x.com/nayan_radadiya6).
 
-If you need any help, feel free to reach out to [@nayan_radadiya6](https://x.com/nayan_radadiya6).
+---
 
-## About this repository
+## Table of Contents
 
-- We use [npm](https://docs.npmjs.com).
-- For animation [framer](https://www.framer.com/motion)
-- For custom icons [lucid react](https://lucide.dev/guide/)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Local Setup](#local-setup)
+- [Key Commands](#key-commands)
+- [Conventional Commits](#conventional-commits)
+- [Adding a New Component](#adding-a-new-component)
+  - [1) Add the Core Component](#1-add-the-core-component)
+  - [2) Add Docs Pages](#2-add-docs-pages)
+  - [3) Register Examples (for docs previews)](#3-register-examples-for-docs-previews)
+  - [4) Register Component in the Registry (CLI)](#4-register-component-in-the-registry-cli)
+  - [5) Add to Navigation](#5-add-to-navigation)
+  - [6) Verify the Registry Build](#6-verify-the-registry-build)
+  - [7) Test the CLI Install Locally (Optional)](#7-test-the-cli-install-locally-optional)
+- [Code Style & Quality](#code-style--quality)
+- [Pull Requests](#pull-requests)
+- [Releases & Publishing (Maintainers)](#releases--publishing-maintainers)
+- [Requests for New Components](#requests-for-new-components)
 
-## Development
+---
 
-### Fork this repo
+## Project Structure
 
-You can fork this repo by clicking the fork button in the top right corner of this page.
+```
+app/                    # Next.js app (docs site)
+  docs/                 # Docs pages + examples
+components/
+  core/                 # Reusable library components (what users install)
+  ui/                   # Site-only UI (docs scaffolding)
+  website/              # Docs-only components (code blocks, previews, layout)
+public/
+  c/                    # Registry JSON for components (CLI uses this)
+  e/                    # Registry JSON for examples/snippets
+cli/                    # (optional) CLI code if we publish one
+scripts/                # registry build scripts
+lib/                    # shared utils (e.g., cn, shiki helpers)
+```
 
-### Clone on your local machine
+---
+
+## Prerequisites
+
+- **Node.js 18+**
+- **npm** (or pnpm/yarn if you prefer)
+- Basic familiarity with **React**, **Tailwind**, and **Motion**
+
+---
+
+## Local Setup
 
 ```bash
+# 1) Fork the repo on GitHub
+
+# 2) Clone your fork
 git clone https://github.com/nayanrdeveloper/shadcn-extras.git
-```
-
-### Navigate to project directory
-
-```bash
 cd shadcn-extras
-```
 
-### Create a new Branch
+# 3) Create a feature branch
+git checkout -b feat/my-new-branch
 
-```bash
-git checkout -b my-new-branch
-```
-
-### Install dependencies
-
-```bash
+# 4) Install dependencies
 npm install
+
+# 5) Run the docs locally
+npm run dev
+# open http://localhost:3000
 ```
 
-## Commit Convention
+---
 
-Before you create a Pull Request, please check whether your commits comply with
-the commit conventions used in this repository.
+## Key Commands
 
-When you create a commit we kindly ask you to follow the convention
-`category(scope or module): message` in your commit message while using one of
-the following categories:
+```bash
+# run the docs app in dev mode
+npm run dev
 
-- `feat / feature`: all changes that introduce completely new code or new
-  features
-- `fix`: changes that fix a bug (ideally you will additionally reference an
-  issue if present)
-- `refactor`: any code related change that is not a fix nor a feature
-- `docs`: changing existing or creating new documentation (i.e. README, docs for
-  usage of a lib or cli usage)
-- `build`: all changes regarding the build of the software, changes to
-  dependencies or the addition of new dependencies
-- `test`: all changes regarding tests (adding new tests or changing existing
-  ones)
-- `ci`: all changes regarding the configuration of continuous integration (i.e.
-  github actions, ci system)
-- `chore`: all changes to the repository that do not fit into any of the above
-  categories
+# format everything with Prettier + Tailwind class sorting
+npm run format
 
-  e.g. `feat(components): add new prop to the avatar component`
+# check formatting only
+npm run check-format
 
-If you are interested in the detailed specification you can visit
-https://www.conventionalcommits.org/ or check out the
-[Angular Commit Message Guidelines](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines).
+# lint (ESLint + TypeScript)
+npm run lint
+npm run lint:fix
 
-## Requests for new components
+# build docs (Next.js)
+npm run build
 
-If you have a request for a new component, please open a discussion on GitHub. We'll be happy to help you out.
+# build the registry JSON (used by CLI + docs)
+npm run build:registry
+```
+
+---
+
+## Conventional Commits
+
+Use the following format for commit messages:
+
+```
+type(scope): short description
+```
+
+**Types:**
+
+- `feat`: new component or feature
+- `fix`: bug fix
+- `refactor`: code change that doesn’t add features or fix bugs
+- `docs`: documentation changes
+- `build`: dependency or build changes
+- `test`: add/change tests
+- `ci`: CI/Actions configuration
+- `chore`: repo maintenance
+
+Examples:
+
+- `feat(kpi-card): add tone and size props`
+- `fix(accordion): correct collapsed opacity variant`
+- `docs(spinners): add slow blue variant example`
+
+---
+
+## Adding a New Component
+
+### 1) Add the Core Component
+
+Create your component in `components/core/my-component.tsx`.
+
+- Export a **main component** and subcomponents (if needed).
+- Accept `className` and merge with Tailwind via `cn`.
+- Use **TypeScript**, `forwardRef`, and allow animations to be configurable.
+- Keep SRP (Single Responsibility Principle).
+
+### 2) Add Docs Pages
+
+Create under `app/docs/my-component/`:
+
+```
+page.mdx
+my-component-basic.tsx
+my-component-variant.tsx
+```
+
+Use `<ComponentCodePreview />` to show examples.
+
+### 3) Register Examples (for docs previews)
+
+Edit `scripts/registry-examples.ts`:
+
+```ts
+{
+  name: 'my-component-basic',
+  path: path.join(__dirname, '../app/docs/my-component/my-component-basic.tsx'),
+  description: 'Basic usage of MyComponent.',
+  componentName: 'my-component-basic',
+  files: [
+    {
+      name: 'my-component.tsx',
+      path: path.join(__dirname, '../components/core/my-component.tsx'),
+      type: 'registry:ui',
+    },
+  ],
+},
+```
+
+### 4) Register Component in the Registry (CLI)
+
+1. **`scripts/registry-components.ts`**
+
+   ```ts
+   {
+     name: 'my-component',
+     path: path.join(__dirname, '../components/core/my-component.tsx'),
+     dependencies: ['motion'],
+     description: 'Short description for registry.',
+   },
+   ```
+
+2. **`public/c/registry.json`** + per-component JSON in `public/c/` if needed.
+
+```json
+{
+  "name": "my-component",
+  "type": "registry:ui",
+  "title": "My Component",
+  "description": "Short docs description.",
+  "dependencies": ["motion"],
+  "files": [
+    { "path": "components/core/my-component.tsx", "type": "registry:component" }
+  ],
+  "categories": ["ui", "shadcn-extras"]
+}
+```
+
+### 5) Add to Navigation
+
+Update `app/docs/navigation.ts`:
+
+```ts
+{
+  name: 'My Component',
+  href: '/docs/my-component',
+  isNew: true
+},
+```
+
+### 6) Verify the Registry Build
+
+```bash
+npm run build:registry
+```
+
+Commit generated changes.
+
+### 7) Test the CLI Install Locally (Optional)
+
+```bash
+npx shadcn-extras add my-component
+```
+
+---
+
+## Code Style & Quality
+
+- **Prettier** for formatting (`npm run format`)
+- **ESLint** for linting (`npm run lint`)
+- **TypeScript** strict
+- **Accessibility** first (aria attributes)
+- **Props**: accept `className`, expose sensible defaults
+
+---
+
+## Pull Requests
+
+Before opening a PR, ensure:
+
+- [ ] Component in `components/core/`
+- [ ] Docs in `app/docs/<component>/`
+- [ ] Navigation updated
+- [ ] Registry updated (`scripts/registry-*.ts` + `public/c/*.json`)
+- [ ] `npm run format` & `npm run lint` pass
+
+---
+
+## Releases & Publishing (Maintainers)
+
+```bash
+# bump version
+npm version patch|minor|major
+
+# publish (ensure package.json is public)
+npm publish --access public
+```
+
+Docs deploy via GitHub Pages (Actions).
+
+---
+
+## Requests for New Components
+
+Open a **GitHub Discussion** or **Issue** with:
+
+- Short description & use case
+- Screenshot or reference
+- Motion/Tailwind constraints
+
+---
+
+🙌 Thanks for helping make **shadcn-extras** better for everyone!

@@ -2,6 +2,25 @@
   "name": "shadcn-extras",
   "version": "0.1.0",
   "description": "Reusable animated UI components built with Motion + Tailwind CSS. Easy to use, customizable, and production-ready.",
+  "keywords": [
+    "shadcn",
+    "ui",
+    "tailwindcss",
+    "motion",
+    "animated components",
+    "react",
+    "design system"
+  ],
+  "author": "Nayan Radadiya",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nayanrdeveloper/shadcn-extras"
+  },
+  "bugs": {
+    "url": "https://github.com/nayanrdeveloper/shadcn-extras/issues"
+  },
+  "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
