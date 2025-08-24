@@ -42,6 +42,7 @@ const TabsTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger> & {
     classNameIndicator?: string;
   }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 >(({ className, children, classNameIndicator, ...props }, ref) => {
   const triggerRef = React.useRef<HTMLButtonElement>(null);
   const [isActive, setIsActive] = React.useState(false);
