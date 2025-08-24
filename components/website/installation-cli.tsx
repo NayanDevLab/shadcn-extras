@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { MPLogo } from './icons/shadcn-extras-logo';
+import { SELogo } from './icons/shadcn-extras-logo';
 import { ShadcnLogo } from './icons/shadcn-logo';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -23,7 +23,7 @@ export function InstallationCli({ value, className }: InstallationCliProps) {
   const commands: Command[] = [
     {
       label: 'shadcn-extras',
-      icon: <MPLogo className='size-4' />,
+      icon: <SELogo className='size-4' />,
       code: `npx shadcn-extras@latest add ${value}`,
     },
     {

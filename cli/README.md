@@ -53,7 +53,7 @@ The CLI automatically detects which package manager you're using based on lock f
 
 ## Available Components
 
-Motion Primitives offers a variety of beautiful and performant animated components, including:
+Shadcn Extras offers a variety of beautiful and performant animated components, including:
 
 - **Animated UI Elements**: Accordion, Dialog, Text Effects, Carousels
 - **Interactive Animations**: Magnetic elements, Spotlights, Tilt effects

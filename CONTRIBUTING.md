@@ -4,7 +4,7 @@ Thanks for your interest in contributing to motion-primitive. We're happy to hav
 
 Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull request to see if someone else is working on something similar.
 
-If you need any help, feel free to reach out to [@ibelick](https://x.com/Ibelick).
+If you need any help, feel free to reach out to [@nayan_radadiya6](https://x.com/nayan_radadiya6).
 
 ## About this repository
 

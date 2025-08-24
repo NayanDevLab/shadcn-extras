@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import * as React from 'react';
 import type { SVGProps } from 'react';
 
-export function MPLogo(props: SVGProps<SVGSVGElement>) {
+export function SELogo(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       role='img'

@@ -5,9 +5,11 @@ import GitHubIcon from '@/components/website/icons/github';
 import ThemeSwitch from '@/components/website/theme-switch';
 import { ChevronRight } from 'lucide-react';
 import { CardExampleLanding } from '@/components/website/card-example-landing';
-import { AnimatedGroupPreset } from '@/app/docs/animated-group/animated-group-preset';
-import { SegmentedControl } from '@/app/docs/animated-background/segmented-control';
-import { MPLogo } from '@/components/website/icons/shadcn-extras-logo';
+import { SELogo } from '@/components/website/icons/shadcn-extras-logo';
+import LinkedinIcon from '@/components/website/icons/LinkedinIcon';
+import { LbFirst } from './docs/leaderboard-card/lb-first';
+import { CrsBasic } from './docs/concentric-rings-spinner/crs-basic';
+import { KpiNegative } from './docs/kpi-card/kpi-negative';
 
 function Button({
   children,
@@ -37,7 +39,7 @@ function Header() {
     <header className='relative top-0 z-10 bg-white px-6 py-5 dark:border-white/10 dark:bg-zinc-950 lg:z-10 lg:flex lg:h-16 lg:items-center lg:px-8 lg:py-0'>
       <div className='mx-auto flex w-full items-center justify-between md:max-w-7xl'>
         <a href='/' className='relative flex items-center space-x-2'>
-          <MPLogo className='h-6 w-auto' />
+          <SELogo className='h-6 w-auto' />
           <div className='text-sm font-medium text-zinc-950 dark:text-white'>
             shadcn-extras
           </div>
@@ -58,7 +60,15 @@ function Header() {
           <div className='hidden h-8 w-[0.5px] bg-zinc-200 dark:bg-zinc-800 sm:flex' />
           <nav className='flex items-center space-x-2'>
             <a
-              href='https://twitter.com/Ibelick'
+              href='https://www.linkedin.com/in/nayanradadiya/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex h-9 w-9 items-center justify-center'
+            >
+              <LinkedinIcon className='h-4 w-4 fill-zinc-950 dark:fill-white' />
+            </a>
+            <a
+              href='https://x.com/nayan_radadiya6'
               target='_blank'
               rel='noopener noreferrer'
               className='inline-flex h-9 w-9 items-center justify-center'
@@ -89,11 +99,11 @@ export default function Motion() {
         <section className='flex h-full flex-col items-center justify-center pt-20'>
           <div className='flex w-full max-w-lg flex-col items-center justify-center text-center'>
             <h1 className='relative mb-4 text-4xl font-medium text-zinc-950 dark:text-zinc-50'>
-              UI kit to make beautiful, animated interfaces, faster.
+              Animated UI components for modern web apps.
             </h1>
             <p className='text-center text-zinc-600 dark:text-zinc-200'>
-              Beautifully designed motions components. Easy copy-paste.
-              Customizable. Open Source. Built for engineers and designers.
+              Reusable motion-powered components with Tailwind CSS. Easy to
+              install. Fully customizable. Open source.
             </p>
           </div>
           <div className='flex items-center space-x-4 py-6'>
@@ -120,12 +130,17 @@ export default function Motion() {
         </section>
         <section className='mx-auto max-w-3xl py-32'>
           <CardExampleLanding hasReTrigger>
-            <AnimatedGroupPreset />
+            <CrsBasic />
+          </CardExampleLanding>
+        </section>
+        <section className='mx-auto max-w-3xl py-32'>
+          <CardExampleLanding hasReTrigger>
+            <KpiNegative />
           </CardExampleLanding>
         </section>
         <section className='mx-auto max-w-3xl py-32'>
           <CardExampleLanding>
-            <SegmentedControl />
+            <LbFirst />
           </CardExampleLanding>
         </section>
         <div className='text-center text-sm text-zinc-500 dark:text-zinc-400'>

@@ -25,22 +25,8 @@ export const NAVIGATION: NavigationGroup[] = [
     ],
   },
   {
-    name: 'Core Components',
+    name: 'Dashboard Components',
     children: [
-      {
-        name: 'Accordion',
-        href: '/docs/accordion',
-      },
-      {
-        name: 'Animated Background',
-        href: '/docs/animated-background',
-        isNew: true,
-      },
-      {
-        name: 'Animated Group',
-        href: '/docs/animated-group',
-        isUpdated: true,
-      },
       {
         name: 'KPI Card',
         href: '/docs/kpi-card',

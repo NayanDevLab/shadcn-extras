@@ -1,6 +1,7 @@
 {
   "name": "shadcn-extras",
   "version": "0.1.0",
+  "description": "Reusable animated UI components built with Motion + Tailwind CSS. Easy to use, customizable, and production-ready.",
   "private": true,
   "scripts": {
     "dev": "next dev",

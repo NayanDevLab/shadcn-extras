@@ -12,9 +12,9 @@ const packageJson = JSON.parse(
   readFileSync(join(__dirname, '..', 'package.json'), 'utf8')
 );
 
-const MOTION_PRIMITIVES_REGISTRY_URL =
+const SHADCN_EXTRAS_REGISTRY_URL =
   'https://raw.githubusercontent.com/nayanrdeveloper/shadcn-extras/dev/public/c/registry.json';
-const MOTION_PRIMITIVES_BASE_URL =
+const SHADCN_EXTRAS_BASE_URL =
   'https://raw.githubusercontent.com/nayanrdeveloper/shadcn-extras/dev/';
 const TARGET_DIR = 'components/shadcn-extras';
 
@@ -127,10 +127,10 @@ program
 
     try {
       // Fetch the shadcn-extras registry
-      const motionPrimitivesRegistry = await fetchRegistry(
-        MOTION_PRIMITIVES_REGISTRY_URL
+      const shacdcnExtrasRegistry = await fetchRegistry(
+        SHADCN_EXTRAS_REGISTRY_URL
       );
-      const componentEntry = motionPrimitivesRegistry.items.find(
+      const componentEntry = shacdcnExtrasRegistry.items.find(
         (item) => item.name === component
       );
       if (!componentEntry) {
@@ -153,7 +153,7 @@ program
       for (const file of componentEntry.files) {
         const content =
           file.content ||
-          (await fetchFile(`${MOTION_PRIMITIVES_BASE_URL}${file.path}`));
+          (await fetchFile(`${SHADCN_EXTRAS_BASE_URL}${file.path}`));
         const relPath = normalize(file.path)
         allFiles.push({ path: relPath, content })
       }
@@ -211,18 +211,18 @@ program
 
     try {
       // Fetch the shadcn-extras registry
-      const motionPrimitivesRegistry = await fetchRegistry(
-        MOTION_PRIMITIVES_REGISTRY_URL
+      const shacdcnExtrasRegistry = await fetchRegistry(
+        SHADCN_EXTRAS_REGISTRY_URL
       );
 
       spinner.succeed(
-        `Found ${motionPrimitivesRegistry.items.length} components`
+        `Found ${shacdcnExtrasRegistry.items.length} components`
       );
 
       console.log('\nAvailable components:');
       console.log('====================\n');
 
-      motionPrimitivesRegistry.items.forEach((item) => {
+      shacdcnExtrasRegistry.items.forEach((item) => {
         console.log(`${item.name} - ${item.title}`);
         if (item.description) {
           console.log(`  ${item.description}`);
