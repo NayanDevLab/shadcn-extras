@@ -51,6 +51,12 @@ export const NAVIGATION: NavigationGroup[] = [
   href: '/docs/leaderboard-card',
   isNew: true,
 },
+{
+  name: 'Radial Dots Spinner',
+  href: '/docs/radial-dots-spinner',
+  isNew: true,
+},
+
 
 
     ],

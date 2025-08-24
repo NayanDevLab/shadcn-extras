@@ -107,6 +107,25 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "radial-dots-spinner",
+      "type": "registry:ui",
+      "title": "Radial Dots Spinner",
+      "description": "Animated dotted spinner (SVG). Customizable spokes, rings, size and speed.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\radial-dots-spinner.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }

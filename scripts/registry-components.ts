@@ -60,6 +60,15 @@ export const components: ComponentDefinition[] = [
   dependencies: ['lucide-react'],
   description: 'Profile score card with avatar, crown/rank badge, amount pill and progress bar.',
 },
+{
+  name: 'radial-dots-spinner',
+  path: path.join(__dirname, '../components/core/radial-dots-spinner.tsx'),
+  registryDependencies: [],
+  dependencies: [],
+  description:
+    'Animated dotted spinner (SVG). Customizable spokes, rings, size and speed.',
+},
+
 
 
 ];
