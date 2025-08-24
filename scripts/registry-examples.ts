@@ -234,5 +234,46 @@ export const examples: ExampleDefinition[] = [
   ],
 },
 
+{
+  name: 'rds-basic',
+  path: path.join(__dirname, '../app/docs/radial-dots-spinner/rds-basic.tsx'),
+  description: 'Basic spinner on dark background.',
+  componentName: 'rds-basic',
+  files: [
+    {
+      name: 'radial-dots-spinner.tsx',
+      path: path.join(__dirname, '../components/core/radial-dots-spinner.tsx'),
+      type: 'registry:ui',
+    },
+  ],
+},
+{
+  name: 'rds-slow-blue',
+  path: path.join(__dirname, '../app/docs/radial-dots-spinner/rds-slow-blue.tsx'),
+  description: 'Slow blue variant.',
+  componentName: 'rds-slow-blue',
+  files: [
+    {
+      name: 'radial-dots-spinner.tsx',
+      path: path.join(__dirname, '../components/core/radial-dots-spinner.tsx'),
+      type: 'registry:ui',
+    },
+  ],
+},
+{
+  name: 'rds-compact',
+  path: path.join(__dirname, '../app/docs/radial-dots-spinner/rds-compact.tsx'),
+  description: 'Compact density with one center ring.',
+  componentName: 'rds-compact',
+  files: [
+    {
+      name: 'radial-dots-spinner.tsx',
+      path: path.join(__dirname, '../components/core/radial-dots-spinner.tsx'),
+      type: 'registry:ui',
+    },
+  ],
+},
+
+
 
 ];

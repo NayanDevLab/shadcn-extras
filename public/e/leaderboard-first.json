@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "leaderboard-first.tsx",
-      "content": "import { LeaderboardCard } from '@/components/core/leaderboard-card'\r\n\r\nexport function LbFirst() {\r\n  return (\r\n    <div className=\"max-w-sm\">\r\n      <LeaderboardCard\r\n        name=\"Alex Brooks\"\r\n        amount={8034}\r\n        avatarSrc=\"/avatars/alex.jpg\"\r\n        rank={1}\r\n        score={90}\r\n        tone=\"emerald\"\r\n        size=\"md\"\r\n        avatarRingClassName=\"outline outline-4 outline-pink-500 ring-4 ring-white dark:ring-zinc-900\"\r\n      />\r\n    </div>\r\n  )\r\n}\r\n",
+      "content": "import { LeaderboardCard } from '@/components/core/leaderboard-card'\r\n\r\nexport function LbFirst() {\r\n  return (\r\n    <div className=\"max-w-sm\">\r\n      <LeaderboardCard\r\n        name=\"Alex Brooks\"\r\n        amount={8034}\r\n        avatarSrc=\"/avatars/man.png\"\r\n        rank={1}\r\n        score={90}\r\n        tone=\"emerald\"\r\n        size=\"md\"\r\n        avatarRingClassName=\"outline outline-4 outline-pink-500 ring-4 ring-white dark:ring-zinc-900\"\r\n      />\r\n    </div>\r\n  )\r\n}\r\n",
       "type": "registry:component"
     },
     {
