@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "leaderboard-first.tsx",
-      "content": "import { LeaderboardCard } from '@/components/core/leaderboard-card';\n\nexport function LbFirst() {\n  return (\n    <div className='max-w-sm'>\n      <LeaderboardCard\n        name='Alex Brooks'\n        amount={8034}\n        avatarSrc='/avatars/man.png'\n        rank={1}\n        score={90}\n        tone='emerald'\n        size='md'\n        avatarRingClassName='outline outline-4 outline-pink-500 ring-4 ring-white dark:ring-zinc-900'\n      />\n    </div>\n  );\n}\n",
+      "content": "import { LeaderboardCard } from '@/components/core/leaderboard-card';\n\nexport function LbFirst() {\n  return (\n    <div className='max-w-sm'>\n      <LeaderboardCard\n        name='Alex Brooks'\n        amount={8034}\n        avatarSrc='https://raw.githubusercontent.com/nayanrdeveloper/shadcn-extras/refs/heads/dev/public/avatars/man.png'\n        rank={1}\n        score={90}\n        tone='emerald'\n        size='md'\n        avatarRingClassName='outline outline-4 outline-pink-500 ring-4 ring-white dark:ring-zinc-900'\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     },
     {

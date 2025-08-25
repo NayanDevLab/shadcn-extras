@@ -26,7 +26,9 @@ export const NAVIGATION: NavigationGroup[] = [
   },
   {
     name: 'Core Components',
-    children: [{ name: 'Testimonial', href: '/docs/testimonial', isNew: true }],
+    children: [
+      { name: 'Testimonial', href: '/docs/testimonial', isUpdated: true },
+    ],
   },
   {
     name: 'Dashboard Components',
@@ -34,7 +36,6 @@ export const NAVIGATION: NavigationGroup[] = [
       {
         name: 'KPI Card',
         href: '/docs/kpi-card',
-        isNew: true,
       },
       {
         name: 'Leaderboard Card',
@@ -49,18 +50,28 @@ export const NAVIGATION: NavigationGroup[] = [
       {
         name: 'Radial Dots',
         href: '/docs/radial-dots-spinner',
-        isNew: true,
       },
       {
         name: 'Concentric Rings',
         href: '/docs/concentric-rings-spinner',
-        isNew: true,
       },
       {
         name: 'Sequential Pulse',
         href: '/docs/spinner-sequential-pulse',
         isNew: true,
       },
+    ],
+  },
+  {
+    name: 'Blogs',
+    children: [
+      {
+        name: 'Blog Card One',
+        href: '/docs/blog-card-one',
+      },
+      { name: 'Blog Card Two', href: '/docs/blog-card-two' },
+      { name: 'Blog Card Three', href: '/docs/blog-card-three', isNew: true },
+      { name: 'Blog Card Four', href: '/docs/blog-card-four', isNew: true },
     ],
   },
 ];

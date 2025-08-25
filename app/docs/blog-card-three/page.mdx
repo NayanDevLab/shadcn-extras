@@ -1,0 +1,67 @@
+export const metadata = {
+  title: 'Blog Card Three – Shadcn-Extras',
+  description:
+    'Minimal blog card with small rounded thumbnail and meta. Variants: thumbnail left or right.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { BlogCardThreeRight } from './blog-card-three-right';
+import { BlogCardThreeLeft } from './blog-card-three-left';
+
+# Blog Card Three
+
+A minimal card with **title**, **small rounded thumbnail**, and **author + read time**. Perfect for compact lists.
+
+## Examples
+
+### Thumbnail on the right
+
+<ComponentCodePreview
+  component={<BlogCardThreeRight />}
+  filePath='app/docs/blog-card-three/blog-card-three-right.tsx'
+/>
+
+### Thumbnail on the left
+
+<ComponentCodePreview
+  component={<BlogCardThreeLeft />}
+  filePath='app/docs/blog-card-three/blog-card-three-left.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='blog-card-three' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps className="steps space-y-6">
+      <Step className="step">
+        Copy the component into <code>components/core/blog-card-three.tsx</code>.
+      </Step>
+      <CodeBlock filePath="components/core/blog-card-three.tsx" />
+      <Step className="step">
+        Use with your <code>title</code>, <code>thumb</code>, and <code>meta</code>.
+        Choose <code>variant</code> or use the <code>MinimalBlogCardRight/Left</code> presets.
+      </Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop                    | Type                                                                           | Default         | Description                                     |
+| ----------------------- | ------------------------------------------------------------------------------ | --------------- | ----------------------------------------------- |
+| href                    | `string`                                                                       | —               | URL for whole card link.                        |
+| title                   | `string`                                                                       | —               | Card title; used for `aria-label` when linked.  |
+| thumb                   | `{ src: string; alt?: string }`                                                | —               | Small square thumbnail.                         |
+| meta                    | `{ author?: {name:string; avatar?:string; href?:string}; readLabel?: string }` | —               | Author + reading time.                          |
+| onLike / onBookmark     | `() => void`                                                                   | —               | Action handlers.                                |
+| variant                 | `'thumb-right' \| 'thumb-left'`                                                | `'thumb-right'` | Layout of thumbnail.                            |
+| className / \*ClassName | `string`                                                                       | —               | Slot overrides for title, thumb, meta, actions. |
