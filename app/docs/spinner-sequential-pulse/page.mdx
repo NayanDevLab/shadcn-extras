@@ -1,0 +1,67 @@
+export const metadata = {
+  title: 'Spinner – Sequential Pulse - Shadcn-Extras',
+  description:
+    'Loading indicator with sequentially pulsing dots around a radial track, built with Motion + Tailwind.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { SpinnerSequentialPulseBasic } from './spinner-sequential-pulse-basic';
+import { SpinnerSequentialPulseVariants } from './spinner-sequential-pulse-variants';
+
+# Spinner – Sequential Pulse
+
+Communicate background activity with an animated, accessible loader.
+
+## Basic
+
+<ComponentCodePreview
+  classNameComponentContainer='min-h-0 py-24 lg:px-32 px-8 bg-black'
+  component={<SpinnerSequentialPulseBasic />}
+  filePath='app/docs/spinner-sequential-pulse/spinner-sequential-pulse-basic.tsx'
+/>
+
+## Variants
+
+<ComponentCodePreview
+  classNameComponentContainer='min-h-0 py-24 lg:px-32 px-8 bg-black'
+  component={<SpinnerSequentialPulseVariants />}
+  filePath='app/docs/spinner-sequential-pulse/spinner-sequential-pulse-variants.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='spinner-sequential-pulse' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Copy and paste the following code into your project.</Step>
+      <CodeBlock filePath="components/core/spinner-sequential-pulse.tsx" />
+      <Step>Update the import paths to match your project setup.</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Component API
+
+### SpinnerSequentialPulse
+
+| Prop       | Type    | Default | Description                         |
+| :--------- | :------ | :------ | :---------------------------------- |
+| size       | number  | 120     | Outer square size (px)              |
+| count      | number  | 12      | Number of dots                      |
+| dotSize    | number  | 8       | Dot diameter (px)                   |
+| color      | string  | '#fff'  | Dot color                           |
+| showTrack  | boolean | true    | Show faint outer ring               |
+| trackColor | string  | rgba    | Track color                         |
+| trackWidth | number  | 2       | Track thickness (px)                |
+| showSpokes | boolean | true    | Show faint radial spokes            |
+| speed      | number  | 1.2     | Full pulse cycle duration (seconds) |
+| className  | string  |         | Tailwind classes on outer container |

@@ -52,6 +52,11 @@ export const NAVIGATION: NavigationGroup[] = [
         href: '/docs/concentric-rings-spinner',
         isNew: true,
       },
+      {
+        name: 'Sequential Pulse',
+        href: '/docs/spinner-sequential-pulse',
+        isNew: true,
+      },
     ],
   },
 ];
