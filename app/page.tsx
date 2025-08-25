@@ -51,7 +51,7 @@ function Header() {
         <div className='flex items-center space-x-6'>
           <nav className='hidden items-center space-x-6 sm:flex'>
             <Link
-              href='/docs/accordion'
+              href='/docs/kpi-card'
               className='text-sm font-medium text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
             >
               Components
