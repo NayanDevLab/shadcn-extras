@@ -1,0 +1,65 @@
+export const metadata = {
+  title: 'Testimonial – Shadcn-Extras',
+  description:
+    'Animated testimonial carousel. Pass plain data or custom nodes. Autoplay, arrows, dots, keyboard, and slot-style overrides.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { TestimonialBasic } from './testimonial-basic';
+import { TestimonialCustom } from './testimonial-custom';
+
+# Testimonial
+
+An animated, accessible testimonial slider.  
+Supports **plain data** (`avatar/name/role/quote`) or **custom render** per slide.
+
+## Basic
+
+<ComponentCodePreview
+  component={<TestimonialBasic />}
+  filePath='app/docs/testimonial/testimonial-basic.tsx'
+/>
+
+## Custom slide
+
+<ComponentCodePreview
+  component={<TestimonialCustom />}
+  filePath='app/docs/testimonial/testimonial-custom.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue='cli'>
+  <TabsList>
+    <TabsTrigger value='cli'>CLI</TabsTrigger>
+    <TabsTrigger value='manual'>Manual</TabsTrigger>
+  </TabsList>
+  <TabsContent value='cli'>
+    <InstallationCli value='testimonial' />
+  </TabsContent>
+  <TabsContent value='manual'>
+    <Steps>
+      <Step>
+        Copy the component into <code>components/core/testimonial.tsx</code>.
+      </Step>
+      <CodeBlock filePath='components/core/testimonial.tsx' />
+      <Step>Use with your data or custom slides.</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop                    | Type                  | Default | Description                        |
+| ----------------------- | --------------------- | ------- | ---------------------------------- |
+| items                   | `TestimonialData[]`   | —       | Data or custom renderer per slide. |
+| variant                 | `'card' \| 'minimal'` | `card`  | Default renderer look.             |
+| loop                    | boolean               | `true`  | Wrap around on ends.               |
+| autoplay                | boolean               | `false` | Enable autoplay.                   |
+| autoplayMs              | number                | `5000`  | Interval for autoplay.             |
+| showArrows              | boolean               | `true`  | Show prev/next buttons.            |
+| showDots                | boolean               | `true`  | Show pagination dots.              |
+| allowKeyboard           | boolean               | `true`  | Enable ←/→ navigation.             |
+| initialIndex            | number                | `0`     | Start slide.                       |
+| onIndexChange           | `(i:number)=>void`    | —       | Notify index changes.              |
+| className / \*ClassName | string                | —       | Slot overrides for styling.        |

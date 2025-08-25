@@ -230,4 +230,36 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+
+  {
+    name: 'testimonial-basic',
+    path: path.join(__dirname, '../app/docs/testimonial/testimonial-basic.tsx'),
+    description:
+      'Basic implementation of the testimonial carousel with avatar, name, role, and quote.',
+    componentName: 'testimonial-basic',
+    files: [
+      {
+        name: 'testimonial.tsx',
+        path: path.join(__dirname, '../components/core/testimonial.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'testimonial-custom',
+    path: path.join(
+      __dirname,
+      '../app/docs/testimonial/testimonial-custom.tsx'
+    ),
+    description:
+      'Custom slide example showing how developers can override rendering with their own nodes.',
+    componentName: 'testimonial-custom',
+    files: [
+      {
+        name: 'testimonial.tsx',
+        path: path.join(__dirname, '../components/core/testimonial.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
