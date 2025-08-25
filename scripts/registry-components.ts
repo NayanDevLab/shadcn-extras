@@ -67,4 +67,12 @@ export const components: ComponentDefinition[] = [
     description:
       'A sequential pulsing spinner with animated dots arranged in a circle.',
   },
+  {
+    name: 'testimonial',
+    path: path.join(__dirname, '../components/core/testimonial.tsx'),
+    description:
+      'Animated testimonial carousel with data or custom node slides. Autoplay, arrows, dots, keyboard.',
+    registryDependencies: [],
+    dependencies: ['motion', 'lucide-react'],
+  },
 ];

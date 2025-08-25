@@ -103,6 +103,28 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "testimonial",
+      "type": "registry:ui",
+      "title": "Testimonial",
+      "description": "Animated testimonial carousel with data or custom node slides. Autoplay, arrows, dots, keyboard.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\testimonial.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }

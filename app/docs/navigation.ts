@@ -25,6 +25,10 @@ export const NAVIGATION: NavigationGroup[] = [
     ],
   },
   {
+    name: 'Core Components',
+    children: [{ name: 'Testimonial', href: '/docs/testimonial', isNew: true }],
+  },
+  {
     name: 'Dashboard Components',
     children: [
       {
