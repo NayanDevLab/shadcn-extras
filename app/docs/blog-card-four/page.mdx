@@ -1,0 +1,63 @@
+export const metadata = {
+  title: 'Blog Card Four – Shadcn-Extras',
+  description:
+    'Top rounded cover image with an attached white info panel. Compact and clean.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { BlogCardFourBasic } from './blog-card-four-basic';
+import { BlogCardFourMuted } from './blog-card-four-muted';
+
+# Blog Card Four
+
+Cover image on top, with a white panel overlapping the bottom edge. Great for article teasers.
+
+## Examples
+
+### Default (attached panel)
+
+<ComponentCodePreview
+  component={<BlogCardFourBasic />}
+  filePath='app/docs/blog-card-four/blog-card-four-basic.tsx'
+/>
+
+### Flush layout
+
+<ComponentCodePreview
+  component={<BlogCardFourMuted />}
+  filePath='app/docs/blog-card-four/blog-card-four-muted.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='blog-card-four' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Copy the component into <code>components/core/blog-card-four.tsx</code>.</Step>
+      <CodeBlock filePath="components/core/blog-card-four.tsx" />
+      <Step>Use with your own <code>image</code>, <code>title</code>, <code>excerpt</code>, and <code>author</code>.</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop                | Type                                               | Default      | Description                                          |
+| ------------------- | -------------------------------------------------- | ------------ | ---------------------------------------------------- |
+| href                | `string`                                           | —            | Optional link for the whole card.                    |
+| image               | `{ src: string; alt?: string }`                    | —            | Cover image (top).                                   |
+| title               | `string`                                           | —            | Title text.                                          |
+| excerpt             | `string`                                           | —            | Optional description.                                |
+| author              | `{ name: string; avatar?: string; href?: string }` | —            | Author block in footer.                              |
+| dateISO / dateLabel | `string`                                           | —            | Formatted date display & machine date.               |
+| variant             | `'attached' \| 'flush'`                            | `'attached'` | Whether the panel overlaps the image.                |
+| \*ClassName props   | `string`                                           | —            | Slot overrides for image/panel/title/excerpt/footer. |

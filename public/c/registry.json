@@ -125,6 +125,88 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "blog-card-one",
+      "type": "registry:ui",
+      "title": "Blog Card One",
+      "description": "Blog/article card with image, category chip, actions, and author meta. Variants: image-left, image-top.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\blog-card-one.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "blog-card-two",
+      "type": "registry:ui",
+      "title": "Blog Card Two",
+      "description": "Full-bleed image blog card with gradient overlay, pinned meta and actions.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\blog-card-two.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "blog-card-three",
+      "type": "registry:ui",
+      "title": "Blog Card Three",
+      "description": "Minimal blog card with small rounded thumbnail and meta. Variants: thumbnail left or right.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\blog-card-three.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "blog-card-four",
+      "type": "registry:ui",
+      "title": "Blog Card Four",
+      "description": "Top rounded cover image with an attached white info panel. Variants: attached or flush.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\blog-card-four.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }

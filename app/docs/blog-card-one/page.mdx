@@ -1,0 +1,70 @@
+export const metadata = {
+  title: 'Blog Card One – Shadcn-Extras',
+  description:
+    'A clean, accessible blog/article card with image, category, actions, and author meta. Two layouts: image-left and image-top.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { BlogCardOneBasic } from './blog-card-one-basic';
+import { BlogCardOneCompact } from './blog-card-one-compact';
+
+# Blog Card One
+
+A developer‑friendly blog/article card. Accessible and customizable with slot classNames. Includes **Modern** (image left) and **Compact** (image on top) layouts.
+
+## Examples
+
+### Modern (image left)
+
+<ComponentCodePreview
+  component={<BlogCardOneBasic />}
+  filePath='app/docs/blog-card-one/blog-card-one-basic.tsx'
+/>
+
+### Compact (image top)
+
+<ComponentCodePreview
+  component={<BlogCardOneCompact />}
+  filePath='app/docs/blog-card-one/blog-card-one-compact.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='blog-card-one' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps className="steps space-y-6">
+      <Step className="step">
+        Copy the component into <code>components/core/blog-card-one.tsx</code>.
+      </Step>
+      <CodeBlock filePath="components/core/blog-card-one.tsx" />
+      <Step className="step">Use with your data and customize via slot classNames.</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop                    | Type                                          | Default        | Description                                     |
+| ----------------------- | --------------------------------------------- | -------------- | ----------------------------------------------- |
+| href                    | `string`                                      | —              | URL for the whole card (link wrapper).          |
+| category                | `{label:string; href?:string}`                | —              | Category/tag chip (optional link).              |
+| title                   | `string`                                      | —              | Article title (also used for `aria-label`).     |
+| excerpt                 | `string`                                      | —              | Short summary, truncated to 2 lines by default. |
+| image                   | `{src:string; alt?:string}`                   | —              | Cover image; empty `alt` makes it decorative.   |
+| author                  | `{name:string; avatar?:string; href?:string}` | —              | Author meta; name can be a link.                |
+| dateISO                 | `string`                                      | —              | Machine‑readable date for `<time dateTime>`.    |
+| dateLabel               | `string`                                      | —              | Human‑readable date text.                       |
+| showActions             | `boolean`                                     | `true`         | Show bookmark and “more” buttons.               |
+| onBookmark              | `() => void`                                  | —              | Click handler for bookmark.                     |
+| onMenu                  | `(e) => void`                                 | —              | Click handler for kebab menu.                   |
+| variant                 | `'image-left' \| 'image-top'`                 | `'image-left'` | Layout.                                         |
+| className / \*ClassName | `string`                                      | —              | Slot overrides: image/body/title/excerpt/tag.   |

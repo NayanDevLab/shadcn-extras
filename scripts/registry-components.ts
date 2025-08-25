@@ -75,4 +75,36 @@ export const components: ComponentDefinition[] = [
     registryDependencies: [],
     dependencies: ['motion', 'lucide-react'],
   },
+  {
+    name: 'blog-card-one',
+    path: path.join(__dirname, '../components/core/blog-card-one.tsx'),
+    description:
+      'Blog/article card with image, category chip, actions, and author meta. Variants: image-left, image-top.',
+    registryDependencies: [],
+    dependencies: [],
+  },
+  {
+    name: 'blog-card-two',
+    path: path.join(__dirname, '../components/core/blog-card-two.tsx'),
+    description:
+      'Full-bleed image blog card with gradient overlay, pinned meta and actions.',
+    registryDependencies: [],
+    dependencies: ['lucide-react'],
+  },
+  {
+    name: 'blog-card-three',
+    path: path.join(__dirname, '../components/core/blog-card-three.tsx'),
+    description:
+      'Minimal blog card with small rounded thumbnail and meta. Variants: thumbnail left or right.',
+    registryDependencies: [],
+    dependencies: ['lucide-react'],
+  },
+  {
+    name: 'blog-card-four',
+    path: path.join(__dirname, '../components/core/blog-card-four.tsx'),
+    description:
+      'Top rounded cover image with an attached white info panel. Variants: attached or flush.',
+    registryDependencies: [],
+    dependencies: ['lucide-react'],
+  },
 ];

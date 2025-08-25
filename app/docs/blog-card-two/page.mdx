@@ -1,0 +1,69 @@
+export const metadata = {
+  title: 'Blog Card Two – Shadcn-Extras',
+  description:
+    'Full-bleed cover image blog card with gradient overlay, pinned meta and actions.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { BlogCardTwoBasic } from './blog-card-two-basic';
+import { BlogCardTwoContrast } from './blog-card-two-contrast';
+
+# Blog Card Two
+
+A full‑bleed image card with a soft gradient overlay. Title + meta pinned to the bottom; action buttons on the right.
+
+## Examples
+
+### Default (bottom gradient)
+
+<ComponentCodePreview
+  component={<BlogCardTwoBasic />}
+  filePath='app/docs/blog-card-two/blog-card-two-basic.tsx'
+/>
+
+### Center fade overlay
+
+<ComponentCodePreview
+  component={<BlogCardTwoContrast />}
+  filePath='app/docs/blog-card-two/blog-card-two-contrast.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='blog-card-two' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps className="steps space-y-6">
+      <Step className="step">
+        Copy the component into <code>components/core/blog-card-two.tsx</code>.
+      </Step>
+      <CodeBlock filePath="components/core/blog-card-two.tsx" />
+      <Step className="step">
+        Use with your image, title and meta. Customize the overlay using the <code>variant</code> or <code>overlayClassName</code> props.
+      </Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop                                             | Type                                                               | Default             | Description                                             |
+| ------------------------------------------------ | ------------------------------------------------------------------ | ------------------- | ------------------------------------------------------- |
+| href                                             | `string`                                                           | —                   | Link for the whole card.                                |
+| image                                            | `{ src: string; alt?: string }`                                    | —                   | Cover image.                                            |
+| title                                            | `string`                                                           | —                   | Card title (used for `aria-label` when `href` present). |
+| meta                                             | `{ category?: string; categoryHref?: string; timeLabel?: string }` | —                   | Bottom meta row.                                        |
+| onLike                                           | `() => void`                                                       | —                   | Like click handler.                                     |
+| onBookmark                                       | `() => void`                                                       | —                   | Bookmark click handler.                                 |
+| variant                                          | `'bottom-gradient' \| 'center-fade'`                               | `'bottom-gradient'` | Overlay style.                                          |
+| rounded                                          | `string`                                                           | `'rounded-2xl'`     | Tailwind radius class on the card.                      |
+| overlayClassName                                 | `string`                                                           | —                   | Extra classes on overlay layer.                         |
+| titleClassName / metaClassName / actionClassName | `string`                                                           | —                   | Slot overrides.                                         |

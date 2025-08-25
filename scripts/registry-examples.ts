@@ -262,4 +262,133 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'blog-card-one-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/blog-card-one/blog-card-one-basic.tsx'
+    ),
+    description:
+      'Modern layout with image on the left, actions, and author meta.',
+    componentName: 'blog-card-one-basic',
+    files: [
+      {
+        name: 'blog-card-one.tsx',
+        path: path.join(__dirname, '../components/core/blog-card-one.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'blog-card-one-compact',
+    path: path.join(
+      __dirname,
+      '../app/docs/blog-card-one/blog-card-one-compact.tsx'
+    ),
+    description: 'Compact layout with the image on top; great for grids.',
+    componentName: 'blog-card-one-compact',
+    files: [
+      {
+        name: 'blog-card-one.tsx',
+        path: path.join(__dirname, '../components/core/blog-card-one.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'blog-card-two-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/blog-card-two/blog-card-two-basic.tsx'
+    ),
+    description: 'Default bottom gradient overlay.',
+    componentName: 'blog-card-two-basic',
+    files: [
+      {
+        name: 'blog-card-two.tsx',
+        path: path.join(__dirname, '../components/core/blog-card-two.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'blog-card-two-contrast',
+    path: path.join(
+      __dirname,
+      '../app/docs/blog-card-two/blog-card-two-contrast.tsx'
+    ),
+    description: 'Center fade overlay variant with custom gradient.',
+    componentName: 'blog-card-two-contrast',
+    files: [
+      {
+        name: 'blog-card-two.tsx',
+        path: path.join(__dirname, '../components/core/blog-card-two.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'blog-card-three-right',
+    path: path.join(
+      __dirname,
+      '../app/docs/blog-card-three/blog-card-three-right.tsx'
+    ),
+    description: 'Thumbnail on the right (default).',
+    componentName: 'blog-card-three-right',
+    files: [
+      {
+        name: 'blog-card-three.tsx',
+        path: path.join(__dirname, '../components/core/blog-card-three.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'blog-card-three-left',
+    path: path.join(
+      __dirname,
+      '../app/docs/blog-card-three/blog-card-three-left.tsx'
+    ),
+    description: 'Thumbnail on the left.',
+    componentName: 'blog-card-three-left',
+    files: [
+      {
+        name: 'blog-card-three.tsx',
+        path: path.join(__dirname, '../components/core/blog-card-three.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'blog-card-four-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/blog-card-four/blog-card-four-basic.tsx'
+    ),
+    description: 'Attached panel variant (default).',
+    componentName: 'blog-card-four-basic',
+    files: [
+      {
+        name: 'blog-card-four.tsx',
+        path: path.join(__dirname, '../components/core/blog-card-four.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'blog-card-four-muted',
+    path: path.join(
+      __dirname,
+      '../app/docs/blog-card-four/blog-card-four-muted.tsx'
+    ),
+    description: 'Flush panel variant.',
+    componentName: 'blog-card-four-muted',
+    files: [
+      {
+        name: 'blog-card-four.tsx',
+        path: path.join(__dirname, '../components/core/blog-card-four.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];

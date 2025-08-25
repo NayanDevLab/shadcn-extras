@@ -6,7 +6,7 @@ export function LbFirst() {
       <LeaderboardCard
         name='Alex Brooks'
         amount={8034}
-        avatarSrc='/avatars/man.png'
+        avatarSrc='https://raw.githubusercontent.com/nayanrdeveloper/shadcn-extras/refs/heads/dev/public/avatars/man.png'
         rank={1}
         score={90}
         tone='emerald'

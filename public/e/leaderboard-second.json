@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "leaderboard-second.tsx",
-      "content": "import { LeaderboardCard } from '@/components/core/leaderboard-card';\n\nexport function LbSecond() {\n  return (\n    <div className='max-w-sm'>\n      <LeaderboardCard\n        name='Maya Rodriguez'\n        amount={7040}\n        avatarSrc='/avatars/man.png'\n        rank={2}\n        score={80}\n        tone='blue'\n      />\n    </div>\n  );\n}\n",
+      "content": "import { LeaderboardCard } from '@/components/core/leaderboard-card';\n\nexport function LbSecond() {\n  return (\n    <div className='max-w-sm'>\n      <LeaderboardCard\n        name='Maya Rodriguez'\n        amount={7040}\n        avatarSrc='https://raw.githubusercontent.com/nayanrdeveloper/shadcn-extras/refs/heads/dev/public/avatars/man.png'\n        rank={2}\n        score={80}\n        tone='blue'\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     },
     {
