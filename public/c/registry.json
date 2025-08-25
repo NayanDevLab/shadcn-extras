@@ -82,6 +82,27 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "spinner-sequential-pulse",
+      "type": "registry:ui",
+      "title": "Spinner Sequential Pulse",
+      "description": "A sequential pulsing spinner with animated dots arranged in a circle.",
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\spinner-sequential-pulse.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }

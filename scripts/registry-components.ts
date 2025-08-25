@@ -56,4 +56,15 @@ export const components: ComponentDefinition[] = [
     description:
       'Dotted rings spinner (SVG). Customizable rings, dots, gap, taper, speed, and direction.',
   },
+  {
+    name: 'spinner-sequential-pulse',
+    path: path.join(
+      __dirname,
+      '../components/core/spinner-sequential-pulse.tsx'
+    ),
+    registryDependencies: [],
+    dependencies: ['motion'],
+    description:
+      'A sequential pulsing spinner with animated dots arranged in a circle.',
+  },
 ];

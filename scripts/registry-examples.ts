@@ -192,4 +192,42 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'spinner-sequential-pulse-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/spinner-sequential-pulse/spinner-sequential-pulse-basic.tsx'
+    ),
+    description: 'Basic usage of the Sequential Pulse spinner.',
+    componentName: 'spinner-sequential-pulse-basic',
+    files: [
+      {
+        name: 'spinner-sequential-pulse.tsx',
+        path: path.join(
+          __dirname,
+          '../components/core/spinner-sequential-pulse.tsx'
+        ),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'spinner-sequential-pulse-variants',
+    path: path.join(
+      __dirname,
+      '../app/docs/spinner-sequential-pulse/spinner-sequential-pulse-variants.tsx'
+    ),
+    description: 'Variant showcase for the Sequential Pulse spinner.',
+    componentName: 'spinner-sequential-pulse-variants',
+    files: [
+      {
+        name: 'spinner-sequential-pulse.tsx',
+        path: path.join(
+          __dirname,
+          '../components/core/spinner-sequential-pulse.tsx'
+        ),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
