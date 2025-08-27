@@ -29,14 +29,16 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      # optional: if your docs read the generated registry at build time
+      - name: Lint (ESLint)
+        run: npm run lint
+
       - name: Build registry (optional)
         run: npm run build:registry
         continue-on-error: true
 
       # 🧱 Build static docs -> out/
       - name: Build static docs
-        run: NEXT_DISABLE_ESLINT=1 npm run docs:build
+        run: npm run docs:build
 
       # 🌈 Build Storybook -> storybook-static/
       - name: Build Storybook
@@ -48,7 +50,6 @@ jobs:
           mkdir -p out/storybook
           cp -r storybook-static/* out/storybook/
 
-      # 🚀 Upload the combined site (docs + storybook) to Pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

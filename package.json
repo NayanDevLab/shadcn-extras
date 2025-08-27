@@ -28,7 +28,7 @@
     "start": "next start",
     "build:registry": "tsx scripts/registry-build.ts",
     "docs:build": "next build",
-    "lint": "eslint app components hooks lib scripts --ext .js,.jsx,.ts,.tsx --max-warnings=0",
+    "lint": "eslint app components hooks lib scripts stories --ext .js,.jsx,.ts,.tsx --max-warnings=0",
     "lint:fix": "eslint app components hooks lib scripts --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
