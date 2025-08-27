@@ -1,0 +1,55 @@
+export const metadata = {
+  title: 'Pricing Card Two – Shadcn-Extras',
+  description:
+    'Outlined pricing card with colored frame, icon, price and feature list (✓/✕). Simple, accessible, and themable.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { Pc2Basic } from './pc2-basic';
+
+# Pricing Card Two
+
+Matches the “3 cards with colored borders” layout. Pass your own icon, data, and tone.
+
+## Example
+
+<ComponentCodePreview
+  component={<Pc2Basic />}
+  filePath='app/docs/pricing-card-two/pc2-basic.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='pricing-card-two' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps className="steps space-y-6">
+      <Step>Copy the component into <code>components/core/pricing-card-two.tsx</code>.</Step>
+      <CodeBlock filePath="components/core/pricing-card-two.tsx" />
+      <Step>Use it with your data (icon, price, features, CTA).</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop          | Type                                                 | Default                | Description                                      |
+| ------------- | ---------------------------------------------------- | ---------------------- | ------------------------------------------------ |
+| `icon`        | `ReactNode`                                          | —                      | Large top icon.                                  |
+| `name`        | `string`                                             | —                      | Plan name.                                       |
+| `subtitle`    | `string`                                             | `'the starter choise'` | Small helper text.                               |
+| `price`       | `number \| string`                                   | —                      | Price (number uses `currency`).                  |
+| `currency`    | `string`                                             | `'$'`                  | Currency prefix when `price` is a number.        |
+| `periodLabel` | `string`                                             | `'/month'`             | Next to price.                                   |
+| `features`    | `{ label: ReactNode; included?: boolean }[]`         | `[]`                   | List of features; `included` defaults to `true`. |
+| `cta`         | `href` or `onClick` + `label?`                       | —                      | Call-to-action (link or button).                 |
+| `tone`        | `'pink' \| 'blue' \| 'amber' \| 'emerald' \| 'zinc'` | `'blue'`               | Accent color.                                    |
+| `*ClassName`  | `string`                                             | —                      | Slot class overrides.                            |

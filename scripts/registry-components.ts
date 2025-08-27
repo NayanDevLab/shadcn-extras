@@ -121,4 +121,12 @@ export const components: ComponentDefinition[] = [
     dependencies: [],
     description: 'Pricing card with icon, price, features, and CTA.',
   },
+  {
+    name: 'pricing-card-two',
+    path: path.join(__dirname, '../components/core/pricing-card-two.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description:
+      'Outlined pricing card with colored frame, icon, price and feature list.',
+  },
 ];
