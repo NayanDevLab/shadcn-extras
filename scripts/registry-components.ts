@@ -114,4 +114,11 @@ export const components: ComponentDefinition[] = [
     dependencies: [],
     description: 'Horizontal timeline with dots, labels and captions.',
   },
+  {
+    name: 'pricing-card-one',
+    path: path.join(__dirname, '../components/core/pricing-card-one.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description: 'Pricing card with icon, price, features, and CTA.',
+  },
 ];

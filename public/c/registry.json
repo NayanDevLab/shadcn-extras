@@ -15,7 +15,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\kpi-card.tsx",
+          "path": "components/core/kpi-card.tsx",
           "type": "registry:component"
         }
       ],
@@ -36,7 +36,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\leaderboard-card.tsx",
+          "path": "components/core/leaderboard-card.tsx",
           "type": "registry:component"
         }
       ],
@@ -55,7 +55,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\radial-dots-spinner.tsx",
+          "path": "components/core/radial-dots-spinner.tsx",
           "type": "registry:component"
         }
       ],
@@ -74,7 +74,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\concentric-rings-spinner.tsx",
+          "path": "components/core/concentric-rings-spinner.tsx",
           "type": "registry:component"
         }
       ],
@@ -95,7 +95,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\spinner-sequential-pulse.tsx",
+          "path": "components/core/spinner-sequential-pulse.tsx",
           "type": "registry:component"
         }
       ],
@@ -117,7 +117,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\testimonial.tsx",
+          "path": "components/core/testimonial.tsx",
           "type": "registry:component"
         }
       ],
@@ -136,7 +136,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\blog-card-one.tsx",
+          "path": "components/core/blog-card-one.tsx",
           "type": "registry:component"
         }
       ],
@@ -157,7 +157,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\blog-card-two.tsx",
+          "path": "components/core/blog-card-two.tsx",
           "type": "registry:component"
         }
       ],
@@ -178,7 +178,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\blog-card-three.tsx",
+          "path": "components/core/blog-card-three.tsx",
           "type": "registry:component"
         }
       ],
@@ -199,7 +199,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\blog-card-four.tsx",
+          "path": "components/core/blog-card-four.tsx",
           "type": "registry:component"
         }
       ],
@@ -218,7 +218,26 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "\\components\\core\\timeline-rail.tsx",
+          "path": "components/core/timeline-rail.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "pricing-card-one",
+      "type": "registry:ui",
+      "title": "Pricing Card One",
+      "description": "Pricing card with icon, price, features, and CTA.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/core/pricing-card-one.tsx",
           "type": "registry:component"
         }
       ],

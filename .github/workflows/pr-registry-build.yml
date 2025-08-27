@@ -5,8 +5,8 @@ on:
     types: [opened, synchronize, reopened]
 
 permissions:
-  contents: write        # allow committing back for same-repo PRs
-  pull-requests: write   # (optional) for comments/labels if you add them later
+  contents: write # allow committing back for same-repo PRs
+  pull-requests: write # (optional) for comments/labels if you add them later
 
 jobs:
   build-registry:
