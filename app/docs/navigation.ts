@@ -27,6 +27,7 @@ export const NAVIGATION: NavigationGroup[] = [
   {
     name: 'Core Components',
     children: [
+      { name: 'Timeline Rail', href: '/docs/timeline-rail', isNew: true },
       { name: 'Testimonial', href: '/docs/testimonial', isUpdated: true },
     ],
   },

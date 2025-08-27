@@ -207,6 +207,25 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "timeline-rail",
+      "type": "registry:ui",
+      "title": "Timeline Rail",
+      "description": "Horizontal timeline with dots, labels and captions.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\timeline-rail.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }

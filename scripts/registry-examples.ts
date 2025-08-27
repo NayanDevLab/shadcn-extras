@@ -391,4 +391,43 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'tr-basic',
+    path: path.join(__dirname, '../app/docs/timeline-rail/tr-basic.tsx'),
+    description: 'Decades example (like screenshot).',
+    componentName: 'tr-basic',
+    files: [
+      {
+        name: 'timeline-rail.tsx',
+        path: path.join(__dirname, '../components/core/timeline-rail.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'tr-compact',
+    path: path.join(__dirname, '../app/docs/timeline-rail/tr-compact.tsx'),
+    description: 'Compact version with smaller gap and thickness.',
+    componentName: 'tr-compact',
+    files: [
+      {
+        name: 'timeline-rail.tsx',
+        path: path.join(__dirname, '../components/core/timeline-rail.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'tr-custom',
+    path: path.join(__dirname, '../app/docs/timeline-rail/tr-custom.tsx'),
+    description: 'Custom renderers and emerald theme.',
+    componentName: 'tr-custom',
+    files: [
+      {
+        name: 'timeline-rail.tsx',
+        path: path.join(__dirname, '../components/core/timeline-rail.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];

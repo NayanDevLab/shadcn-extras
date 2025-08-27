@@ -107,4 +107,11 @@ export const components: ComponentDefinition[] = [
     registryDependencies: [],
     dependencies: ['lucide-react'],
   },
+  {
+    name: 'timeline-rail',
+    path: path.join(__dirname, '../components/core/timeline-rail.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description: 'Horizontal timeline with dots, labels and captions.',
+  },
 ];
