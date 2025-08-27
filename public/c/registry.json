@@ -226,6 +226,25 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "pricing-card-one",
+      "type": "registry:ui",
+      "title": "Pricing Card One",
+      "description": "Pricing card with icon, price, features, and CTA.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\pricing-card-one.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }

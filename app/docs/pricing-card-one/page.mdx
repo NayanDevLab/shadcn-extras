@@ -1,0 +1,59 @@
+export const metadata = {
+  title: 'Pricing Card One – Shadcn-Extras',
+  description:
+    'Clean pricing card with icon, price, feature list (✓/✕), and CTA. Accessible, themable, and SRP-friendly.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { Pc1Basic } from './pc1-basic';
+
+# Pricing Card One
+
+A simple pricing plan card with **icon**, **price**, **features**, and **CTA**.  
+Supports tones, “Recommended” badge, and button link/onClick.
+
+## Example
+
+<ComponentCodePreview
+  component={<Pc1Basic />}
+  filePath='app/docs/pricing-card-one/pc1-basic.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='pricing-card-one' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps className="steps space-y-6">
+      <Step>Copy the component into <code>components/core/pricing-card-one.tsx</code>.</Step>
+      <CodeBlock filePath="components/core/pricing-card-one.tsx" />
+      <Step>Use it with your own data (features, price, CTA).</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop               | Type                                         | Default                | Description                                                 |
+| ------------------ | -------------------------------------------- | ---------------------- | ----------------------------------------------------------- |
+| `icon`             | `ReactNode`                                  | —                      | Big icon above title.                                       |
+| `name`             | `string`                                     | —                      | Plan name.                                                  |
+| `subtitle`         | `string`                                     | `'the starter choice'` | Small subtitle.                                             |
+| `price`            | `number \| string`                           | —                      | Either a number (uses `currency`) or a preformatted string. |
+| `currency`         | `string`                                     | `'$'`                  | Prefix used when `price` is a number.                       |
+| `periodLabel`      | `string`                                     | `'/month'`             | Shown next to price.                                        |
+| `recommended`      | `boolean`                                    | `false`                | Shows badge and uses filled CTA style.                      |
+| `recommendedLabel` | `string`                                     | `'Recommended'`        | Badge text.                                                 |
+| `features`         | `{ label: ReactNode; included?: boolean }[]` | `[]`                   | List items; `included` defaults to `true`.                  |
+| `cta`              | `AnchorOrButton & { label?: string }`        | —                      | Pass `href` or `onClick`.                                   |
+| `tone`             | `'indigo' \| 'blue' \| 'emerald' \| 'zinc'`  | `'blue'`               | Accent color.                                               |
+| `variant`          | `'outline' \| 'elevated' \| 'soft'`          | `'outline'`            | Surface style.                                              |
+| `*ClassName`       | `string`                                     | —                      | Slot overrides for fine styling control.                    |
