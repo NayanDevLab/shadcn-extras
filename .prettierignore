@@ -9,3 +9,7 @@ coverage
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+
+# 👇 Storybook build outputs (skip formatting on generated files)
+storybook-static
+out/storybook

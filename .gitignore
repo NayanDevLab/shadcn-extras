@@ -38,3 +38,7 @@ next-env.d.ts
 # cli
 cli/dist
 cli/node_modules
+
+# 👇 Storybook build outputs
+storybook-static/
+out/storybook/
