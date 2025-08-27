@@ -6,7 +6,7 @@ import { userEvent, within, expect } from '@storybook/test';
 import { action } from '@storybook/addon-actions';
 
 const meta: Meta<typeof TimelineRail> = {
-  title: 'Core/Timeline/Timeline Rail',
+  title: 'Core/Core/Timeline Rail',
   component: TimelineRail,
   tags: ['autodocs'], // enables Docs tab
   parameters: { layout: 'padded' }, // comfy spacing in Canvas

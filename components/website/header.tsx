@@ -26,6 +26,12 @@ export function Header() {
             >
               Components
             </Link>
+            <Link
+              href='/docs/storybook'
+              className='text-sm font-medium text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
+            >
+              StoryBook
+            </Link>
           </nav>
           <div className='hidden h-8 w-[0.5px] bg-zinc-200 dark:bg-zinc-800 sm:flex' />
           <nav className='flex items-center space-x-2'>
