@@ -42,3 +42,10 @@ cli/node_modules
 # 👇 Storybook build outputs
 storybook-static/
 out/storybook/
+
+# --- Tests & tooling caches ---
+/coverage/
+/junit.xml
+/.jest/
+/.eslintcache
+/.cache/
