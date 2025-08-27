@@ -1,17 +1,22 @@
-# .github/workflows/build-registry-on-pr.yml
 name: Build Registry on PR
 
 on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+permissions:
+  contents: write        # allow committing back for same-repo PRs
+  pull-requests: write   # (optional) for comments/labels if you add them later
+
 jobs:
   build-registry:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
@@ -19,16 +24,46 @@ jobs:
           cache: 'npm'
 
       - run: npm ci
-      - run: npm run build:registry
 
-      - name: Commit and push changes
+      - name: Build registry
+        run: npm run build:registry
+
+      # Upload the generated outputs so reviewers can inspect them, even on forks.
+      - name: Upload registry artifacts (for review)
+        uses: actions/upload-artifact@v4
+        with:
+          name: registry-build
+          path: |
+            public/c/
+            public/e/
+            scripts/registry-*.json
+          if-no-files-found: ignore
+
+      # ✅ Only push back if the PR branch is in the same repository (not a fork)
+      - name: Commit and push changes back to PR branch (same-repo only)
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
         run: |
           if [ -n "$(git status --porcelain)" ]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git add .
+            git config user.email "action@github.com"
+            git config user.name "github-actions[bot]"
+            git add -A
             git commit -m "chore: update registry build artifacts"
-            git push origin HEAD:${{ github.head_ref }}
+            # ensure pushes use the token
+            git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+            git push origin "HEAD:${{ github.head_ref }}"
           else
-            echo "No changes"
+            echo "No changes to commit"
+          fi
+
+      # ❌ On fork PRs, we can't push. Choose one of these behaviors:
+      # A) Fail with instructions (keeps PR honest that artifacts must be committed)
+      - name: Fail if registry outputs are out of date (fork PRs)
+        if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Registry build produced changes. Please run 'npm run build:registry' locally and commit the updated artifacts to your PR branch."
+            git status --porcelain
+            exit 1
+          else
+            echo "Registry outputs are up to date."
           fi
