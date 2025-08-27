@@ -1,0 +1,78 @@
+export const metadata = {
+  title: 'Timeline Rail – Shadcn-Extras',
+  description:
+    'A customizable horizontal timeline with dots, angled labels and captions. Pure UI, SRP-friendly.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+
+import { TrBasic } from './tr-basic';
+import { TrCompact } from './tr-compact';
+import { TrCustom } from './tr-custom';
+
+# Timeline Rail
+
+Clean horizontal timeline with dots on a rail, small diagonal labels above, and captions below.
+
+## Basic
+
+<ComponentCodePreview
+  component={<TrBasic />}
+  filePath='app/docs/timeline-rail/tr-basic.tsx'
+/>
+
+## Variants
+
+<ComponentCodePreview
+  component={<TrCompact />}
+  filePath='app/docs/timeline-rail/tr-compact.tsx'
+/>
+
+<ComponentCodePreview
+  component={<TrCustom />}
+  filePath='app/docs/timeline-rail/tr-custom.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='timeline-rail' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Copy the component into <code>components/core/timeline-rail.tsx</code>.</Step>
+      <CodeBlock filePath="components/core/timeline-rail.tsx" />
+      <Step>Use with your data and customize via props or slot classNames.</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Component API
+
+### TimelineRail
+
+| Prop                 | Type                     | Default                          | Description                                          |
+| :------------------- | :----------------------- | :------------------------------- | :--------------------------------------------------- |
+| items                | `TimelineItem[]`         | —                                | Ordered items to render as dots along the rail.      |
+| size                 | `'sm' \| 'md'`           | `'md'`                           | Density of dots and vertical offsets.                |
+| emphasizeActiveTrail | `boolean`                | `true`                           | Darken rail up to the last item with `active: true`. |
+| labelAngle           | `number`                 | `45`                             | Rotation (degrees) for the top labels.               |
+| gapClassName         | `string`                 | `'gap-14'`                       | Horizontal gap between dots (Tailwind class).        |
+| lineColorClass       | `string`                 | `'bg-zinc-300 dark:bg-zinc-700'` | Rail color.                                          |
+| lineThickness        | `number`                 | `6`                              | Rail thickness in pixels.                            |
+| dotClass             | `string`                 | `'bg-zinc-400 dark:bg-zinc-600'` | Inactive dot class.                                  |
+| dotActiveClass       | `string`                 | `'bg-zinc-900 dark:bg-zinc-100'` | Active dot class.                                    |
+| className            | `string`                 | —                                | Root element classes.                                |
+| railClassName        | `string`                 | —                                | Rail wrapper classes.                                |
+| itemClassName        | `string`                 | —                                | Per-item container classes.                          |
+| labelClassName       | `string`                 | —                                | Top label classes.                                   |
+| captionClassName     | `string`                 | —                                | Bottom caption classes.                              |
+| renderLabel          | `(item, i) => ReactNode` | —                                | Custom renderer for the top label.                   |
+| renderCaption        | `(item, i) => ReactNode` | —                                | Custom renderer for the bottom caption.              |
