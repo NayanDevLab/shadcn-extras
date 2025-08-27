@@ -245,6 +245,25 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "pricing-card-two",
+      "type": "registry:ui",
+      "title": "Pricing Card Two",
+      "description": "Outlined pricing card with colored frame, icon, price and feature list.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/core/pricing-card-two.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }
