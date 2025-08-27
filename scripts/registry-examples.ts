@@ -430,4 +430,17 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'pc1-basic',
+    path: path.join(__dirname, '../app/docs/pricing-card-one/pc1-basic.tsx'),
+    description: 'Two plan example (Basic + Pro).',
+    componentName: 'pc1-basic',
+    files: [
+      {
+        name: 'pricing-card-one.tsx',
+        path: path.join(__dirname, '../components/core/pricing-card-one.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
