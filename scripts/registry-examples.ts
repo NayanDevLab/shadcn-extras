@@ -443,4 +443,17 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'pc2-basic',
+    path: path.join(__dirname, '../app/docs/pricing-card-two/pc2-basic.tsx'),
+    description: 'Three cards (Personal / Team / Business).',
+    componentName: 'pc2-basic',
+    files: [
+      {
+        name: 'pricing-card-two.tsx',
+        path: path.join(__dirname, '../components/core/pricing-card-two.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
