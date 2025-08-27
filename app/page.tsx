@@ -129,6 +129,25 @@ export default function Motion() {
                 Star on GitHub
               </Button>
             </a>
+            <a
+              href='https://nayanrdeveloper.github.io/shadcn-extras/storybook/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Button aria-label='Visit Storybook'>
+                <svg
+                  viewBox='0 0 256 256'
+                  className='mr-1.5 h-4 w-4'
+                  fill='currentColor'
+                  aria-hidden
+                >
+                  <path d='M210.6 18.6 208 56a8 8 0 0 1-8 8h-24a8 8 0 0 1-8-8V32H72a16 16 0 0 0-16 16v168a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16V24a8 8 0 0 0-8.4-8.4ZM168 32v16h16.8l1.1-16Z' />
+                  <path d='M176 96a24 24 0 1 0-24 24 24 24 0 0 0 24-24Zm-48 72h48a8 8 0 0 0 0-16h-40v-8h32a8 8 0 0 0 0-16h-32v-8h40a8 8 0 0 0 0-16h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8Z' />
+                </svg>
+                Visit Storybook
+                <ChevronRight className='ml-1.5 h-4 w-4' />
+              </Button>
+            </a>
           </div>
           <span className='mt-2 text-center text-sm text-zinc-500 dark:text-zinc-400'>
             Free updates and new components released regularly.
