@@ -9,3 +9,7 @@ cli/**
 
 # misc editor + lock files (optional)
 *.lock
+
+# 👇 Storybook build outputs (keep sources linted)
+storybook-static/**
+out/storybook/**
