@@ -13,3 +13,6 @@ cli/**
 # 👇 Storybook build outputs (keep sources linted)
 storybook-static/**
 out/storybook/**
+
+# caches & logs
+.eslintcache
