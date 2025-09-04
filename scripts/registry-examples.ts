@@ -456,4 +456,100 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'chevron-steps-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/chevron-steps/chevron-steps-basic.tsx'
+    ),
+    description: 'Brand variant like the reference screenshot.',
+    componentName: 'chevron-steps-basic',
+    files: [
+      {
+        name: 'chevron-steps.tsx',
+        path: path.join(__dirname, '../components/core/chevron-steps.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'chevron-steps-progress',
+    path: path.join(
+      __dirname,
+      '../app/docs/chevron-steps/chevron-steps-progress.tsx'
+    ),
+    description: 'Interactive progress with Prev/Next.',
+    componentName: 'chevron-steps-progress',
+    files: [
+      {
+        name: 'chevron-steps.tsx',
+        path: path.join(__dirname, '../components/core/chevron-steps.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'chevron-steps-neutral',
+    path: path.join(
+      __dirname,
+      '../app/docs/chevron-steps/chevron-steps-neutral.tsx'
+    ),
+    description: 'Neutral, large variant.',
+    componentName: 'chevron-steps-neutral',
+    files: [
+      {
+        name: 'chevron-steps.tsx',
+        path: path.join(__dirname, '../components/core/chevron-steps.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'text-circle-scroll-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/text-circle-scroll/text-circle-basic.tsx'
+    ),
+    description: 'Scroll-driven rotation with serif words around the ring.',
+    componentName: 'text-circle-basic',
+    files: [
+      {
+        name: 'text-circle-scroll.tsx',
+        path: path.join(__dirname, '../components/core/text-circle-scroll.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'text-circle-scroll-auto',
+    path: path.join(
+      __dirname,
+      '../app/docs/text-circle-scroll/text-circle-auto.tsx'
+    ),
+    description: 'Auto-spin demo (no scroll binding), counter-clockwise.',
+    componentName: 'text-circle-auto',
+    files: [
+      {
+        name: 'text-circle-scroll.tsx',
+        path: path.join(__dirname, '../components/core/text-circle-scroll.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'text-circle-scroll-nodes',
+    path: path.join(
+      __dirname,
+      '../app/docs/text-circle-scroll/text-circle-nodes.tsx'
+    ),
+    description: 'Custom React nodes (uppercase labels) + mixed scroll/auto.',
+    componentName: 'text-circle-nodes',
+    files: [
+      {
+        name: 'text-circle-scroll.tsx',
+        path: path.join(__dirname, '../components/core/text-circle-scroll.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];

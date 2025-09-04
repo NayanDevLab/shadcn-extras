@@ -129,4 +129,19 @@ export const components: ComponentDefinition[] = [
     description:
       'Outlined pricing card with colored frame, icon, price and feature list.',
   },
+  {
+    name: 'chevron-steps',
+    path: path.join(__dirname, '../components/core/chevron-steps.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description: 'Arrowed step progress bar with clickable segments.',
+  },
+  {
+    name: 'text-circle-scroll',
+    path: path.join(__dirname, '../components/core/text-circle-scroll.tsx'),
+    registryDependencies: [],
+    dependencies: ['motion'],
+    description:
+      'Circular text/nodes that rotate with scroll and/or auto-spin.',
+  },
 ];
