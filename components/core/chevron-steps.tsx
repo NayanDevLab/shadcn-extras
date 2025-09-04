@@ -67,16 +67,20 @@ export default function ChevronSteps({
   stepUpcomingClassName,
 }: ChevronStepsProps) {
   const h =
-    size === 'sm' ? 'h-8 text-xs' : size === 'lg' ? 'h-14 text-base' : 'h-11 text-sm';
+    size === 'sm'
+      ? 'h-8 text-xs'
+      : size === 'lg'
+        ? 'h-14 text-base'
+        : 'h-11 text-sm';
   const pad = size === 'sm' ? 'px-4' : size === 'lg' ? 'px-7' : 'px-6';
   const r =
     radius === 'md'
       ? 'rounded-md'
       : radius === 'lg'
-      ? 'rounded-lg'
-      : radius === 'xl'
-      ? 'rounded-xl'
-      : 'rounded-2xl';
+        ? 'rounded-lg'
+        : radius === 'xl'
+          ? 'rounded-xl'
+          : 'rounded-2xl';
 
   // The chevron shape uses a clip-path polygon with --twc-tail custom property
   // to create the arrow head. We mask the first/last to give rounded ends.
@@ -86,8 +90,7 @@ export default function ChevronSteps({
   const theme =
     variant === 'brand'
       ? {
-          active:
-            'bg-blue-700 text-white',
+          active: 'bg-blue-700 text-white',
           completed:
             'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-200',
           upcoming:
@@ -95,8 +98,7 @@ export default function ChevronSteps({
           border: 'ring-1 ring-white/70 dark:ring-black/20',
         }
       : {
-          active:
-            'bg-zinc-800 text-white dark:bg-zinc-200 dark:text-zinc-900',
+          active: 'bg-zinc-800 text-white dark:bg-zinc-200 dark:text-zinc-900',
           completed:
             'bg-zinc-200 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200',
           upcoming:
@@ -128,8 +130,8 @@ export default function ChevronSteps({
               'linear-gradient(to right, transparent, black 24px, black calc(100% - 24px), transparent)',
           } as React.CSSProperties
         }
-        role="list"
-        aria-label="Progress"
+        role='list'
+        aria-label='Progress'
       >
         {steps.map((step, i) => {
           const state =
@@ -139,15 +141,15 @@ export default function ChevronSteps({
             state === 'active'
               ? theme.active
               : state === 'completed'
-              ? theme.completed
-              : theme.upcoming;
+                ? theme.completed
+                : theme.upcoming;
 
           const override =
             state === 'active'
               ? stepActiveClassName
               : state === 'completed'
-              ? stepCompletedClassName
-              : stepUpcomingClassName;
+                ? stepCompletedClassName
+                : stepUpcomingClassName;
 
           // leftmost and rightmost need rounded masks
           const roundLeft = i === 0 ? r : '';
@@ -156,9 +158,9 @@ export default function ChevronSteps({
           // Each step uses clip-path polygon to form a chevron.
           // We add a tiny overlap (-0.5px) to avoid hairline gaps between shapes.
           return (
-            <li key={step.id ?? i} className="relative flex">
+            <li key={step.id ?? i} className='relative flex'>
               <button
-                type="button"
+                type='button'
                 className={cn(
                   baseStep,
                   h,
@@ -185,7 +187,7 @@ export default function ChevronSteps({
                           0 100%
                         )`
                         : i === steps.length - 1
-                        ? `polygon(
+                          ? `polygon(
                           0 0,
                           calc(100% - var(--twc-tail)) 0,
                           100% 50%,
@@ -193,7 +195,7 @@ export default function ChevronSteps({
                           0 100%,
                           var(--twc-tail) 50%
                         )`
-                        : `polygon(
+                          : `polygon(
                           0 0,
                           calc(100% - var(--twc-tail)) 0,
                           100% 50%,

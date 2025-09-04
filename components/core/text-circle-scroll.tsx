@@ -4,9 +4,7 @@ import * as React from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'motion/react';
 import { cn } from '@/lib/utils';
 
-export type TextCircleItem =
-  | string
-  | React.ReactNode;
+export type TextCircleItem = string | React.ReactNode;
 
 export type TextCircleScrollProps = {
   /** Items placed on the ring in order (clockwise by default). */
@@ -130,13 +128,13 @@ export default function TextCircleScroll({
         className
       )}
       style={{ height }}
-      aria-label="Circular text animation"
-      role="img"
+      aria-label='Circular text animation'
+      role='img'
     >
       {/* Visual inner hole helper */}
       <div
         aria-hidden
-        className="pointer-events-none absolute rounded-full border border-zinc-300/40 dark:border-zinc-700/40"
+        className='pointer-events-none absolute rounded-full border border-zinc-300/40 dark:border-zinc-700/40'
         style={{ width: innerGap, height: innerGap }}
       />
       {/* Ring */}
@@ -160,7 +158,11 @@ export default function TextCircleScroll({
             whiteSpace: 'nowrap',
           };
           return (
-            <div key={i} style={style} className={cn('select-none', itemClassName)}>
+            <div
+              key={i}
+              style={style}
+              className={cn('select-none', itemClassName)}
+            >
               <span className={textClassName}>
                 {typeof item === 'string' ? item : item}
               </span>

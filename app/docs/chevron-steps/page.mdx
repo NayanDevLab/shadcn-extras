@@ -20,21 +20,21 @@ Keyboard and screen-reader friendly, responsive, and customizable via props.
 
 <ComponentCodePreview
   component={<ChevronStepsBasic />}
-  filePath="app/docs/chevron-steps/chevron-steps-basic.tsx"
+  filePath='app/docs/chevron-steps/chevron-steps-basic.tsx'
 />
 
 ### Clickable progress
 
 <ComponentCodePreview
   component={<ChevronStepsProgress />}
-  filePath="app/docs/chevron-steps/chevron-steps-progress.tsx"
+  filePath='app/docs/chevron-steps/chevron-steps-progress.tsx'
 />
 
 ### Neutral, large
 
 <ComponentCodePreview
   component={<ChevronStepsNeutral />}
-  filePath="app/docs/chevron-steps/chevron-steps-neutral.tsx"
+  filePath='app/docs/chevron-steps/chevron-steps-neutral.tsx'
 />
 
 ## Installation
@@ -45,9 +45,9 @@ Keyboard and screen-reader friendly, responsive, and customizable via props.
     <TabsTrigger value="manual">Manual</TabsTrigger>
   </TabsList>
 
-  <TabsContent value="cli">
-    <InstallationCli value="chevron-steps" />
-  </TabsContent>
+<TabsContent value='cli'>
+  <InstallationCli value='chevron-steps' />
+</TabsContent>
 
   <TabsContent value="manual">
     <Steps className="space-y-6">
@@ -60,15 +60,15 @@ Keyboard and screen-reader friendly, responsive, and customizable via props.
 
 ## Props
 
-| Prop | Type | Default | Description |
-| :-- | :-- | :-- | :-- |
-| `steps` | `Array<{ id?: string\|number; label: string; description?: string; className?: string; disabled?: boolean }>` | — | Steps in order. |
-| `current` | `number` | `0` | Zero-based active step index. |
-| `onStepClick` | `(index, step) => void` | — | Called when a step is clicked (if not disabled). |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Height & text size. |
-| `variant` | `'brand' \| 'neutral'` | `'brand'` | Color scheme. |
-| `tailWidth` | `number` | `18` | Arrow head width (px). |
-| `radius` | `'md' \| 'lg' \| 'xl' \| '2xl'` | `'2xl'` | Outer roundness. |
-| `scrollable` | `boolean` | `true` | Enables horizontal scroll on small screens. |
-| `className` | `string` | — | Root classes. |
-| `stepClassName` / `stepActiveClassName` / `stepCompletedClassName` / `stepUpcomingClassName` | `string` | — | Slot overrides. |
+| Prop                                                                                         | Type                                                                                                          | Default   | Description                                      |
+| :------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------ | :-------- | :----------------------------------------------- |
+| `steps`                                                                                      | `Array<{ id?: string\|number; label: string; description?: string; className?: string; disabled?: boolean }>` | —         | Steps in order.                                  |
+| `current`                                                                                    | `number`                                                                                                      | `0`       | Zero-based active step index.                    |
+| `onStepClick`                                                                                | `(index, step) => void`                                                                                       | —         | Called when a step is clicked (if not disabled). |
+| `size`                                                                                       | `'sm' \| 'md' \| 'lg'`                                                                                        | `'md'`    | Height & text size.                              |
+| `variant`                                                                                    | `'brand' \| 'neutral'`                                                                                        | `'brand'` | Color scheme.                                    |
+| `tailWidth`                                                                                  | `number`                                                                                                      | `18`      | Arrow head width (px).                           |
+| `radius`                                                                                     | `'md' \| 'lg' \| 'xl' \| '2xl'`                                                                               | `'2xl'`   | Outer roundness.                                 |
+| `scrollable`                                                                                 | `boolean`                                                                                                     | `true`    | Enables horizontal scroll on small screens.      |
+| `className`                                                                                  | `string`                                                                                                      | —         | Root classes.                                    |
+| `stepClassName` / `stepActiveClassName` / `stepCompletedClassName` / `stepUpcomingClassName` | `string`                                                                                                      | —         | Slot overrides.                                  |

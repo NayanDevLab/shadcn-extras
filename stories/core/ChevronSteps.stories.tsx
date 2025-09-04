@@ -4,7 +4,10 @@ import ChevronSteps from '@/components/core/chevron-steps';
 import type { ChevronStep } from '@/components/core/chevron-steps';
 import { action } from '@storybook/addon-actions';
 
-const stepClicked = action('step-click') as (index: number, step: ChevronStep) => void;
+const stepClicked = action('step-click') as (
+  index: number,
+  step: ChevronStep
+) => void;
 
 const meta: Meta<typeof ChevronSteps> = {
   title: 'Core/Navigation/Chevron Steps',
@@ -21,7 +24,10 @@ const meta: Meta<typeof ChevronSteps> = {
   },
   argTypes: {
     steps: { control: 'object', description: 'Array of steps in order.' },
-    current: { control: { type: 'number', min: 0 }, description: 'Zero-based active index.' },
+    current: {
+      control: { type: 'number', min: 0 },
+      description: 'Zero-based active index.',
+    },
     size: { control: 'inline-radio', options: ['sm', 'md', 'lg'] },
     variant: { control: 'inline-radio', options: ['brand', 'neutral'] },
     radius: { control: 'inline-radio', options: ['md', 'lg', 'xl', '2xl'] },
@@ -70,13 +76,13 @@ export const Playground: Story = {
 
 export const LikeScreenshot: Story = {
   render: () => (
-    <div className="mx-auto max-w-5xl px-6">
+    <div className='mx-auto max-w-5xl px-6'>
       <ChevronSteps
         steps={basicSteps}
         current={0}
-        variant="brand"
+        variant='brand'
         tailWidth={20}
-        className="mx-auto"
+        className='mx-auto'
         onStepClick={stepClicked}
       />
     </div>
@@ -89,12 +95,12 @@ export const LikeScreenshot: Story = {
 
 export const NeutralLarge: Story = {
   render: () => (
-    <div className="mx-auto max-w-3xl px-6">
+    <div className='mx-auto max-w-3xl px-6'>
       <ChevronSteps
         steps={[{ label: 'Plan' }, { label: 'Build' }, { label: 'Ship' }]}
         current={1}
-        size="lg"
-        variant="neutral"
+        size='lg'
+        variant='neutral'
         tailWidth={22}
         onStepClick={stepClicked}
       />
@@ -108,13 +114,13 @@ export const NeutralLarge: Story = {
 
 export const ScrollableMany: Story = {
   render: () => (
-    <div className="mx-auto max-w-4xl px-6">
+    <div className='mx-auto max-w-4xl px-6'>
       <ChevronSteps
         steps={Array.from({ length: 10 }).map((_, i) => ({
           label: i === 3 ? `Step ${i + 1} with long label` : `Step ${i + 1}`,
         }))}
         current={4}
-        size="md"
+        size='md'
         tailWidth={18}
         onStepClick={stepClicked}
       />
@@ -128,7 +134,7 @@ export const ScrollableMany: Story = {
 
 export const WithDisabled: Story = {
   render: () => (
-    <div className="mx-auto max-w-3xl px-6">
+    <div className='mx-auto max-w-3xl px-6'>
       <ChevronSteps
         steps={[
           { label: 'Account' },
@@ -153,7 +159,7 @@ const InteractiveDemo = (args: React.ComponentProps<typeof ChevronSteps>) => {
   ];
 
   return (
-    <div className="mx-auto w-[820px] max-w-full px-6">
+    <div className='mx-auto w-[820px] max-w-full px-6'>
       <ChevronSteps
         {...args}
         steps={steps}
@@ -163,15 +169,15 @@ const InteractiveDemo = (args: React.ComponentProps<typeof ChevronSteps>) => {
           if (!s.disabled) setIdx(i);
         }}
       />
-      <div className="mt-4 flex justify-center gap-2">
+      <div className='mt-4 flex justify-center gap-2'>
         <button
-          className="rounded-md border px-3 py-1.5 text-sm"
+          className='rounded-md border px-3 py-1.5 text-sm'
           onClick={() => setIdx((v) => Math.max(0, v - 1))}
         >
           Prev
         </button>
         <button
-          className="rounded-md border px-3 py-1.5 text-sm"
+          className='rounded-md border px-3 py-1.5 text-sm'
           onClick={() => setIdx((v) => Math.min(steps.length - 1, v + 1))}
         >
           Next
@@ -180,7 +186,6 @@ const InteractiveDemo = (args: React.ComponentProps<typeof ChevronSteps>) => {
     </div>
   );
 };
-
 
 /* --------------------------------------------------------------- */
 /* Interactive (stateful demo)                                     */
@@ -193,4 +198,4 @@ export const Interactive: Story = {
     variant: 'brand',
     tailWidth: 20,
   },
-}
+};

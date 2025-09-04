@@ -16,21 +16,24 @@ Arrange any items around a circle and rotate the ring based on **scroll progress
 ## Examples
 
 ### Scroll-driven
+
 <ComponentCodePreview
   component={<TextCircleBasic />}
-  filePath="app/docs/text-circle-scroll/text-circle-basic.tsx"
+  filePath='app/docs/text-circle-scroll/text-circle-basic.tsx'
 />
 
 ### Auto-spin (no scroll)
+
 <ComponentCodePreview
   component={<TextCircleAuto />}
-  filePath="app/docs/text-circle-scroll/text-circle-auto.tsx"
+  filePath='app/docs/text-circle-scroll/text-circle-auto.tsx'
 />
 
 ### Using custom nodes
+
 <ComponentCodePreview
   component={<TextCircleNodes />}
-  filePath="app/docs/text-circle-scroll/text-circle-nodes.tsx"
+  filePath='app/docs/text-circle-scroll/text-circle-nodes.tsx'
 />
 
 ## Installation
@@ -41,9 +44,9 @@ Arrange any items around a circle and rotate the ring based on **scroll progress
     <TabsTrigger value="manual">Manual</TabsTrigger>
   </TabsList>
 
-  <TabsContent value="cli">
-    <InstallationCli value="text-circle-scroll" />
-  </TabsContent>
+<TabsContent value='cli'>
+  <InstallationCli value='text-circle-scroll' />
+</TabsContent>
 
   <TabsContent value="manual">
     <Steps className="space-y-6">
@@ -56,16 +59,16 @@ Arrange any items around a circle and rotate the ring based on **scroll progress
 
 ## Props
 
-| Prop | Type | Default | Description |
-| --- | --- | --- | --- |
-| `items` | `(string \| ReactNode)[]` | — | Items around the ring in order. |
-| `radius` | `number` | `110` | Radius in px (center → baseline). |
-| `innerGap` | `number` | `90` | Visual hole size (px). |
-| `startAngle` | `number` | `-90` | First item angle in degrees. |
-| `clockwise` | `boolean` | `true` | Direction of item order. |
-| `rotateOnScroll` | `boolean` | `true` | Attach rotation to scroll. |
-| `scrollDegrees` | `number` | `360` | Total degrees across viewport scrolling. |
-| `autoSpinDegPerSec` | `number` | `0` | Constant rotation (deg/s). |
-| `springStiffness` | `number` | `120` | Spring stiffness for scroll rotation. |
-| `height` | `number \| string` | `320` | Outer container height. |
-| `className` / `ringClassName` / `itemClassName` / `textClassName` | `string` | — | Slot overrides. |
+| Prop                                                              | Type                      | Default | Description                              |
+| ----------------------------------------------------------------- | ------------------------- | ------- | ---------------------------------------- |
+| `items`                                                           | `(string \| ReactNode)[]` | —       | Items around the ring in order.          |
+| `radius`                                                          | `number`                  | `110`   | Radius in px (center → baseline).        |
+| `innerGap`                                                        | `number`                  | `90`    | Visual hole size (px).                   |
+| `startAngle`                                                      | `number`                  | `-90`   | First item angle in degrees.             |
+| `clockwise`                                                       | `boolean`                 | `true`  | Direction of item order.                 |
+| `rotateOnScroll`                                                  | `boolean`                 | `true`  | Attach rotation to scroll.               |
+| `scrollDegrees`                                                   | `number`                  | `360`   | Total degrees across viewport scrolling. |
+| `autoSpinDegPerSec`                                               | `number`                  | `0`     | Constant rotation (deg/s).               |
+| `springStiffness`                                                 | `number`                  | `120`   | Spring stiffness for scroll rotation.    |
+| `height`                                                          | `number \| string`        | `320`   | Outer container height.                  |
+| `className` / `ringClassName` / `itemClassName` / `textClassName` | `string`                  | —       | Slot overrides.                          |

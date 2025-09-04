@@ -2,7 +2,7 @@ import ChevronSteps from '@/components/core/chevron-steps';
 
 export function ChevronStepsBasic() {
   return (
-    <div className="w-full px-6">
+    <div className='w-full px-6'>
       <ChevronSteps
         steps={[
           { label: 'Step 1' },
@@ -11,9 +11,9 @@ export function ChevronStepsBasic() {
           { label: 'Step 4' },
         ]}
         current={0}
-        variant="brand"
+        variant='brand'
         tailWidth={20}
-        className="mx-auto max-w-4xl"
+        className='mx-auto max-w-4xl'
       />
     </div>
   );
