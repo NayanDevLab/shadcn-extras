@@ -27,15 +27,21 @@ export const NAVIGATION: NavigationGroup[] = [
   {
     name: 'Core Components',
     children: [
-      { name: 'Timeline Rail', href: '/docs/timeline-rail', isNew: true },
-      { name: 'Testimonial', href: '/docs/testimonial', isUpdated: true },
+      { name: 'Timeline Rail', href: '/docs/timeline-rail' },
+      { name: 'Testimonial', href: '/docs/testimonial' },
+      { name: 'Chevron Steps', href: '/docs/chevron-steps', isNew: true },
+      {
+        name: 'Text Circle Scroll',
+        href: '/docs/text-circle-scroll',
+        isNew: true,
+      },
     ],
   },
   {
     name: 'Pricing Card',
     children: [
-      { name: 'Pricing Card One', href: '/docs/pricing-card-one', isNew: true },
-      { name: 'Pricing Card Two', href: '/docs/pricing-card-two', isNew: true },
+      { name: 'Pricing Card One', href: '/docs/pricing-card-one' },
+      { name: 'Pricing Card Two', href: '/docs/pricing-card-two' },
     ],
   },
   {
@@ -48,7 +54,7 @@ export const NAVIGATION: NavigationGroup[] = [
       {
         name: 'Leaderboard Card',
         href: '/docs/leaderboard-card',
-        isNew: true,
+        isUpdated: true,
       },
     ],
   },
@@ -78,8 +84,8 @@ export const NAVIGATION: NavigationGroup[] = [
         href: '/docs/blog-card-one',
       },
       { name: 'Blog Card Two', href: '/docs/blog-card-two' },
-      { name: 'Blog Card Three', href: '/docs/blog-card-three', isNew: true },
-      { name: 'Blog Card Four', href: '/docs/blog-card-four', isNew: true },
+      { name: 'Blog Card Three', href: '/docs/blog-card-three' },
+      { name: 'Blog Card Four', href: '/docs/blog-card-four' },
     ],
   },
 ];

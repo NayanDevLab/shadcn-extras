@@ -136,7 +136,7 @@ export function LeaderboardCard({
             className={cn(
               'relative inline-flex items-center justify-center rounded-full ring-4 ring-white dark:ring-zinc-900',
               s.avatar,
-              avatarRingClassName ?? 'outline outline-4 outline-yellow-300/80'
+              avatarRingClassName ?? 'outline outline-yellow-300/80'
             )}
           >
             {avatarSrc ? (

@@ -264,6 +264,46 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "chevron-steps",
+      "type": "registry:ui",
+      "title": "Chevron Steps",
+      "description": "Arrowed step progress bar with clickable segments.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/core/chevron-steps.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "text-circle-scroll",
+      "type": "registry:ui",
+      "title": "Text Circle Scroll",
+      "description": "Circular text/nodes that rotate with scroll and/or auto-spin.",
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/core/text-circle-scroll.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }

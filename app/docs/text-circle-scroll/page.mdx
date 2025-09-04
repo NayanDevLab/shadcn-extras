@@ -1,0 +1,74 @@
+export const metadata = {
+  title: 'Text Circle Scroll – Shadcn-Extras',
+  description:
+    'Lay text (or any nodes) around a circle and rotate it with scroll and/or auto-spin. Fully customizable and accessible.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { TextCircleBasic } from './text-circle-basic';
+import { TextCircleAuto } from './text-circle-auto';
+import { TextCircleNodes } from './text-circle-nodes';
+
+# Text Circle Scroll
+
+Arrange any items around a circle and rotate the ring based on **scroll progress** (with spring), **auto-spin**, or a **combination of both**.
+
+## Examples
+
+### Scroll-driven
+
+<ComponentCodePreview
+  component={<TextCircleBasic />}
+  filePath='app/docs/text-circle-scroll/text-circle-basic.tsx'
+/>
+
+### Auto-spin (no scroll)
+
+<ComponentCodePreview
+  component={<TextCircleAuto />}
+  filePath='app/docs/text-circle-scroll/text-circle-auto.tsx'
+/>
+
+### Using custom nodes
+
+<ComponentCodePreview
+  component={<TextCircleNodes />}
+  filePath='app/docs/text-circle-scroll/text-circle-nodes.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='text-circle-scroll' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps className="space-y-6">
+      <Step>Copy the component into <code>components/core/text-circle-scroll.tsx</code>.</Step>
+      <CodeBlock filePath="components/core/text-circle-scroll.tsx" />
+      <Step>Pass your items, radius, and behaviors (scroll/auto-spin) via props.</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop                                                              | Type                      | Default | Description                              |
+| ----------------------------------------------------------------- | ------------------------- | ------- | ---------------------------------------- |
+| `items`                                                           | `(string \| ReactNode)[]` | —       | Items around the ring in order.          |
+| `radius`                                                          | `number`                  | `110`   | Radius in px (center → baseline).        |
+| `innerGap`                                                        | `number`                  | `90`    | Visual hole size (px).                   |
+| `startAngle`                                                      | `number`                  | `-90`   | First item angle in degrees.             |
+| `clockwise`                                                       | `boolean`                 | `true`  | Direction of item order.                 |
+| `rotateOnScroll`                                                  | `boolean`                 | `true`  | Attach rotation to scroll.               |
+| `scrollDegrees`                                                   | `number`                  | `360`   | Total degrees across viewport scrolling. |
+| `autoSpinDegPerSec`                                               | `number`                  | `0`     | Constant rotation (deg/s).               |
+| `springStiffness`                                                 | `number`                  | `120`   | Spring stiffness for scroll rotation.    |
+| `height`                                                          | `number \| string`        | `320`   | Outer container height.                  |
+| `className` / `ringClassName` / `itemClassName` / `textClassName` | `string`                  | —       | Slot overrides.                          |
