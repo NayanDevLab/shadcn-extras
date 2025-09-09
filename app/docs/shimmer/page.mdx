@@ -1,0 +1,83 @@
+export const metadata = {
+  title: 'Shimmer / Skeleton – Shadcn-Extras',
+  description:
+    'Customizable shimmer skeletons for loading states (lines, avatars, cards, lists).',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { ShimmerBasic } from './shimmer-basic';
+import { ShimmerAvatar } from './shimmer-avatar';
+import { ShimmerCard } from './shimmer-card';
+
+# Shimmer / Skeleton
+
+A small, flexible set of skeleton components for loading UI.  
+Variants: **line**, **avatar**, **card**, **rect**, **list**.
+
+## Simple lines
+
+<ComponentCodePreview
+  component={<ShimmerBasic />}
+  filePath='app/docs/shimmer/shimmer-basic.tsx'
+/>
+
+## Avatar list
+
+<ComponentCodePreview
+  component={<ShimmerAvatar />}
+  filePath='app/docs/shimmer/shimmer-avatar.tsx'
+/>
+
+## Card placeholders
+
+<ComponentCodePreview
+  component={<ShimmerCard />}
+  filePath='app/docs/shimmer/shimmer-card.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='shimmer' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>
+        Copy the component into <code>components/core/shimmer-skeleton.tsx</code>.
+      </Step>
+      <CodeBlock filePath="components/core/shimmer-skeleton.tsx" />
+      <Step>Use with your preferred variant (`line`, `avatar`, `card`, etc.).</Step>
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+### Shimmer
+
+| Prop          | Type                                               | Default  | Description                                 |
+| ------------- | -------------------------------------------------- | -------- | ------------------------------------------- |
+| variant       | `'line' \| 'avatar' \| 'card' \| 'rect' \| 'list'` | `'line'` | Which skeleton shape to render.             |
+| lines         | `number`                                           | `3`      | For `line` or `list`, number of rows.       |
+| width         | `string \| number`                                 | `'100%'` | CSS width (applies to line/list items).     |
+| height        | `string \| number`                                 | `'1rem'` | CSS height (applies to line/card rect).     |
+| circle        | `boolean`                                          | `false`  | If true, makes avatar/rect fully rounded.   |
+| animate       | `boolean`                                          | `true`   | Enable shimmer gradient animation.          |
+| className     | `string`                                           | —        | Custom classes for wrapper.                 |
+| lineClassName | `string`                                           | —        | Custom classes for each line (when `line`). |
+| cardClassName | `string`                                           | —        | Custom classes for card skeleton.           |
+| avatarSize    | `number \| string`                                 | `40`     | For `avatar` variant, pixel size.           |
+
+---
+
+✅ This format matches your `testimonial` doc page.  
+✅ No `css-variables` theme involved — only your `ComponentCodePreview` renderer.
+
+Would you like me to also create the **registry entry** (`registry-examples.ts` + `registry-components.ts` for shimmer) like I did for blog cards/testimonials? That way `npx shadcn-extras add shimmer` would work directly.

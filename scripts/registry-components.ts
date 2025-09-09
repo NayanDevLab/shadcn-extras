@@ -144,4 +144,12 @@ export const components: ComponentDefinition[] = [
     description:
       'Circular text/nodes that rotate with scroll and/or auto-spin.',
   },
+  {
+    name: 'shimmer',
+    path: path.join(__dirname, '../components/core/shimmer-skeleton.tsx'),
+    registryDependencies: [],
+    dependencies: ['motion'],
+    description:
+      'Shimmer/skeleton loading components: line, avatar, card, rect, list.',
+  },
 ];

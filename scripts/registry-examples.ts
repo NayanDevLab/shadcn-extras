@@ -552,4 +552,30 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'shimmer-basic',
+    path: path.join(__dirname, '../app/docs/shimmer/shimmer-basic.tsx'),
+    description: 'Simple line skeletons.',
+    componentName: 'shimmer-basic',
+    files: [
+      {
+        name: 'shimmer-skeleton.tsx',
+        path: path.join(__dirname, '../components/core/shimmer-skeleton.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'shimmer-card',
+    path: path.join(__dirname, '../app/docs/shimmer/shimmer-card.tsx'),
+    description: 'Card placeholders.',
+    componentName: 'shimmer-card',
+    files: [
+      {
+        name: 'shimmer-skeleton.tsx',
+        path: path.join(__dirname, '../components/core/shimmer-skeleton.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];

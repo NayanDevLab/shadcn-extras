@@ -30,6 +30,7 @@ export const NAVIGATION: NavigationGroup[] = [
       { name: 'Timeline Rail', href: '/docs/timeline-rail' },
       { name: 'Testimonial', href: '/docs/testimonial' },
       { name: 'Chevron Steps', href: '/docs/chevron-steps', isNew: true },
+      { name: 'Shimmer / Skeleton', href: '/docs/shimmer', isNew: true },
       {
         name: 'Text Circle Scroll',
         href: '/docs/text-circle-scroll',
