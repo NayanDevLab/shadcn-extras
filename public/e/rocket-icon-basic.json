@@ -1,0 +1,18 @@
+{
+  "name": "rocket-icon-basic",
+  "type": "registry:ui",
+  "componentName": "rocket-icon-basic",
+  "description": "Basic usage of the Rocket Icon.",
+  "files": [
+    {
+      "path": "rocket-icon-basic.tsx",
+      "content": "'use client';\n\nimport { RocketIcon } from '@/components/core/rocket-icon';\n\nexport default function RocketIconBasic() {\n  return (\n    <div className='flex flex-col items-center gap-4 p-8'>\n      <RocketIcon size={48} className='text-primary' />\n      <p className='text-muted-foreground text-sm'>Hover to launch</p>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "components/core/rocket-icon.tsx",
+      "content": "'use client';\n\nimport { motion, useAnimation } from 'motion/react';\nimport { Rocket } from 'lucide-react';\nimport { cn } from '@/lib/utils';\nimport { useEffect, useState } from 'react';\n\ninterface RocketIconProps {\n  className?: string;\n  color?: string;\n  size?: number;\n  isLaunching?: boolean;\n  startOnHover?: boolean;\n}\n\nexport function RocketIcon({\n  className,\n  color = 'currentColor',\n  size = 24,\n  isLaunching = false,\n  startOnHover = true,\n}: RocketIconProps) {\n  const controls = useAnimation();\n  const [isHovered, setIsHovered] = useState(false);\n  const shouldAnimate = isLaunching || (startOnHover && isHovered);\n\n  useEffect(() => {\n    if (shouldAnimate) {\n      controls.start({\n        x: [0, -2, 2, -2, 2, 0],\n        y: [0, -2, 2, -2, 2, 0],\n        transition: {\n          duration: 0.2,\n          repeat: Infinity,\n          repeatType: 'loop',\n          ease: 'linear',\n        },\n      });\n    } else {\n      controls.stop();\n      controls.set({ x: 0, y: 0 });\n    }\n  }, [shouldAnimate, controls]);\n\n  return (\n    <div\n      className={cn(\n        'relative flex cursor-pointer select-none items-center justify-center',\n        className\n      )}\n      onMouseEnter={() => setIsHovered(true)}\n      onMouseLeave={() => setIsHovered(false)}\n    >\n      <motion.div animate={controls}>\n        <Rocket size={size} color={color} />\n      </motion.div>\n      {shouldAnimate && (\n        <motion.div\n          initial={{ opacity: 0, y: 10, scale: 0.5 }}\n          animate={{ opacity: [0, 1, 0], y: [10, 20], scale: [0.5, 1] }}\n          transition={{\n            duration: 0.5,\n            repeat: Infinity,\n            ease: 'easeOut',\n          }}\n          className='absolute -bottom-2 h-4 w-2 rounded-full bg-orange-500 blur-sm'\n        />\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

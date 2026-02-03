@@ -1,0 +1,49 @@
+export const metadata = {
+  title: 'Rocket Icon - Shadcn-Extras',
+  description: 'An animated rocket icon with launch effect.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import RocketIconBasic from './rocket-icon-basic';
+
+# Rocket Icon
+
+An animated rocket icon that simulates a launch effect using Motion.
+
+## Examples
+
+### Basic Usage
+
+<ComponentCodePreview
+  component={<RocketIconBasic />}
+  filePath='app/docs/rocket-icon/rocket-icon-basic.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value="cli">CLI</TabsTrigger>
+    <TabsTrigger value="manual">Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='rocket-icon' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Copy the component to <code>components/core/rocket-icon.tsx</code>.</Step>
+      <CodeBlock filePath="components/core/rocket-icon.tsx" />
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop        | Type    | Default        | Description                   |
+| ----------- | ------- | -------------- | ----------------------------- |
+| className   | string  |                | Wrapper classes               |
+| color       | string  | "currentColor" | Icon color                    |
+| size        | number  | 24             | Icon size in pixels           |
+| isLaunching | boolean | false          | Controls the launch animation |

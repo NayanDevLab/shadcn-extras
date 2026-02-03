@@ -1,0 +1,22 @@
+{
+  "name": "phone-icon",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "motion",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "tailwind": {},
+  "cssVars": {
+    "light": {},
+    "dark": {}
+  },
+  "files": [
+    {
+      "path": "phone-icon.tsx",
+      "content": "'use client';\n\nimport { motion, useAnimation } from 'motion/react';\nimport { Phone } from 'lucide-react';\nimport { cn } from '@/lib/utils';\nimport { useEffect, useState } from 'react';\n\ninterface PhoneIconProps {\n  className?: string;\n  color?: string;\n  size?: number;\n  isRinging?: boolean;\n  startOnHover?: boolean;\n}\n\nexport function PhoneIcon({\n  className,\n  color = 'currentColor',\n  size = 24,\n  isRinging = false,\n  startOnHover = true,\n}: PhoneIconProps) {\n  const controls = useAnimation();\n  const [isHovered, setIsHovered] = useState(false);\n  const shouldAnimate = isRinging || (startOnHover && isHovered);\n\n  useEffect(() => {\n    if (shouldAnimate) {\n      controls.start({\n        rotate: [0, -10, 10, -10, 10, 0],\n        transition: {\n          duration: 0.5,\n          repeat: Infinity,\n          repeatType: 'loop',\n          ease: 'easeInOut',\n          repeatDelay: 1,\n        },\n      });\n    } else {\n      controls.stop();\n      controls.set({ rotate: 0 });\n    }\n  }, [shouldAnimate, controls]);\n\n  return (\n    <div\n      className={cn(\n        'relative flex cursor-pointer select-none items-center justify-center',\n        className\n      )}\n      onMouseEnter={() => setIsHovered(true)}\n      onMouseLeave={() => setIsHovered(false)}\n    >\n      {shouldAnimate && (\n        <>\n          <motion.div\n            initial={{ opacity: 0, scale: 0.5 }}\n            animate={{ opacity: [0, 0.5, 0], scale: [1, 1.5, 2] }}\n            transition={{\n              duration: 1.5,\n              repeat: Infinity,\n              ease: 'easeOut',\n            }}\n            className='border-primary/50 absolute rounded-full border-2'\n            style={{ width: size * 1.5, height: size * 1.5 }}\n          />\n          <motion.div\n            initial={{ opacity: 0, scale: 0.5 }}\n            animate={{ opacity: [0, 0.5, 0], scale: [1, 1.5, 2] }}\n            transition={{\n              duration: 1.5,\n              repeat: Infinity,\n              ease: 'easeOut',\n              delay: 0.5,\n            }}\n            className='border-primary/30 absolute rounded-full border-2'\n            style={{ width: size * 1.5, height: size * 1.5 }}\n          />\n        </>\n      )}\n      <motion.div animate={controls}>\n        <Phone size={size} color={color} />\n      </motion.div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

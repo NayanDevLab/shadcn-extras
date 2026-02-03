@@ -578,4 +578,30 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'phone-icon-basic',
+    path: path.join(__dirname, '../app/docs/phone-icon/phone-icon-basic.tsx'),
+    description: 'Basic usage of the Phone Icon.',
+    componentName: 'phone-icon-basic',
+    files: [
+      {
+        name: 'phone-icon.tsx',
+        path: path.join(__dirname, '../components/core/phone-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'rocket-icon-basic',
+    path: path.join(__dirname, '../app/docs/rocket-icon/rocket-icon-basic.tsx'),
+    description: 'Basic usage of the Rocket Icon.',
+    componentName: 'rocket-icon-basic',
+    files: [
+      {
+        name: 'rocket-icon.tsx',
+        path: path.join(__dirname, '../components/core/rocket-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];

@@ -36,6 +36,16 @@ export const NAVIGATION: NavigationGroup[] = [
         href: '/docs/text-circle-scroll',
         isNew: true,
       },
+      {
+        name: 'Phone Icon',
+        href: '/docs/phone-icon',
+        isNew: true,
+      },
+      {
+        name: 'Rocket Icon',
+        href: '/docs/rocket-icon',
+        isNew: true,
+      },
     ],
   },
   {

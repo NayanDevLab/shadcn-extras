@@ -152,4 +152,18 @@ export const components: ComponentDefinition[] = [
     description:
       'Shimmer/skeleton loading components: line, avatar, card, rect, list.',
   },
+  {
+    name: 'phone-icon',
+    path: path.join(__dirname, '../components/core/phone-icon.tsx'),
+    registryDependencies: [],
+    dependencies: ['motion', 'lucide-react'],
+    description: 'Animated phone icon with ringing effect.',
+  },
+  {
+    name: 'rocket-icon',
+    path: path.join(__dirname, '../components/core/rocket-icon.tsx'),
+    registryDependencies: [],
+    dependencies: ['motion', 'lucide-react'],
+    description: 'Animated rocket icon with launch effect.',
+  },
 ];

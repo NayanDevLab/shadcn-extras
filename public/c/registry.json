@@ -325,6 +325,50 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "phone-icon",
+      "type": "registry:ui",
+      "title": "Phone Icon",
+      "description": "Animated phone icon with ringing effect.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\phone-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "rocket-icon",
+      "type": "registry:ui",
+      "title": "Rocket Icon",
+      "description": "Animated rocket icon with launch effect.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\rocket-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }
