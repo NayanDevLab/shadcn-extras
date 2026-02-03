@@ -1,0 +1,18 @@
+{
+  "name": "truck-icon-basic",
+  "type": "registry:ui",
+  "componentName": "truck-icon-basic",
+  "description": "Basic usage of the Truck Icon.",
+  "files": [
+    {
+      "path": "truck-icon-basic.tsx",
+      "content": "'use client';\n\nimport { TruckIcon } from '@/components/core/truck-icon';\n\nexport default function TruckIconBasic() {\n  return (\n    <div className='flex flex-col items-center gap-8 p-8'>\n      <div className='flex flex-col items-center gap-2'>\n        <TruckIcon\n          size={48}\n          animationType='drive'\n          className='text-orange-600'\n        />\n        <p className='text-muted-foreground text-sm'>Drive (Slide)</p>\n      </div>\n\n      <div className='flex flex-col items-center gap-2'>\n        <TruckIcon size={48} animationType='bounce' className='text-blue-600' />\n        <p className='text-muted-foreground text-sm'>Bounce (Rough Road)</p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "components/core/truck-icon.tsx",
+      "content": "'use client';\n\nimport { motion, useAnimation } from 'motion/react';\nimport { Truck } from 'lucide-react';\nimport { cn } from '@/lib/utils';\nimport { useEffect, useState } from 'react';\n\ninterface TruckIconProps {\n  className?: string;\n  color?: string;\n  size?: number;\n  isAnimating?: boolean;\n  startOnHover?: boolean;\n  animationType?: 'drive' | 'bounce';\n}\n\nexport function TruckIcon({\n  className,\n  color = 'currentColor',\n  size = 24,\n  isAnimating = false,\n  startOnHover = true,\n  animationType = 'drive',\n}: TruckIconProps) {\n  const controls = useAnimation();\n  const [isHovered, setIsHovered] = useState(false);\n  const shouldAnimate = isAnimating || (startOnHover && isHovered);\n\n  useEffect(() => {\n    if (shouldAnimate) {\n      if (animationType === 'drive') {\n        controls.start({\n          x: [0, 3, -3, 0],\n          transition: {\n            duration: 0.5,\n            repeat: Infinity,\n            repeatType: 'loop',\n            ease: 'easeInOut',\n            repeatDelay: 0.5,\n          },\n        });\n      } else if (animationType === 'bounce') {\n        controls.start({\n          y: [0, -2, 0, -1, 0],\n          transition: {\n            duration: 0.5,\n            repeat: Infinity,\n            repeatType: 'loop',\n            ease: 'easeInOut',\n            repeatDelay: 0.2,\n          },\n        });\n      }\n    } else {\n      controls.stop();\n      controls.set({ x: 0, y: 0 });\n    }\n  }, [shouldAnimate, animationType, controls]);\n\n  return (\n    <div\n      className={cn(\n        'relative flex cursor-pointer select-none items-center justify-center',\n        className\n      )}\n      onMouseEnter={() => setIsHovered(true)}\n      onMouseLeave={() => setIsHovered(false)}\n    >\n      <motion.div animate={controls}>\n        <Truck size={size} color={color} />\n      </motion.div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

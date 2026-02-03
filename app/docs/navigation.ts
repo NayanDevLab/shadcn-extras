@@ -32,18 +32,13 @@ export const NAVIGATION: NavigationGroup[] = [
       { name: 'Chevron Steps', href: '/docs/chevron-steps', isNew: true },
       { name: 'Shimmer / Skeleton', href: '/docs/shimmer', isNew: true },
       {
+        name: 'Animated Icons',
+        href: '/docs/icons',
+        isNew: true,
+      },
+      {
         name: 'Text Circle Scroll',
         href: '/docs/text-circle-scroll',
-        isNew: true,
-      },
-      {
-        name: 'Phone Icon',
-        href: '/docs/phone-icon',
-        isNew: true,
-      },
-      {
-        name: 'Rocket Icon',
-        href: '/docs/rocket-icon',
         isNew: true,
       },
     ],

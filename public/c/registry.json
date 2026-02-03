@@ -369,6 +369,116 @@
         "ui",
         "shadcn-extras"
       ]
+    },
+    {
+      "name": "bulb-icon",
+      "type": "registry:ui",
+      "title": "Bulb Icon",
+      "description": "Animated lightbulb icon with pulse and flash effects.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\bulb-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "money-icon",
+      "type": "registry:ui",
+      "title": "Money Icon",
+      "description": "Animated banknote icon with bounce and flip effects.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\money-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "refresh-icon",
+      "type": "registry:ui",
+      "title": "Refresh Icon",
+      "description": "Animated refresh/sync icon with spin and pulse effects.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\refresh-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "clock-icon",
+      "type": "registry:ui",
+      "title": "Clock Icon",
+      "description": "Animated clock icon with swing and shake effects.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\clock-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "truck-icon",
+      "type": "registry:ui",
+      "title": "Truck Icon",
+      "description": "Animated truck icon with drive and bounce effects.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\truck-icon.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
     }
   ]
 }

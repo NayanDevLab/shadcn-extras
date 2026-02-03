@@ -1,0 +1,18 @@
+{
+  "name": "clock-icon-basic",
+  "type": "registry:ui",
+  "componentName": "clock-icon-basic",
+  "description": "Basic usage of the Clock Icon.",
+  "files": [
+    {
+      "path": "clock-icon-basic.tsx",
+      "content": "'use client';\n\nimport { ClockIcon } from '@/components/core/clock-icon';\n\nexport default function ClockIconBasic() {\n  return (\n    <div className='flex flex-col items-center gap-8 p-8'>\n      <div className='flex flex-col items-center gap-2'>\n        <ClockIcon size={48} animationType='swing' className='text-gray-600' />\n        <p className='text-muted-foreground text-sm'>Swing (Pendulum)</p>\n      </div>\n\n      <div className='flex flex-col items-center gap-2'>\n        <ClockIcon size={48} animationType='shake' className='text-red-500' />\n        <p className='text-muted-foreground text-sm'>Shake (Alarm)</p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "components/core/clock-icon.tsx",
+      "content": "'use client';\n\nimport { motion, useAnimation } from 'motion/react';\nimport { Clock } from 'lucide-react';\nimport { cn } from '@/lib/utils';\nimport { useEffect, useState } from 'react';\n\ninterface ClockIconProps {\n  className?: string;\n  color?: string;\n  size?: number;\n  isAnimating?: boolean;\n  startOnHover?: boolean;\n  animationType?: 'swing' | 'shake';\n}\n\nexport function ClockIcon({\n  className,\n  color = 'currentColor',\n  size = 24,\n  isAnimating = false,\n  startOnHover = true,\n  animationType = 'swing',\n}: ClockIconProps) {\n  const controls = useAnimation();\n  const [isHovered, setIsHovered] = useState(false);\n  const shouldAnimate = isAnimating || (startOnHover && isHovered);\n\n  useEffect(() => {\n    if (shouldAnimate) {\n      if (animationType === 'swing') {\n        controls.start({\n          rotate: [0, 15, -15, 10, -10, 0],\n          transition: {\n            duration: 1.5,\n            repeat: Infinity,\n            repeatType: 'loop',\n            ease: 'easeInOut',\n            repeatDelay: 0.5,\n          },\n        });\n      } else if (animationType === 'shake') {\n        controls.start({\n          x: [0, -2, 2, -2, 2, 0],\n          transition: {\n            duration: 0.2,\n            repeat: Infinity,\n            repeatType: 'loop',\n            ease: 'linear',\n            repeatDelay: 0.8,\n          },\n        });\n      }\n    } else {\n      controls.stop();\n      controls.set({ rotate: 0, x: 0 });\n    }\n  }, [shouldAnimate, animationType, controls]);\n\n  return (\n    <div\n      className={cn(\n        'relative flex cursor-pointer select-none items-center justify-center',\n        className\n      )}\n      onMouseEnter={() => setIsHovered(true)}\n      onMouseLeave={() => setIsHovered(false)}\n    >\n      <motion.div\n        animate={controls}\n        style={{ originY: animationType === 'swing' ? 0.2 : 0.5 }}\n      >\n        <Clock size={size} color={color} />\n      </motion.div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

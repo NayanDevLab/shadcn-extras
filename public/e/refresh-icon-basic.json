@@ -1,0 +1,18 @@
+{
+  "name": "refresh-icon-basic",
+  "type": "registry:ui",
+  "componentName": "refresh-icon-basic",
+  "description": "Basic usage of the Refresh Icon.",
+  "files": [
+    {
+      "path": "refresh-icon-basic.tsx",
+      "content": "'use client';\n\nimport { RefreshIcon } from '@/components/core/refresh-icon';\n\nexport default function RefreshIconBasic() {\n  return (\n    <div className='flex flex-col items-center gap-8 p-8'>\n      <div className='flex flex-col items-center gap-2'>\n        <RefreshIcon size={48} animationType='spin' className='text-blue-600' />\n        <p className='text-muted-foreground text-sm'>Spin on Hover</p>\n      </div>\n\n      <div className='flex flex-col items-center gap-2'>\n        <RefreshIcon\n          size={48}\n          animationType='pulse'\n          className='text-indigo-600'\n        />\n        <p className='text-muted-foreground text-sm'>Pulse on Hover</p>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:component"
+    },
+    {
+      "path": "components/core/refresh-icon.tsx",
+      "content": "'use client';\n\nimport { motion, useAnimation } from 'motion/react';\nimport { RefreshCcw } from 'lucide-react';\nimport { cn } from '@/lib/utils';\nimport { useEffect, useState } from 'react';\n\ninterface RefreshIconProps {\n  className?: string;\n  color?: string;\n  size?: number;\n  isRefreshing?: boolean;\n  startOnHover?: boolean;\n  animationType?: 'spin' | 'pulse';\n}\n\nexport function RefreshIcon({\n  className,\n  color = 'currentColor',\n  size = 24,\n  isRefreshing = false,\n  startOnHover = true,\n  animationType = 'spin',\n}: RefreshIconProps) {\n  const controls = useAnimation();\n  const [isHovered, setIsHovered] = useState(false);\n  const shouldAnimate = isRefreshing || (startOnHover && isHovered);\n\n  useEffect(() => {\n    if (shouldAnimate) {\n      if (animationType === 'spin') {\n        controls.start({\n          rotate: 360,\n          transition: {\n            duration: 1,\n            repeat: Infinity,\n            repeatType: 'loop',\n            ease: 'linear',\n          },\n        });\n      } else if (animationType === 'pulse') {\n        controls.start({\n          scale: [1, 1.1, 1],\n          opacity: [1, 0.7, 1],\n          transition: {\n            duration: 1.5,\n            repeat: Infinity,\n            repeatType: 'loop',\n            ease: 'easeInOut',\n          },\n        });\n      }\n    } else {\n      controls.stop();\n      if (animationType === 'spin') {\n        controls.set({ rotate: 0 });\n      } else {\n        controls.set({ scale: 1, opacity: 1 });\n      }\n    }\n  }, [shouldAnimate, animationType, controls]);\n\n  return (\n    <div\n      className={cn(\n        'relative flex cursor-pointer select-none items-center justify-center',\n        className\n      )}\n      onMouseEnter={() => setIsHovered(true)}\n      onMouseLeave={() => setIsHovered(false)}\n    >\n      <motion.div animate={controls}>\n        <RefreshCcw size={size} color={color} />\n      </motion.div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ]
+}

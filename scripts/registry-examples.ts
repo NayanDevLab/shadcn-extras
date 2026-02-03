@@ -580,7 +580,7 @@ export const examples: ExampleDefinition[] = [
   },
   {
     name: 'phone-icon-basic',
-    path: path.join(__dirname, '../app/docs/phone-icon/phone-icon-basic.tsx'),
+    path: path.join(__dirname, '../app/docs/icons/phone-icon-basic.tsx'),
     description: 'Basic usage of the Phone Icon.',
     componentName: 'phone-icon-basic',
     files: [
@@ -593,13 +593,78 @@ export const examples: ExampleDefinition[] = [
   },
   {
     name: 'rocket-icon-basic',
-    path: path.join(__dirname, '../app/docs/rocket-icon/rocket-icon-basic.tsx'),
+    path: path.join(__dirname, '../app/docs/icons/rocket-icon-basic.tsx'),
     description: 'Basic usage of the Rocket Icon.',
     componentName: 'rocket-icon-basic',
     files: [
       {
         name: 'rocket-icon.tsx',
         path: path.join(__dirname, '../components/core/rocket-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'bulb-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/bulb-icon-basic.tsx'),
+    description: 'Basic usage of the Bulb Icon.',
+    componentName: 'bulb-icon-basic',
+    files: [
+      {
+        name: 'bulb-icon.tsx',
+        path: path.join(__dirname, '../components/core/bulb-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'money-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/money-icon-basic.tsx'),
+    description: 'Basic usage of the Money Icon.',
+    componentName: 'money-icon-basic',
+    files: [
+      {
+        name: 'money-icon.tsx',
+        path: path.join(__dirname, '../components/core/money-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'refresh-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/refresh-icon-basic.tsx'),
+    description: 'Basic usage of the Refresh Icon.',
+    componentName: 'refresh-icon-basic',
+    files: [
+      {
+        name: 'refresh-icon.tsx',
+        path: path.join(__dirname, '../components/core/refresh-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'clock-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/clock-icon-basic.tsx'),
+    description: 'Basic usage of the Clock Icon.',
+    componentName: 'clock-icon-basic',
+    files: [
+      {
+        name: 'clock-icon.tsx',
+        path: path.join(__dirname, '../components/core/clock-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'truck-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/truck-icon-basic.tsx'),
+    description: 'Basic usage of the Truck Icon.',
+    componentName: 'truck-icon-basic',
+    files: [
+      {
+        name: 'truck-icon.tsx',
+        path: path.join(__dirname, '../components/core/truck-icon.tsx'),
         type: 'registry:ui',
       },
     ],
