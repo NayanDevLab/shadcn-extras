@@ -669,4 +669,109 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'network-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/network-icon-basic.tsx'),
+    description: 'Basic usage of the Network Icon.',
+    componentName: 'network-icon-basic',
+    files: [
+      {
+        name: 'network-icon.tsx',
+        path: path.join(__dirname, '../components/core/network-icon.tsx'),
+        type: 'registry:ui',
+      },
+      // Note: Network Icon uses Lucide's User icon, ensuring it's available.
+    ],
+  },
+  {
+    name: 'home-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/home-icon-basic.tsx'),
+    description: 'Basic usage of the Home Icon.',
+    componentName: 'home-icon-basic',
+    files: [
+      {
+        name: 'home-icon.tsx',
+        path: path.join(__dirname, '../components/core/home-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'cart-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/cart-icon-basic.tsx'),
+    description: 'Basic usage of the Cart Icon.',
+    componentName: 'cart-icon-basic',
+    files: [
+      {
+        name: 'cart-icon.tsx',
+        path: path.join(__dirname, '../components/core/cart-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'shield-check-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/shield-check-icon-basic.tsx'),
+    description: 'Basic usage of the Shield Check Icon.',
+    componentName: 'shield-check-icon-basic',
+    files: [
+      {
+        name: 'shield-check-icon.tsx',
+        path: path.join(__dirname, '../components/core/shield-check-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'calendar-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/calendar-icon-basic.tsx'),
+    description: 'Basic usage of the Calendar Icon.',
+    componentName: 'calendar-icon-basic',
+    files: [
+      {
+        name: 'calendar-icon.tsx',
+        path: path.join(__dirname, '../components/core/calendar-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'mobile-store-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/mobile-store-icon-basic.tsx'),
+    description: 'Basic usage of the Mobile Store Icon.',
+    componentName: 'mobile-store-icon-basic',
+    files: [
+      {
+        name: 'mobile-store-icon.tsx',
+        path: path.join(__dirname, '../components/core/mobile-store-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'balance-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/balance-icon-basic.tsx'),
+    description: 'Basic usage of the Balance Icon.',
+    componentName: 'balance-icon-basic',
+    files: [
+      {
+        name: 'balance-icon.tsx',
+        path: path.join(__dirname, '../components/core/balance-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'building-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/building-icon-basic.tsx'),
+    description: 'Basic usage of the Building Icon.',
+    componentName: 'building-icon-basic',
+    files: [
+      {
+        name: 'building-icon.tsx',
+        path: path.join(__dirname, '../components/core/building-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
