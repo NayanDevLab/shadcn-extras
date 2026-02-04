@@ -14,6 +14,19 @@ import { CalendarIcon } from '@/components/core/calendar-icon';
 import { MobileStoreIcon } from '@/components/core/mobile-store-icon';
 import { BalanceIcon } from '@/components/core/balance-icon';
 import { BuildingIcon } from '@/components/core/building-icon';
+import { GlobalIcon } from '@/components/core/global-icon';
+import { UserIcon } from '@/components/core/user-icon';
+import { GlobalSearchIcon } from '@/components/core/global-search-icon';
+import { ToolsIcon } from '@/components/core/tools-icon';
+import { TrophyIcon } from '@/components/core/trophy-icon';
+import { MicrophoneIcon } from '@/components/core/microphone-icon';
+import { LikeIcon } from '@/components/core/like-icon';
+import { BellIcon } from '@/components/core/bell-icon';
+import { HeartIcon } from '@/components/core/heart-icon';
+import { TrashIcon } from '@/components/core/trash-icon';
+import { ShareIcon } from '@/components/core/share-icon';
+import { PaperPlaneIcon } from '@/components/core/paper-plane-icon';
+import { MailStackIcon } from '@/components/core/mail-stack-icon';
 
 import PhoneIconBasic from './phone-icon-basic';
 import RocketIconBasic from './rocket-icon-basic';
@@ -30,6 +43,19 @@ import CalendarIconBasic from './calendar-icon-basic';
 import MobileStoreIconBasic from './mobile-store-icon-basic';
 import BalanceIconBasic from './balance-icon-basic';
 import BuildingIconBasic from './building-icon-basic';
+import GlobalIconBasic from './global-icon-basic';
+import UserIconBasic from './user-icon-basic';
+import GlobalSearchIconBasic from './global-search-icon-basic';
+import ToolsIconBasic from './tools-icon-basic';
+import TrophyIconBasic from './trophy-icon-basic';
+import MicrophoneIconBasic from './microphone-icon-basic';
+import LikeIconBasic from './like-icon-basic';
+import BellIconBasic from './bell-icon-basic';
+import HeartIconBasic from './heart-icon-basic';
+import TrashIconBasic from './trash-icon-basic';
+import ShareIconBasic from './share-icon-basic';
+import PaperPlaneIconBasic from './paper-plane-icon-basic';
+import MailStackIconBasic from './mail-stack-icon-basic';
 
 export type IconDefinition = {
   name: string;
@@ -152,5 +178,108 @@ export const AVAILABLE_ICONS: IconDefinition[] = [
     ),
     example: <BuildingIconBasic />,
     filePath: 'app/docs/icons/building-icon-basic.tsx',
+  },
+  {
+    name: 'Global Icon',
+    installName: 'global-icon',
+    component: <GlobalIcon size={48} startOnHover={true} pinColor='#06b6d4' />,
+    example: <GlobalIconBasic />,
+    filePath: 'app/docs/icons/global-icon-basic.tsx',
+  },
+  {
+    name: 'User Icon',
+    installName: 'user-icon',
+    component: <UserIcon size={48} startOnHover={true} userColor='#06b6d4' />,
+    example: <UserIconBasic />,
+    filePath: 'app/docs/icons/user-icon-basic.tsx',
+  },
+  {
+    name: 'Global Search Icon',
+    installName: 'global-search-icon',
+    component: (
+      <GlobalSearchIcon size={48} startOnHover={true} globeColor='#06b6d4' />
+    ),
+    example: <GlobalSearchIconBasic />,
+    filePath: 'app/docs/icons/global-search-icon-basic.tsx',
+  },
+  {
+    name: 'Tools Icon',
+    installName: 'tools-icon',
+    component: (
+      <ToolsIcon size={48} startOnHover={true} screwdriverColor='#06b6d4' />
+    ),
+    example: <ToolsIconBasic />,
+    filePath: 'app/docs/icons/tools-icon-basic.tsx',
+  },
+  {
+    name: 'Trophy Icon',
+    installName: 'trophy-icon',
+    component: <TrophyIcon size={48} startOnHover={true} starColor='#fbbf24' />,
+    example: <TrophyIconBasic />,
+    filePath: 'app/docs/icons/trophy-icon-basic.tsx',
+  },
+  {
+    name: 'Microphone Icon',
+    installName: 'microphone-icon',
+    component: (
+      <MicrophoneIcon size={48} startOnHover={true} standColor='#06b6d4' />
+    ),
+    example: <MicrophoneIconBasic />,
+    filePath: 'app/docs/icons/microphone-icon-basic.tsx',
+  },
+  {
+    name: 'Like Icon',
+    installName: 'like-icon',
+    component: <LikeIcon size={48} startOnHover={true} cuffColor='#06b6d4' />,
+    example: <LikeIconBasic />,
+    filePath: 'app/docs/icons/like-icon-basic.tsx',
+  },
+  {
+    name: 'Bell Icon',
+    installName: 'bell-icon',
+    component: (
+      <BellIcon size={48} startOnHover={true} clapperColor='#06b6d4' />
+    ),
+    example: <BellIconBasic />,
+    filePath: 'app/docs/icons/bell-icon-basic.tsx',
+  },
+  {
+    name: 'Heart Icon',
+    installName: 'heart-icon',
+    component: <HeartIcon size={48} startOnHover={true} shineColor='#06b6d4' />,
+    example: <HeartIconBasic />,
+    filePath: 'app/docs/icons/heart-icon-basic.tsx',
+  },
+  {
+    name: 'Trash Icon',
+    installName: 'trash-icon',
+    component: <TrashIcon size={48} startOnHover={true} lidColor='#06b6d4' />,
+    example: <TrashIconBasic />,
+    filePath: 'app/docs/icons/trash-icon-basic.tsx',
+  },
+  {
+    name: 'Share Icon',
+    installName: 'share-icon',
+    component: <ShareIcon size={48} startOnHover={true} dotColor='#06b6d4' />,
+    example: <ShareIconBasic />,
+    filePath: 'app/docs/icons/share-icon-basic.tsx',
+  },
+  {
+    name: 'Paper Plane Icon',
+    installName: 'paper-plane-icon',
+    component: (
+      <PaperPlaneIcon size={48} startOnHover={true} trailColor='#06b6d4' />
+    ),
+    example: <PaperPlaneIconBasic />,
+    filePath: 'app/docs/icons/paper-plane-icon-basic.tsx',
+  },
+  {
+    name: 'Mail Stack Icon',
+    installName: 'mail-stack-icon',
+    component: (
+      <MailStackIcon size={48} startOnHover={true} stackColor='#06b6d4' />
+    ),
+    example: <MailStackIconBasic />,
+    filePath: 'app/docs/icons/mail-stack-icon-basic.tsx',
   },
 ];

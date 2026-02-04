@@ -86,7 +86,7 @@ export function BuildingIcon({
         });
       } else if (animationType === 'lights') {
         // Flicker lights
-        lightControls.start((i) => ({
+        lightControls.start(() => ({
           opacity: [1, 0.3, 1],
           transition: {
             duration: Math.random() * 1 + 0.5,

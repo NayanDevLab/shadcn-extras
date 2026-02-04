@@ -1,7 +1,6 @@
 'use client';
 
 import { PhoneIcon } from '@/components/core/phone-icon';
-import { useState } from 'react';
 
 export default function PhoneIconBasic() {
   return (

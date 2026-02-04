@@ -29,7 +29,6 @@ export function NetworkIcon({
   // Calculate sizes relative to the main size
   const userSize = size * 0.5;
   const nodeSize = size * 0.15;
-  const radius = size * 0.35; // Distance from center to nodes
 
   useEffect(() => {
     if (shouldAnimate) {

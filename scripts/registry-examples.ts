@@ -774,4 +774,176 @@ export const examples: ExampleDefinition[] = [
       },
     ],
   },
+  {
+    name: 'global-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/global-icon-basic.tsx'),
+    description: 'Basic usage of the Global Icon.',
+    componentName: 'global-icon-basic',
+    files: [
+      {
+        name: 'global-icon.tsx',
+        path: path.join(__dirname, '../components/core/global-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'user-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/user-icon-basic.tsx'),
+    description: 'Basic usage of the User Icon.',
+    componentName: 'user-icon-basic',
+    files: [
+      {
+        name: 'user-icon.tsx',
+        path: path.join(__dirname, '../components/core/user-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'global-search-icon-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/icons/global-search-icon-basic.tsx'
+    ),
+    description: 'Basic usage of the Global Search Icon.',
+    componentName: 'global-search-icon-basic',
+    files: [
+      {
+        name: 'global-search-icon.tsx',
+        path: path.join(__dirname, '../components/core/global-search-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'tools-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/tools-icon-basic.tsx'),
+    description: 'Basic usage of the Tools Icon.',
+    componentName: 'tools-icon-basic',
+    files: [
+      {
+        name: 'tools-icon.tsx',
+        path: path.join(__dirname, '../components/core/tools-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'trophy-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/trophy-icon-basic.tsx'),
+    description: 'Basic usage of the Trophy Icon.',
+    componentName: 'trophy-icon-basic',
+    files: [
+      {
+        name: 'trophy-icon.tsx',
+        path: path.join(__dirname, '../components/core/trophy-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'microphone-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/microphone-icon-basic.tsx'),
+    description: 'Basic usage of the Microphone Icon.',
+    componentName: 'microphone-icon-basic',
+    files: [
+      {
+        name: 'microphone-icon.tsx',
+        path: path.join(__dirname, '../components/core/microphone-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'like-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/like-icon-basic.tsx'),
+    description: 'Basic usage of the Like Icon.',
+    componentName: 'like-icon-basic',
+    files: [
+      {
+        name: 'like-icon.tsx',
+        path: path.join(__dirname, '../components/core/like-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'bell-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/bell-icon-basic.tsx'),
+    description: 'Basic usage of the Bell Icon.',
+    componentName: 'bell-icon-basic',
+    files: [
+      {
+        name: 'bell-icon.tsx',
+        path: path.join(__dirname, '../components/core/bell-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'heart-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/heart-icon-basic.tsx'),
+    description: 'Basic usage of the Heart Icon.',
+    componentName: 'heart-icon-basic',
+    files: [
+      {
+        name: 'heart-icon.tsx',
+        path: path.join(__dirname, '../components/core/heart-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'trash-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/trash-icon-basic.tsx'),
+    description: 'Basic usage of the Trash Icon.',
+    componentName: 'trash-icon-basic',
+    files: [
+      {
+        name: 'trash-icon.tsx',
+        path: path.join(__dirname, '../components/core/trash-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'share-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/share-icon-basic.tsx'),
+    description: 'Basic usage of the Share Icon.',
+    componentName: 'share-icon-basic',
+    files: [
+      {
+        name: 'share-icon.tsx',
+        path: path.join(__dirname, '../components/core/share-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'paper-plane-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/paper-plane-icon-basic.tsx'),
+    description: 'Basic usage of the Paper Plane Icon.',
+    componentName: 'paper-plane-icon-basic',
+    files: [
+      {
+        name: 'paper-plane-icon.tsx',
+        path: path.join(__dirname, '../components/core/paper-plane-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'mail-stack-icon-basic',
+    path: path.join(__dirname, '../app/docs/icons/mail-stack-icon-basic.tsx'),
+    description: 'Basic usage of the Mail Stack Icon.',
+    componentName: 'mail-stack-icon-basic',
+    files: [
+      {
+        name: 'mail-stack-icon.tsx',
+        path: path.join(__dirname, '../components/core/mail-stack-icon.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
