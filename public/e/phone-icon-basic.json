@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "phone-icon-basic.tsx",
-      "content": "'use client';\n\nimport { PhoneIcon } from '@/components/core/phone-icon';\nimport { useState } from 'react';\n\nexport default function PhoneIconBasic() {\n  return (\n    <div className='flex flex-col items-center gap-4 p-8'>\n      <PhoneIcon size={48} className='text-primary' />\n      <p className='text-muted-foreground text-sm'>Hover to ring</p>\n    </div>\n  );\n}\n",
+      "content": "'use client';\n\nimport { PhoneIcon } from '@/components/core/phone-icon';\n\nexport default function PhoneIconBasic() {\n  return (\n    <div className='flex flex-col items-center gap-4 p-8'>\n      <PhoneIcon size={48} className='text-primary' />\n      <p className='text-muted-foreground text-sm'>Hover to ring</p>\n    </div>\n  );\n}\n",
       "type": "registry:component"
     },
     {
