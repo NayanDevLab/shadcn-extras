@@ -78,7 +78,6 @@ export const NAVIGATION: NavigationGroup[] = [
       {
         name: 'Sequential Pulse',
         href: '/docs/spinner-sequential-pulse',
-        isNew: true,
       },
     ],
   },
@@ -92,6 +91,36 @@ export const NAVIGATION: NavigationGroup[] = [
       { name: 'Blog Card Two', href: '/docs/blog-card-two' },
       { name: 'Blog Card Three', href: '/docs/blog-card-three' },
       { name: 'Blog Card Four', href: '/docs/blog-card-four' },
+    ],
+  },
+  {
+    name: 'Backgrounds',
+    children: [
+      {
+        name: 'Gradient Generator',
+        href: '/docs/backgrounds/gradient',
+        isNew: true,
+      },
+      {
+        name: 'Gradient Mesh',
+        href: '/docs/backgrounds/mesh',
+        isNew: true,
+      },
+      {
+        name: 'Pattern Generator',
+        href: '/docs/backgrounds/pattern',
+        isNew: true,
+      },
+      {
+        name: 'Noise & Grain',
+        href: '/docs/backgrounds/noise',
+        isNew: true,
+      },
+      {
+        name: 'Animated Presets',
+        href: '/docs/backgrounds/animated',
+        isNew: true,
+      },
     ],
   },
 ];

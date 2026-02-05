@@ -1,0 +1,31 @@
+import { GradientGenerator } from '@/components/tools/gradient-generator';
+import { IconGalleryWrapper } from '../../icons/gallery-wrapper';
+
+# Gradient Generator
+
+Generate beautiful, highly customizable gradients ready for your Tailwind CSS projects.
+
+<div className='my-8'>
+  <GradientGenerator />
+</div>
+
+## Features
+
+- **Linear, Radial, and Conic Gradients**: Choose the style that fits your design.
+- **Tailwind Ready**: Generates `bg-gradient-to-...` classes with arbitrary values for maximum color flexibility.
+- **Customizable**: Add up to 5 colors, control direction, and randomize combinations.
+- **CSS Fallback**: Provides standard CSS `background` strings for use in vanilla CSS or `style` attributes.
+
+## Usage
+
+Copy the generated class and apply it to any element:
+
+```tsx
+<div className='h-40 w-full rounded-xl bg-gradient-to-r from-[#6366f1] via-[#a855f7] to-[#ec4899]' />
+```
+
+For complex gradients (Radial/Conic), the tool generates JIT arbitrary values:
+
+```tsx
+<div className='h-40 w-full rounded-xl bg-[radial-gradient(circle,_#6366f1,_#a855f7)]' />
+```

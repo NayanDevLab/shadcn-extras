@@ -1,0 +1,54 @@
+import { GradientMeshGenerator } from '@/components/tools/gradient-mesh-generator';
+
+# Gradient Mesh Generator
+
+Create stunning, animated gradient backgrounds using blended blobs. Perfect for hero sections and feature highlights.
+
+<div className='my-8'>
+  <GradientMeshGenerator />
+</div>
+
+## Installation
+
+To support the animation, add the following CSS to your `app/globals.css` file within the `@theme inline` block (or `@theme` block):
+
+```css
+/* app/globals.css */
+@theme inline {
+  /* ... existing variables ... */
+
+  --animate-blob: blob 10s infinite;
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+}
+```
+
+## Features
+
+- **Animated Blobs**: Floating blobs that create a dynamic "lava lamp" or "Aurora" effect.
+- **Customizable**: Adjust position, color, size, and blur for each blob.
+- **Mix Blend Modes**: Uses `mix-blend-multiply` for beautiful color blending (best on dark backgrounds).
+- **Interactive Preview**: Real-time updates as you tweak parameters.
+
+## Usage
+
+Copy the generated JSX and paste it into your component. Ensure the parent container has `relative` position and defined dimensions.
+
+```tsx
+<div className='relative h-96 w-full overflow-hidden bg-slate-950'>
+  {/* Blobs go here */}
+</div>
+```

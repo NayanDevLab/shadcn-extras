@@ -1,0 +1,37 @@
+import { NoiseGenerator } from '@/components/tools/noise-generator';
+
+# Noise & Grain Generator
+
+Generate custom SVG noise textures to add depth, texture, and a "film grain" look to your backgrounds.
+
+<div className='my-8'>
+  <NoiseGenerator />
+</div>
+
+## Why use Noise?
+
+Adding subtle noise can reduce color banding in gradients and give flat designs a more tangible, premium feel. This tool generates a pure CSS `background-image` using an SVG data URI, meaning:
+
+1. **No external requests**: It's embedded directly in your CSS.
+2. **Infinite scalability**: It's SVG-based, so it looks crisp at any resolution.
+3. **Performance**: Lightweight compared to raster images.
+
+## Features
+
+- **Turbulence vs Fractal Noise**: Choose between rougher or smoother organic textures.
+- **Base Frequency**: Controls the "zoom" or grain size of the noise.
+- **Octaves**: Controls the detail level (complexity).
+- **Opacity**: Fine-tune the blend strength.
+
+## Usage
+
+Simply copy the generated CSS class and apply it to any element. You can stack it with gradients or colors using comma-separated backgrounds:
+
+```css
+.my-element {
+  background-color: #000;
+  /* Paste the generated noise code here, combined with your background */
+  background-image:
+    url('data:image/svg+xml...'), linear-gradient(to bottom, #333, #000);
+}
+```

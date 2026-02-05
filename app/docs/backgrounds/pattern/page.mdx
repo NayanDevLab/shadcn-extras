@@ -1,0 +1,26 @@
+import { PatternGenerator } from '@/components/tools/pattern-generator';
+
+# Background Pattern Generator
+
+Create subtle, repeating background patterns like dots, grids, and lines. Great for adding texture to empty spaces without overwhelming the content.
+
+<div className='my-8'>
+  <PatternGenerator />
+</div>
+
+## Features
+
+- **Types**: Dot matrix, Grid lines, Diagonal lines.
+- **Customizable**: Adjust color, background size (gap), thickness, and opacity.
+- **CSS-First**: Generates optimized `backgroundImage` CSS using gradients, ensuring lightweight and fast rendering.
+
+## Usage
+
+For best results, wrap the output code in a container element or apply the styles directly to your layout wrapper.
+
+```tsx
+// Example Grid Pattern
+<div className='absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]' />
+```
+
+_Note: The tool generates standard style objects for maximum browser compatibility and control over opacity._
