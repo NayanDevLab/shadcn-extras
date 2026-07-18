@@ -1,0 +1,51 @@
+export const metadata = {
+  title: 'Testimonial Card - Shadcn-Extras',
+  description:
+    'A speech-bubble style testimonial card with an avatar placed below.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { TestimonialCardBasic } from './testimonial-card-basic';
+
+# Testimonial Card
+
+A clean, modern speech-bubble style testimonial component, perfect for showcasing customer reviews in a grid or carousel layout.
+
+## Examples
+
+### Basic Grid
+
+<ComponentCodePreview
+  component={<TestimonialCardBasic />}
+  filePath='app/docs/testimonial-card/testimonial-card-basic.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value='cli'>CLI</TabsTrigger>
+    <TabsTrigger value='manual'>Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='testimonial-card' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Copy and paste the component into <code>components/core/testimonial-card.tsx</code>.</Step>
+      <CodeBlock filePath='components/core/testimonial-card.tsx' />
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+| Prop        | Type     | Default      | Description                        |
+| :---------- | :------- | :----------- | :--------------------------------- |
+| `name`      | `string` | **Required** | The name of the reviewer.          |
+| `role`      | `string` | **Required** | The role or title of the reviewer. |
+| `content`   | `string` | **Required** | The testimonial text.              |
+| `avatarSrc` | `string` | **Required** | The URL of the avatar image.       |
+| `rating`    | `number` | `5`          | The star rating (0-5).             |

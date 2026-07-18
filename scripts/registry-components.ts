@@ -23,6 +23,14 @@ type ComponentDefinition = Partial<
 
 export const components: ComponentDefinition[] = [
   {
+    name: 'testimonial-card',
+    path: path.join(__dirname, '../components/core/testimonial-card.tsx'),
+    registryDependencies: [],
+    dependencies: ['lucide-react'],
+    description:
+      'A speech-bubble style testimonial card with an avatar placed below.',
+  },
+  {
     name: 'day-range',
     path: path.join(__dirname, '../components/core/day-range.tsx'),
     registryDependencies: [],

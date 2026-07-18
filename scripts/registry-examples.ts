@@ -15,6 +15,22 @@ type ExampleDefinition = {
 
 export const examples: ExampleDefinition[] = [
   {
+    name: 'testimonial-card-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/testimonial-card/testimonial-card-basic.tsx'
+    ),
+    description: 'Grid layout of speech bubble testimonial cards.',
+    componentName: 'testimonial-card-basic',
+    files: [
+      {
+        name: 'testimonial-card.tsx',
+        path: path.join(__dirname, '../components/core/testimonial-card.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'day-range-basic',
     path: path.join(__dirname, '../app/docs/day-range/day-range-basic.tsx'),
     description: 'Basic Day Range.',

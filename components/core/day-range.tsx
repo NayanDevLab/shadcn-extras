@@ -88,7 +88,7 @@ export const DayRange = React.forwardRef<HTMLDivElement, DayRangeProps>(
           >
             {/* Tooltip triangle */}
             <div className='absolute -top-1.5 left-1/2 -translate-x-1/2 transform border-x-[6px] border-b-[6px] border-transparent border-b-blue-600' />
-            <div className='whitespace-nowrap rounded bg-blue-600 px-2.5 py-1 text-sm font-medium text-white shadow-sm'>
+            <div className='rounded bg-blue-600 px-2.5 py-1 text-sm font-medium whitespace-nowrap text-white shadow-sm'>
               {currencySymbol}
               {formatter(current)}
             </div>

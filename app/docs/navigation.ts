@@ -29,6 +29,7 @@ export const NAVIGATION: NavigationGroup[] = [
     children: [
       { name: 'Timeline Rail', href: '/docs/timeline-rail' },
       { name: 'Testimonial', href: '/docs/testimonial' },
+      { name: 'Testimonial Card', href: '/docs/testimonial-card', isNew: true },
       { name: 'Chevron Steps', href: '/docs/chevron-steps', isNew: true },
       { name: 'Shimmer / Skeleton', href: '/docs/shimmer', isNew: true },
       {

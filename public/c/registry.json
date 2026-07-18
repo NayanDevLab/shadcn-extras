@@ -4,6 +4,27 @@
   "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/docs/",
   "items": [
     {
+      "name": "testimonial-card",
+      "type": "registry:ui",
+      "title": "Testimonial Card",
+      "description": "A speech-bubble style testimonial card with an avatar placed below.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\testimonial-card.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
       "name": "day-range",
       "type": "registry:ui",
       "title": "Day Range",
