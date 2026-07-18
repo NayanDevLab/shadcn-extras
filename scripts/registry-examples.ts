@@ -57,6 +57,33 @@ export const examples: ExampleDefinition[] = [
     ],
   },
   {
+    name: 'animated-image-grid-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/animated-image-grid/animated-image-grid-basic.tsx'
+    ),
+    description: 'Basic Animated Image Grid.',
+    componentName: 'animated-image-grid-basic',
+    files: [
+      {
+        name: 'animated-image-grid.css',
+        path: path.join(
+          __dirname,
+          '../components/core/animated-image-grid.css'
+        ),
+        type: 'registry:ui',
+      },
+      {
+        name: 'animated-image-grid.tsx',
+        path: path.join(
+          __dirname,
+          '../components/core/animated-image-grid.tsx'
+        ),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'holographic-card-basic',
     path: path.join(
       __dirname,

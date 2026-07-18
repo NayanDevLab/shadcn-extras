@@ -34,7 +34,10 @@ export const GlitchText = React.forwardRef<HTMLHeadingElement, GlitchTextProps>(
 );
 GlitchText.displayName = 'GlitchText';
 
-export interface HolographicCardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
+export interface HolographicCardProps extends Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  'title'
+> {
   title?: React.ReactNode;
   description?: React.ReactNode;
   buttonText?: string;

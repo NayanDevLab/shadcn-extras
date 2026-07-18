@@ -1,0 +1,69 @@
+export const metadata = {
+  title: 'Animated Image Grid - Shadcn-Extras',
+  description:
+    'A fluid CSS grid that beautifully reflows items when they are added or removed using cutting-edge CSS Math Functions.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { AnimatedImageGridBasic } from './animated-image-grid-basic';
+
+# Animated Image Grid
+
+A stunning, fluid CSS grid layout that beautifully reflows items when they are dynamically added or removed. It leverages cutting-edge CSS container queries (`container-type`), math functions (`round()`, `mod()`), and `@starting-style` to orchestrate complex entrance animations purely through CSS!
+
+## Showcase
+
+<ComponentCodePreview
+  component={<AnimatedImageGridBasic />}
+  filePath='app/docs/animated-image-grid/animated-image-grid-basic.tsx'
+/>
+
+> **Note**: This component uses modern CSS functions (`round()`, `mod()`, `@starting-style`). Ensure your target audience is using reasonably modern browsers (Chrome 111+, Safari 16.4+, Firefox 113+).
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value='cli'>CLI</TabsTrigger>
+    <TabsTrigger value='manual'>Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='animated-image-grid' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Add the `animated-image-grid.css` file</Step>
+      <CodeBlock filePath='components/core/animated-image-grid.css' />
+      <Step>Add the `animated-image-grid.tsx` component</Step>
+      <CodeBlock filePath='components/core/animated-image-grid.tsx' />
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx
+import { AnimatedImageGrid } from '@/components/core/animated-image-grid';
+
+const MOCK_ITEMS = [
+  { id: 1, src: 'https://i.pravatar.cc/150?img=1' },
+  { id: 2, src: 'https://i.pravatar.cc/150?img=2' },
+];
+
+export function Example() {
+  return <AnimatedImageGrid items={MOCK_ITEMS} gap='10px' size='130px' />;
+}
+```
+
+## Props
+
+| Prop | Type | Description |
+| ---- | ---- | ----------- |
+| `items` | `AnimatedImageGridItem[]` | An array of objects containing `id` and `src` properties. |
+| `gap` | `string` | The gap between grid items (default: `10px`). |
+| `size` | `string` | The size of the square grid items (default: `130px`). |
+| `variant` | `string` | The visual style variant (`'default'`, `'circle'`, `'polaroid'`, `'minimal'`). |
+| `itemClassName` | `string` | Custom Tailwind classes for the item wrapper div. |
+| `imageClassName` | `string` | Custom Tailwind classes for the image element itself. |

@@ -60,6 +60,33 @@
       ]
     },
     {
+      "name": "animated-image-grid",
+      "type": "registry:ui",
+      "title": "Animated Image Grid",
+      "description": "A fluid CSS grid that beautifully reflows items when they are added or removed.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\animated-image-grid.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "\\components\\core\\animated-image-grid.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "\\components\\core\\animated-image-grid.css",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
       "name": "holographic-card",
       "type": "registry:ui",
       "title": "Holographic Card",

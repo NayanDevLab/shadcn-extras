@@ -62,6 +62,32 @@ export const components: ComponentDefinition[] = [
     ],
   },
   {
+    name: 'animated-image-grid',
+    path: path.join(__dirname, '../components/core/animated-image-grid.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description:
+      'A fluid CSS grid that beautifully reflows items when they are added or removed.',
+    files: [
+      {
+        name: 'animated-image-grid.tsx',
+        path: path.join(
+          __dirname,
+          '../components/core/animated-image-grid.tsx'
+        ),
+        type: 'registry:ui',
+      },
+      {
+        name: 'animated-image-grid.css',
+        path: path.join(
+          __dirname,
+          '../components/core/animated-image-grid.css'
+        ),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'holographic-card',
     path: path.join(__dirname, '../components/core/holographic-card.tsx'),
     registryDependencies: [],

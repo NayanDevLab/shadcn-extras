@@ -1,0 +1,54 @@
+@reference "../../app/globals.css";
+
+.animated-image-grid {
+  --animated-grid-gap: var(--grid-gap, 10px);
+  --animated-grid-size: var(--grid-size, 130px);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--animated-grid-size));
+  grid-auto-rows: var(--animated-grid-size);
+  gap: var(--animated-grid-gap);
+  justify-content: center;
+  container-type: inline-size;
+}
+
+.animated-image-grid-item {
+  grid-area: 1 / 1;
+  width: var(--animated-grid-size);
+  aspect-ratio: 1;
+  box-sizing: border-box;
+
+  /* Dynamically calculate the number of columns using the container's width */
+  --n: round(
+    down,
+    (100cqw + var(--animated-grid-gap)) /
+      (var(--animated-grid-size) + var(--animated-grid-gap))
+  );
+
+  /* Calculate row and column indices based on the injected --index custom property */
+  --i: round(down, var(--index) / var(--n));
+  --j: mod(var(--index), var(--n));
+
+  /* Translate the item into its calculated position */
+  translate: calc(var(--j) * (100% + var(--animated-grid-gap)))
+    calc(var(--i) * (100% + var(--animated-grid-gap)));
+
+  transition:
+    0.4s,
+    scale 0.3s 0.4s,
+    opacity 0.3s 0.3s,
+    rotate 0.3s 0.3s;
+
+  @starting-style {
+    scale: 0;
+    opacity: 0;
+    rotate: -1turn;
+  }
+}
+
+/* A hack to fix the grid container size, since all items are stacked at 1/1 */
+.animated-image-grid-filler {
+  translate: 0;
+  visibility: hidden;
+  grid-row: calc(var(--i) + min(var(--j), 1));
+}
