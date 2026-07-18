@@ -23,6 +23,25 @@ type ComponentDefinition = Partial<
 
 export const components: ComponentDefinition[] = [
   {
+    name: 'hexagon-grid',
+    path: path.join(__dirname, '../components/core/hexagon-grid.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description: 'An interlocking hexagon grid gallery.',
+    files: [
+      {
+        name: 'hexagon-grid.tsx',
+        path: path.join(__dirname, '../components/core/hexagon-grid.tsx'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'hexagon-grid.css',
+        path: path.join(__dirname, '../components/core/hexagon-grid.css'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'testimonial-card',
     path: path.join(__dirname, '../components/core/testimonial-card.tsx'),
     registryDependencies: [],

@@ -4,6 +4,33 @@
   "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/docs/",
   "items": [
     {
+      "name": "hexagon-grid",
+      "type": "registry:ui",
+      "title": "Hexagon Grid",
+      "description": "An interlocking hexagon grid gallery.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\hexagon-grid.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "\\components\\core\\hexagon-grid.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "\\components\\core\\hexagon-grid.css",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
       "name": "testimonial-card",
       "type": "registry:ui",
       "title": "Testimonial Card",

@@ -1,0 +1,75 @@
+export const metadata = {
+  title: 'Hexagon Grid - Shadcn-Extras',
+  description: 'An interlocking hexagon grid gallery.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+
+# Hexagon Grid
+
+An interlocking hexagon grid gallery built with CSS `clip-path`, precise math using CSS variables, and interactive hover effects. Perfect for portfolios and photo galleries.
+
+## Showcase
+
+import { HexagonGridBasic } from './hexagon-grid-basic';
+
+<ComponentCodePreview
+  component={<HexagonGridBasic />}
+  filePath='app/docs/hexagon-grid/hexagon-grid-basic.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value='cli'>CLI</TabsTrigger>
+    <TabsTrigger value='manual'>Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='hexagon-grid' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Add the `hexagon-grid.css` file</Step>
+      <CodeBlock filePath='components/core/hexagon-grid.css' />
+      <Step>Add the `hexagon-grid.tsx` component</Step>
+      <CodeBlock filePath='components/core/hexagon-grid.tsx' />
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx
+import { HexGrid, Hexagon } from '@/components/core/hexagon-grid';
+
+export function Example() {
+  return (
+    <HexGrid size={220} gap={16}>
+      <Hexagon imageSrc='/example.jpg' title='Title' subtitle='Subtitle' />
+      {/* ... */}
+    </HexGrid>
+  );
+}
+```
+
+## Props
+
+### HexGrid Props
+
+| Prop   | Type     | Default | Description                                             |
+| ------ | -------- | ------- | ------------------------------------------------------- |
+| `size` | `number` | `220`   | The width of the individual hexagon elements in pixels. |
+| `gap`  | `number` | `16`    | The spacing gap between the hexagon elements in pixels. |
+
+### Hexagon Props
+
+Accepts standard HTML `div` props plus:
+| Prop | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+| `imageSrc` | `string` | required | The source URL of the image. |
+| `imageAlt` | `string` | `'Hexagon image'` | The alt text of the image. |
+| `title` | `React.ReactNode` | `undefined` | Optional title to display inside the hexagon caption overlay. |
+| `subtitle` | `React.ReactNode` | `undefined` | Optional subtitle to display inside the hexagon caption overlay. |

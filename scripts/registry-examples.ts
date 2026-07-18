@@ -15,6 +15,27 @@ type ExampleDefinition = {
 
 export const examples: ExampleDefinition[] = [
   {
+    name: 'hexagon-grid-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/hexagon-grid/hexagon-grid-basic.tsx'
+    ),
+    description: 'Basic Interlocking Hexagon Grid.',
+    componentName: 'hexagon-grid-basic',
+    files: [
+      {
+        name: 'hexagon-grid.css',
+        path: path.join(__dirname, '../components/core/hexagon-grid.css'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'hexagon-grid.tsx',
+        path: path.join(__dirname, '../components/core/hexagon-grid.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'testimonial-card-basic',
     path: path.join(
       __dirname,

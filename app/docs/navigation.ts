@@ -32,6 +32,7 @@ export const NAVIGATION: NavigationGroup[] = [
       { name: 'Testimonial Card', href: '/docs/testimonial-card', isNew: true },
       { name: 'Chevron Steps', href: '/docs/chevron-steps', isNew: true },
       { name: 'Shimmer / Skeleton', href: '/docs/shimmer', isNew: true },
+      { name: 'Hexagon Grid', href: '/docs/hexagon-grid', isNew: true },
       {
         name: 'Animated Icons',
         href: '/docs/icons',
