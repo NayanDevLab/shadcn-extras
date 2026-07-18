@@ -60,6 +60,33 @@
       ]
     },
     {
+      "name": "newspaper",
+      "type": "registry:ui",
+      "title": "Newspaper",
+      "description": "A responsive, flex-based vintage newspaper layout component.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\newspaper.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "\\components\\core\\newspaper.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "\\components\\core\\newspaper.css",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
       "name": "animated-image-grid",
       "type": "registry:ui",
       "title": "Animated Image Grid",

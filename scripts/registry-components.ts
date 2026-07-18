@@ -62,6 +62,25 @@ export const components: ComponentDefinition[] = [
     ],
   },
   {
+    name: 'newspaper',
+    path: path.join(__dirname, '../components/core/newspaper.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description: 'A responsive, flex-based vintage newspaper layout component.',
+    files: [
+      {
+        name: 'newspaper.tsx',
+        path: path.join(__dirname, '../components/core/newspaper.tsx'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'newspaper.css',
+        path: path.join(__dirname, '../components/core/newspaper.css'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'animated-image-grid',
     path: path.join(__dirname, '../components/core/animated-image-grid.tsx'),
     registryDependencies: [],

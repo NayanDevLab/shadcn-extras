@@ -39,6 +39,7 @@ export const NAVIGATION: NavigationGroup[] = [
         href: '/docs/animated-image-grid',
         isNew: true,
       },
+      { name: 'Newspaper Layout', href: '/docs/newspaper', isNew: true },
       { name: 'Enlarge Gallery', href: '/docs/enlarge-gallery', isNew: true },
       { name: 'Holographic Card', href: '/docs/holographic-card', isNew: true },
       {

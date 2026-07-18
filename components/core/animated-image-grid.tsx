@@ -28,7 +28,8 @@ export interface AnimatedImageGridItem {
 }
 
 export interface AnimatedImageGridProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends
+    React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof itemVariants> {
   items: AnimatedImageGridItem[];
   gap?: string;
@@ -83,12 +84,13 @@ export const AnimatedImageGrid = React.forwardRef<
             />
           </div>
         ))}
-      {/* Hidden filler element required to stretch the container height hack */}
-      <div
-        className='animated-image-grid-item animated-image-grid-filler'
-        style={{ '--index': items.length } as React.CSSProperties}
-      />
-    </div>
-  );
-});
+        {/* Hidden filler element required to stretch the container height hack */}
+        <div
+          className='animated-image-grid-item animated-image-grid-filler'
+          style={{ '--index': items.length } as React.CSSProperties}
+        />
+      </div>
+    );
+  }
+);
 AnimatedImageGrid.displayName = 'AnimatedImageGrid';

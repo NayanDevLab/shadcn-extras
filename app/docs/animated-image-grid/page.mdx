@@ -44,6 +44,10 @@ A stunning, fluid CSS grid layout that beautifully reflows items when they are d
 
 ## Usage
 
+```bash
+npx shadcn-extras@latest add animated-image-grid
+```
+
 ```tsx
 import { AnimatedImageGrid } from '@/components/core/animated-image-grid';
 
@@ -59,11 +63,11 @@ export function Example() {
 
 ## Props
 
-| Prop | Type | Description |
-| ---- | ---- | ----------- |
-| `items` | `AnimatedImageGridItem[]` | An array of objects containing `id` and `src` properties. |
-| `gap` | `string` | The gap between grid items (default: `10px`). |
-| `size` | `string` | The size of the square grid items (default: `130px`). |
-| `variant` | `string` | The visual style variant (`'default'`, `'circle'`, `'polaroid'`, `'minimal'`). |
-| `itemClassName` | `string` | Custom Tailwind classes for the item wrapper div. |
-| `imageClassName` | `string` | Custom Tailwind classes for the image element itself. |
+| Prop             | Type                      | Description                                                                    |
+| ---------------- | ------------------------- | ------------------------------------------------------------------------------ |
+| `items`          | `AnimatedImageGridItem[]` | An array of objects containing `id` and `src` properties.                      |
+| `gap`            | `string`                  | The gap between grid items (default: `10px`).                                  |
+| `size`           | `string`                  | The size of the square grid items (default: `130px`).                          |
+| `variant`        | `string`                  | The visual style variant (`'default'`, `'circle'`, `'polaroid'`, `'minimal'`). |
+| `itemClassName`  | `string`                  | Custom Tailwind classes for the item wrapper div.                              |
+| `imageClassName` | `string`                  | Custom Tailwind classes for the image element itself.                          |

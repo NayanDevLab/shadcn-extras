@@ -12,8 +12,16 @@ export default meta;
 type Story = StoryObj<typeof CircularGallery>;
 
 const ITEMS = [
-  { id: '1', imageSrc: 'https://images.unsplash.com/photo-1448375240586-882707db888b', title: 'Forest' },
-  { id: '2', imageSrc: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b', title: 'Mountains' },
+  {
+    id: '1',
+    imageSrc: 'https://images.unsplash.com/photo-1448375240586-882707db888b',
+    title: 'Forest',
+  },
+  {
+    id: '2',
+    imageSrc: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b',
+    title: 'Mountains',
+  },
 ];
 
 export const Basic: Story = {

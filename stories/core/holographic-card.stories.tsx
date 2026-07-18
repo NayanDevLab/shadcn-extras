@@ -14,12 +14,13 @@ type Story = StoryObj<typeof HolographicCard>;
 export const Basic: Story = {
   args: {
     title: 'Holographic Interface',
-    description: 'Pure CSS art combining glitch typography, grain textures, floating holograms and 3D depth.',
+    description:
+      'Pure CSS art combining glitch typography, grain textures, floating holograms and 3D depth.',
     buttonText: 'EXPLORE',
   },
   render: (args) => (
-    <div className="bg-[#020617] h-[600px] w-full p-8 flex items-center justify-center">
+    <div className='flex h-[600px] w-full items-center justify-center bg-[#020617] p-8'>
       <HolographicCard {...args} />
     </div>
-  )
+  ),
 };

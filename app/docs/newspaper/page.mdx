@@ -1,0 +1,37 @@
+export const metadata = {
+  title: 'Newspaper Layout - Shadcn-Extras',
+  description: 'A responsive, flex-based vintage newspaper layout component.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { NewspaperBasic } from './newspaper-basic';
+
+# Newspaper Layout
+
+A classic, vintage newspaper layout component featuring robust responsive flexbox grids and custom web typography. It perfectly adapts from a multi-column desktop spread to a single-column mobile view.
+
+<ComponentCodePreview
+  component={<NewspaperBasic />}
+  filePath='app/docs/newspaper/newspaper-basic.tsx'
+  hasReTrigger={false}
+/>
+
+## Installation
+
+```bash
+npx shadcn-extras@latest add newspaper
+```
+
+## Props
+
+The `NewspaperArticle` component accepts the following props:
+
+| Prop         | Type      | Description                                                                                          |
+| ------------ | --------- | ---------------------------------------------------------------------------------------------------- |
+| `isBreaking` | `boolean` | If true, the article will take up twice as much horizontal space as a standard article (`flex-[2]`). |
+
+## Features
+
+- Handles responsive column stacking automatically.
+- Imports `Oswald`, `Merriweather`, and a custom `Queens Park` font to achieve a genuine vintage newsprint aesthetic.
+- Highly composable structure: `<Newspaper>`, `<NewspaperHeader>`, `<NewspaperContent>`, and `<NewspaperArticle>`.

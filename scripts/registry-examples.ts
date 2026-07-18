@@ -57,6 +57,24 @@ export const examples: ExampleDefinition[] = [
     ],
   },
   {
+    name: 'newspaper-basic',
+    path: path.join(__dirname, '../app/docs/newspaper/newspaper-basic.tsx'),
+    description: 'Basic Newspaper Layout.',
+    componentName: 'newspaper-basic',
+    files: [
+      {
+        name: 'newspaper.css',
+        path: path.join(__dirname, '../components/core/newspaper.css'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'newspaper.tsx',
+        path: path.join(__dirname, '../components/core/newspaper.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'animated-image-grid-basic',
     path: path.join(
       __dirname,
