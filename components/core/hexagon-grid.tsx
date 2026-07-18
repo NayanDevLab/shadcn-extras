@@ -34,8 +34,10 @@ export const HexGrid = React.forwardRef<HTMLDivElement, HexGridProps>(
 );
 HexGrid.displayName = 'HexGrid';
 
-export interface HexagonProps
-  extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
+export interface HexagonProps extends Omit<
+  React.HTMLAttributes<HTMLDivElement>,
+  'title'
+> {
   imageSrc: string;
   imageAlt?: string;
   title?: React.ReactNode;

@@ -15,6 +15,27 @@ type ExampleDefinition = {
 
 export const examples: ExampleDefinition[] = [
   {
+    name: 'circular-gallery-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/circular-gallery/circular-gallery-basic.tsx'
+    ),
+    description: 'Basic Circular Gallery.',
+    componentName: 'circular-gallery-basic',
+    files: [
+      {
+        name: 'circular-gallery.css',
+        path: path.join(__dirname, '../components/core/circular-gallery.css'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'circular-gallery.tsx',
+        path: path.join(__dirname, '../components/core/circular-gallery.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'hexagon-grid-basic',
     path: path.join(
       __dirname,

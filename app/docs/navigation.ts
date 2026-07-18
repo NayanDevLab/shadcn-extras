@@ -33,6 +33,7 @@ export const NAVIGATION: NavigationGroup[] = [
       { name: 'Chevron Steps', href: '/docs/chevron-steps', isNew: true },
       { name: 'Shimmer / Skeleton', href: '/docs/shimmer', isNew: true },
       { name: 'Hexagon Grid', href: '/docs/hexagon-grid', isNew: true },
+      { name: 'Circular Gallery', href: '/docs/circular-gallery', isNew: true },
       {
         name: 'Animated Icons',
         href: '/docs/icons',

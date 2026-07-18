@@ -1,0 +1,67 @@
+export const metadata = {
+  title: 'Circular Gallery - Shadcn-Extras',
+  description: 'A 3D circular fan-out image gallery.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { CircularGalleryBasic } from './circular-gallery-basic';
+
+# Circular Gallery
+
+An advanced 3D circular image gallery using cutting-edge CSS features like **Anchor Positioning** and complex `:has` sibling targets for a stunning fan-out effect.
+
+> [!WARNING]
+> This component uses **CSS Anchor Positioning** (`anchor-name`, `position-area`), which is an experimental web feature. It is currently fully supported in **Chrome 125+** and **Edge 125+**. In older or unsupported browsers (like Firefox and Safari), the interactive center preview may not function as intended.
+
+## Showcase
+
+<ComponentCodePreview
+  component={<CircularGalleryBasic />}
+  filePath='app/docs/circular-gallery/circular-gallery-basic.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value='cli'>CLI</TabsTrigger>
+    <TabsTrigger value='manual'>Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='circular-gallery' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Add the `circular-gallery.css` file</Step>
+      <CodeBlock filePath='components/core/circular-gallery.css' />
+      <Step>Add the `circular-gallery.tsx` component</Step>
+      <CodeBlock filePath='components/core/circular-gallery.tsx' />
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx
+import { CircularGallery } from '@/components/core/circular-gallery';
+
+export function Example() {
+  const items = [
+    { id: 'item-1', title: 'Mountain', imageSrc: '/image1.jpg' },
+    { id: 'item-2', title: 'Ocean', imageSrc: '/image2.jpg' },
+    // Add as many items as you want, the layout math adjusts automatically!
+  ];
+
+  return <CircularGallery items={items} title='My Gallery' radius='40vmin' />;
+}
+```
+
+## Props
+
+| Prop     | Type                         | Default     | Description                                                    |
+| -------- | ---------------------------- | ----------- | -------------------------------------------------------------- |
+| `items`  | `CircularGalleryItemProps[]` | required    | Array of items with `id`, `title`, and `imageSrc`.             |
+| `title`  | `React.ReactNode`            | `undefined` | The title rendered in the center of the gallery when inactive. |
+| `radius` | `string`                     | `'40vmin'`  | The radius of the gallery container.                           |

@@ -4,6 +4,33 @@
   "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/docs/",
   "items": [
     {
+      "name": "circular-gallery",
+      "type": "registry:ui",
+      "title": "Circular Gallery",
+      "description": "A 3D circular fan-out image gallery.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\circular-gallery.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "\\components\\core\\circular-gallery.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "\\components\\core\\circular-gallery.css",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
       "name": "hexagon-grid",
       "type": "registry:ui",
       "title": "Hexagon Grid",

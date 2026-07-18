@@ -23,6 +23,25 @@ type ComponentDefinition = Partial<
 
 export const components: ComponentDefinition[] = [
   {
+    name: 'circular-gallery',
+    path: path.join(__dirname, '../components/core/circular-gallery.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description: 'A 3D circular fan-out image gallery.',
+    files: [
+      {
+        name: 'circular-gallery.tsx',
+        path: path.join(__dirname, '../components/core/circular-gallery.tsx'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'circular-gallery.css',
+        path: path.join(__dirname, '../components/core/circular-gallery.css'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'hexagon-grid',
     path: path.join(__dirname, '../components/core/hexagon-grid.tsx'),
     registryDependencies: [],
