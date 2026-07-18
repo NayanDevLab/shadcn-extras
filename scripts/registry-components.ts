@@ -62,6 +62,46 @@ export const components: ComponentDefinition[] = [
     ],
   },
   {
+    name: 'infinite-parallax-gallery',
+    path: path.join(
+      __dirname,
+      '../components/core/infinite-parallax-gallery.tsx'
+    ),
+    registryDependencies: [],
+    dependencies: ['three'],
+    description: 'An interactive, WebGL-powered 3D infinite parallax gallery.',
+    files: [
+      {
+        name: 'infinite-parallax-gallery.tsx',
+        path: path.join(
+          __dirname,
+          '../components/core/infinite-parallax-gallery.tsx'
+        ),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'grid-newspaper',
+    path: path.join(__dirname, '../components/core/grid-newspaper.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description:
+      'An advanced CSS Grid-based vintage newspaper layout component.',
+    files: [
+      {
+        name: 'grid-newspaper.tsx',
+        path: path.join(__dirname, '../components/core/grid-newspaper.tsx'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'grid-newspaper.css',
+        path: path.join(__dirname, '../components/core/grid-newspaper.css'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'newspaper',
     path: path.join(__dirname, '../components/core/newspaper.tsx'),
     registryDependencies: [],

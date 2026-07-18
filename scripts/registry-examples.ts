@@ -57,6 +57,84 @@ export const examples: ExampleDefinition[] = [
     ],
   },
   {
+    name: 'infinite-parallax-gallery-dense',
+    path: path.join(
+      __dirname,
+      '../app/docs/infinite-parallax-gallery/infinite-parallax-gallery-dense.tsx'
+    ),
+    description: 'Dense Infinite Parallax Gallery.',
+    componentName: 'infinite-parallax-gallery-dense',
+    files: [
+      {
+        name: 'infinite-parallax-gallery.tsx',
+        path: path.join(
+          __dirname,
+          '../components/core/infinite-parallax-gallery.tsx'
+        ),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'infinite-parallax-gallery-large',
+    path: path.join(
+      __dirname,
+      '../app/docs/infinite-parallax-gallery/infinite-parallax-gallery-large.tsx'
+    ),
+    description: 'Large Minimal Infinite Parallax Gallery.',
+    componentName: 'infinite-parallax-gallery-large',
+    files: [
+      {
+        name: 'infinite-parallax-gallery.tsx',
+        path: path.join(
+          __dirname,
+          '../components/core/infinite-parallax-gallery.tsx'
+        ),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'infinite-parallax-gallery-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/infinite-parallax-gallery/infinite-parallax-gallery-basic.tsx'
+    ),
+    description: 'Basic Infinite Parallax Gallery.',
+    componentName: 'infinite-parallax-gallery-basic',
+    files: [
+      {
+        name: 'infinite-parallax-gallery.tsx',
+        path: path.join(
+          __dirname,
+          '../components/core/infinite-parallax-gallery.tsx'
+        ),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'grid-newspaper-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/grid-newspaper/grid-newspaper-basic.tsx'
+    ),
+    description: 'Basic Grid Newspaper Layout.',
+    componentName: 'grid-newspaper-basic',
+    files: [
+      {
+        name: 'grid-newspaper.css',
+        path: path.join(__dirname, '../components/core/grid-newspaper.css'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'grid-newspaper.tsx',
+        path: path.join(__dirname, '../components/core/grid-newspaper.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'newspaper-basic',
     path: path.join(__dirname, '../app/docs/newspaper/newspaper-basic.tsx'),
     description: 'Basic Newspaper Layout.',

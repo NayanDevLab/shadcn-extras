@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC&family=Playfair+Display:ital@0;1&family=Manrope:wght@800&display=swap');
+
+:root {
+  --gn-font: 'EB Garamond', serif;
+  --gn-font-title: 'Playfair Display', serif;
+  --gn-font-sans-serif: 'Manrope', sans-serif;
+  --gn-black: #1c1f33;
+  --gn-black-acc: #222;
+  --gn-gray: #eee;
+  --gn-gray-1: #ededed;
+}
+
+.grid-newspaper-wrapper {
+  font-family: var(--gn-font);
+  color: var(--gn-black);
+  background: url(https://img.freepik.com/free-photo/cardboard-sheet-paper-abstract-texture-background_7182-2105.jpg?size=626&ext=jpg)
+    repeat;
+  padding: 2rem 1rem;
+  line-height: 1.3;
+  text-align: justify;
+  column-break-inside: avoid;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 700px) {
+  .grid-newspaper-wrapper {
+    padding: 4rem 2rem;
+  }
+}
+
+.grid-newspaper-wrapper a {
+  text-decoration: none;
+  display: block;
+  color: var(--gn-black);
+}
+.grid-newspaper-wrapper a:hover,
+.grid-newspaper-wrapper a:focus,
+.grid-newspaper-wrapper a:active,
+.grid-newspaper-wrapper a:visited {
+  color: var(--gn-black-acc);
+}
+
+.grid-newspaper-container {
+  max-width: 1135px;
+  margin: auto;
+}
+
+/* Typography Overrides inside the component */
+.grid-newspaper-container h1 {
+  font:
+    50px/1 'Playfair Display SC',
+    serif;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  .grid-newspaper-container h1 {
+    font:
+      70px/1 'Playfair Display SC',
+      serif;
+  }
+}
+
+.grid-newspaper-container h3 {
+  font: italic 20px var(--gn-font-title);
+  margin-bottom: 1rem;
+}
+
+.grid-newspaper-container h4 {
+  font: 20px/1.2 var(--gn-font-title);
+}
+
+.grid-newspaper-container h5 {
+  font: 700 20px/1 var(--gn-font);
+  transition: 0.3s ease;
+}
+
+.grid-newspaper-container p {
+  line-height: 1.3;
+}
+.grid-newspaper-container p a {
+  display: inline;
+}
+
+.grid-newspaper-container em {
+  font-style: italic;
+}
+
+/* Main Grid Layout */
+.grid-newspaper-main {
+  /* Default Mobile layout (stack) */
+}
+
+@media (min-width: 700px) {
+  .grid-newspaper-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 23%;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 1.2rem;
+  }
+
+  .grid-newspaper-header-wrap {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Header aside */
+.grid-newspaper-aside {
+  text-align: center;
+  padding: 3px 0;
+  border: solid var(--gn-black);
+  border-width: 2px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 1.5rem 0;
+}
+@media (min-width: 700px) {
+  .grid-newspaper-aside {
+    margin: 0;
+  }
+}
+.grid-newspaper-aside > div {
+  display: flex;
+  align-items: center;
+  border: solid var(--gn-black);
+  border-width: 1px 0;
+}
+.grid-newspaper-aside > div > div {
+  flex: 1;
+  padding: 8px;
+}
+
+/* Reusable Utilities */
+@media (min-width: 700px) {
+  .gn-multi-column-2 {
+    column-count: 2;
+    column-gap: 1.3rem;
+    margin-top: 0.75rem;
+  }
+  .gn-multi-column-3 {
+    column-count: 3;
+    column-gap: 1.3rem;
+    margin-top: 0.75rem;
+  }
+}
+
+.gn-with-border {
+  border-top: 1px solid var(--gn-black);
+  padding-top: 0.6rem;
+}
+
+.grid-newspaper-container img {
+  width: 100%;
+  filter: grayscale(95%);
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--gn-black);
+  transition: 0.3s ease;
+}
+
+.grid-newspaper-container figcaption {
+  font-style: italic;
+  font-size: 90%;
+}
+
+/* Hover effects */
+.gn-hover-image:hover img {
+  filter: grayscale(0);
+}
+
+.gn-hover-bg:hover h4 {
+  color: white !important;
+  background: var(--gn-black);
+}
+
+.gn-hover-bg:hover h5 {
+  transition: 0.3s ease;
+  background: var(--gn-black);
+  color: white !important;
+}

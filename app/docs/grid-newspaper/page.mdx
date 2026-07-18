@@ -1,0 +1,41 @@
+export const metadata = {
+  title: 'Grid Newspaper - Shadcn-Extras',
+  description: 'An advanced CSS Grid-based vintage newspaper layout component.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { GridNewspaperBasic } from './grid-newspaper-basic';
+
+# Grid Newspaper
+
+A magical, vintage newspaper layout component utilizing a highly complex and responsive CSS Grid. It perfectly adapts from a multi-column desktop spread to a single-column mobile view, allowing articles to dynamically span rows and columns.
+
+<ComponentCodePreview
+  component={<GridNewspaperBasic />}
+  filePath='app/docs/grid-newspaper/grid-newspaper-basic.tsx'
+  hasReTrigger={false}
+/>
+
+## Installation
+
+```bash
+npx shadcn-extras@latest add grid-newspaper
+```
+
+## Props
+
+The `GridNewspaperArticle` component accepts the following props:
+
+| Prop         | Type      | Description                                                                                          |
+| ------------ | --------- | ---------------------------------------------------------------------------------------------------- |
+| `withBorder` | `boolean` | If true, applies a top border to the article block.                                                  |
+| `hoverImage` | `boolean` | If true, any images inside the block will transition from grayscale to full color on hover.          |
+| `hoverBg`    | `boolean` | If true, the block's background will transition to black and text will transition to white on hover. |
+
+_Note: Layout spanning (like `col-span-2` or `row-span-2`) is handled using standard Tailwind CSS classes passed to the `className` prop, enabling unlimited customization._
+
+## Features
+
+- Harnesses the full power of CSS Grid for complex, masonry-style layouts.
+- Imports `EB Garamond`, `Playfair Display SC`, and `Manrope` fonts.
+- Built-in `gn-multi-column-2` utility class for internal text column breaks.

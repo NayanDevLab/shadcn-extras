@@ -60,6 +60,58 @@
       ]
     },
     {
+      "name": "infinite-parallax-gallery",
+      "type": "registry:ui",
+      "title": "Infinite Parallax Gallery",
+      "description": "An interactive, WebGL-powered 3D infinite parallax gallery.",
+      "dependencies": [
+        "three"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\infinite-parallax-gallery.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "\\components\\core\\infinite-parallax-gallery.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
+      "name": "grid-newspaper",
+      "type": "registry:ui",
+      "title": "Grid Newspaper",
+      "description": "An advanced CSS Grid-based vintage newspaper layout component.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\grid-newspaper.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "\\components\\core\\grid-newspaper.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "\\components\\core\\grid-newspaper.css",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
       "name": "newspaper",
       "type": "registry:ui",
       "title": "Newspaper",

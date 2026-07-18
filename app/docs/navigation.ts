@@ -40,6 +40,12 @@ export const NAVIGATION: NavigationGroup[] = [
         isNew: true,
       },
       { name: 'Newspaper Layout', href: '/docs/newspaper', isNew: true },
+      { name: 'Grid Newspaper', href: '/docs/grid-newspaper', isNew: true },
+      {
+        name: 'Infinite Parallax Gallery',
+        href: '/docs/infinite-parallax-gallery',
+        isNew: true,
+      },
       { name: 'Enlarge Gallery', href: '/docs/enlarge-gallery', isNew: true },
       { name: 'Holographic Card', href: '/docs/holographic-card', isNew: true },
       {

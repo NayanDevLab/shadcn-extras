@@ -1,0 +1,71 @@
+export const metadata = {
+  title: 'Infinite Parallax Gallery - Shadcn-Extras',
+  description: 'An interactive, WebGL-powered 3D infinite parallax gallery.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { InfiniteParallaxGalleryBasic } from './infinite-parallax-gallery-basic';
+import { InfiniteParallaxGalleryDense } from './infinite-parallax-gallery-dense';
+import { InfiniteParallaxGalleryLarge } from './infinite-parallax-gallery-large';
+
+# Infinite Parallax Gallery
+
+A stunning WebGL-powered parallax gallery utilizing `three.js`. It features hardware-accelerated rendering, an infinite scrolling loop, layered depth parallax, and seamless drag/scroll interactions.
+
+<ComponentCodePreview
+  component={<InfiniteParallaxGalleryBasic />}
+  filePath='app/docs/infinite-parallax-gallery/infinite-parallax-gallery-basic.tsx'
+  hasReTrigger={false}
+/>
+
+## Installation
+
+```bash
+npx shadcn-extras@latest add infinite-parallax-gallery
+```
+
+> [!NOTE]
+> This component requires the `three` and `@types/three` packages which will be automatically installed by the CLI.
+
+## Props
+
+The `InfiniteParallaxGallery` component accepts the following props:
+
+| Prop             | Type              | Default     | Description                                                                       |
+| ---------------- | ----------------- | ----------- | --------------------------------------------------------------------------------- |
+| `images`         | `string[]`        | _Required_  | Array of image URLs to load in the gallery.                                       |
+| `depthLayers`    | `number`          | `5`         | Number of Z-index depth layers for the parallax effect.                           |
+| `imagesPerLayer` | `number`          | `10`        | Number of image sprites to instantiate per layer.                                 |
+| `maxImageWidth`  | `number`          | `160`       | Maximum width of an image sprite.                                                 |
+| `maxImageHeight` | `number`          | `160`       | Maximum height of an image sprite.                                                |
+| `overlayText`    | `React.ReactNode` | `undefined` | Optional overlay to display on top of the gallery (e.g., attribution text).       |
+| `showLoading`    | `boolean`         | `true`      | Whether to show the percentage loading indicator while textures are being cached. |
+
+## Variants
+
+### Dense Parallax
+
+You can increase the `depthLayers` and `imagesPerLayer` while decreasing the image sizes to create a super dense, fast-moving gallery.
+
+<ComponentCodePreview
+  component={<InfiniteParallaxGalleryDense />}
+  filePath='app/docs/infinite-parallax-gallery/infinite-parallax-gallery-dense.tsx'
+  hasReTrigger={false}
+/>
+
+### Minimal & Large
+
+By dramatically lowering the layers and increasing the `maxImageWidth`, you can achieve a totally different slow-moving, portfolio-style look.
+
+<ComponentCodePreview
+  component={<InfiniteParallaxGalleryLarge />}
+  filePath='app/docs/infinite-parallax-gallery/infinite-parallax-gallery-large.tsx'
+  hasReTrigger={false}
+/>
+
+## Features
+
+- **WebGL Rendering**: Uses `three.js` to render dozens of layered images at a smooth 60FPS.
+- **Interactive Physics**: Responds naturally to mouse drag, touch swipes, and scroll wheels with momentum and deceleration.
+- **Resource Management**: Automatically handles WebGL context creation and disposal to prevent memory leaks in React.
+- **Fallback Loading**: Generates placeholder canvases while images download.
