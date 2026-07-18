@@ -1,0 +1,84 @@
+export const metadata = {
+  title: 'Holographic Card - Shadcn-Extras',
+  description: 'A 3D floating card with holographic gradients and glitch text.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { HolographicCardBasic } from './holographic-card-basic';
+
+# Holographic Card
+
+A stunning 3D floating card featuring a blurred holographic background gradient, local grain textures, and an accompanying glitch typography component.
+
+## Showcase
+
+<ComponentCodePreview
+  component={<HolographicCardBasic />}
+  filePath='app/docs/holographic-card/holographic-card-basic.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value='cli'>CLI</TabsTrigger>
+    <TabsTrigger value='manual'>Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='holographic-card' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Add the `holographic-card.css` file</Step>
+      <CodeBlock filePath='components/core/holographic-card.css' />
+      <Step>Add the `holographic-card.tsx` component</Step>
+      <CodeBlock filePath='components/core/holographic-card.tsx' />
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  HolographicCard,
+  GlitchText,
+} from '@/components/core/holographic-card';
+
+export function Example() {
+  return (
+    <div className='holographic-container h-screen w-full'>
+      {/* Optional animated grain noise overlay */}
+      <div className='holographic-grain-overlay' />
+
+      <GlitchText text='CYBERPUNK' className='text-white' />
+
+      <HolographicCard
+        title='Welcome to the Future'
+        description='This card floats in 3D space with a holographic glow.'
+        buttonText='ENTER'
+      />
+    </div>
+  );
+}
+```
+
+## Props
+
+### HolographicCard
+
+| Prop          | Type              | Description                         |
+| ------------- | ----------------- | ----------------------------------- |
+| `title`       | `React.ReactNode` | The main title of the card          |
+| `description` | `React.ReactNode` | The paragraph text                  |
+| `buttonText`  | `string`          | The text for the holographic button |
+| `buttonHref`  | `string`          | The link for the holographic button |
+
+### GlitchText
+
+| Prop   | Type     | Description                                |
+| ------ | -------- | ------------------------------------------ |
+| `text` | `string` | The text to display and animate            |
+| `as`   | `string` | The HTML element to render (default: `h1`) |

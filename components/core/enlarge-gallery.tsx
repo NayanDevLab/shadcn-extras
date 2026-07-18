@@ -13,8 +13,7 @@ export interface EnlargeGalleryItem {
   description?: string;
 }
 
-export interface EnlargeGalleryProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+export interface EnlargeGalleryProps extends React.HTMLAttributes<HTMLDivElement> {
   items: EnlargeGalleryItem[];
 }
 
@@ -61,9 +60,9 @@ export const EnlargeGallery = React.forwardRef<
       className={cn('enlarge-gallery-root font-sans', className)}
       {...props}
     >
-      <div className="enlarge-gallery-gallery relative w-full h-full">
+      <div className='enlarge-gallery-gallery relative h-full w-full'>
         {/* Slides / Track */}
-        <div className="enlarge-gallery-track absolute inset-0 w-full h-full">
+        <div className='enlarge-gallery-track absolute inset-0 h-full w-full'>
           {items.map((item, index) => {
             const active = index === activeIndex;
             const offset = active
@@ -73,27 +72,27 @@ export const EnlargeGallery = React.forwardRef<
             return (
               <div
                 key={item.id}
-                className="enlarge-gallery-item"
+                className='enlarge-gallery-item'
                 data-active={String(active)}
               >
                 <div
-                  className="enlarge-gallery-slide"
+                  className='enlarge-gallery-slide'
                   style={{ '--offset': offset } as React.CSSProperties}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={item.src}
                     alt={item.alt || item.title}
-                    className="enlarge-gallery-image"
+                    className='enlarge-gallery-image'
                   />
                   {!active && (
                     <button
-                      type="button"
-                      className="enlarge-gallery-thumbButton"
+                      type='button'
+                      className='enlarge-gallery-thumbButton'
                       tabIndex={-1}
                       onClick={() => goToIndex(index)}
                     >
-                      <span className="enlarge-gallery-visuallyHidden">
+                      <span className='enlarge-gallery-visuallyHidden'>
                         Show {item.title}
                       </span>
                     </button>
@@ -105,38 +104,38 @@ export const EnlargeGallery = React.forwardRef<
         </div>
 
         {/* Active Content & Navigation */}
-        <div className="enlarge-gallery-rail">
-          <div className="enlarge-gallery-content" key={activeItem.id}>
-            <p className="enlarge-gallery-kicker">
+        <div className='enlarge-gallery-rail'>
+          <div className='enlarge-gallery-content' key={activeItem.id}>
+            <p className='enlarge-gallery-kicker'>
               {String(activeIndex + 1).padStart(2, '0')} /{' '}
               {String(total).padStart(2, '0')}
             </p>
-            <h2 className="enlarge-gallery-title">{activeItem.title}</h2>
+            <h2 className='enlarge-gallery-title'>{activeItem.title}</h2>
             {activeItem.description && (
-              <p className="enlarge-gallery-description">
+              <p className='enlarge-gallery-description'>
                 {activeItem.description}
               </p>
             )}
           </div>
 
-          <div className="enlarge-gallery-controls">
+          <div className='enlarge-gallery-controls'>
             <button
-              type="button"
-              className="enlarge-gallery-navBtn"
+              type='button'
+              className='enlarge-gallery-navBtn'
               onClick={() =>
                 goToIndex(indexOfId(thumbOrder[thumbOrder.length - 1]))
               }
             >
-              <ChevronLeft className="w-5 h-5" />
-              <span className="enlarge-gallery-visuallyHidden">Previous</span>
+              <ChevronLeft className='h-5 w-5' />
+              <span className='enlarge-gallery-visuallyHidden'>Previous</span>
             </button>
             <button
-              type="button"
-              className="enlarge-gallery-navBtn"
+              type='button'
+              className='enlarge-gallery-navBtn'
               onClick={() => goToIndex(indexOfId(thumbOrder[0]))}
             >
-              <ChevronRight className="w-5 h-5" />
-              <span className="enlarge-gallery-visuallyHidden">Next</span>
+              <ChevronRight className='h-5 w-5' />
+              <span className='enlarge-gallery-visuallyHidden'>Next</span>
             </button>
           </div>
         </div>

@@ -62,6 +62,26 @@ export const components: ComponentDefinition[] = [
     ],
   },
   {
+    name: 'holographic-card',
+    path: path.join(__dirname, '../components/core/holographic-card.tsx'),
+    registryDependencies: [],
+    dependencies: [],
+    description:
+      'A 3D floating card with holographic gradients and glitch text.',
+    files: [
+      {
+        name: 'holographic-card.tsx',
+        path: path.join(__dirname, '../components/core/holographic-card.tsx'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'holographic-card.css',
+        path: path.join(__dirname, '../components/core/holographic-card.css'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'hexagon-grid',
     path: path.join(__dirname, '../components/core/hexagon-grid.tsx'),
     registryDependencies: [],

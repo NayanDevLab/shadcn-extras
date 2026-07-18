@@ -1,0 +1,144 @@
+@reference "../../app/globals.css";
+
+/* background grain overlay */
+.holographic-grain-overlay {
+  position: absolute;
+  inset: 0;
+  background: repeating-radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 0 1px,
+    transparent 1px 2px
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  opacity: 0.35;
+  animation: holographic-grain 0.25s steps(2) infinite;
+}
+
+@keyframes holographic-grain {
+  to {
+    transform: translate(2px, -2px);
+  }
+}
+
+/* glitch title */
+.holographic-glitch {
+  position: relative;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+.holographic-glitch::before,
+.holographic-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0.8;
+}
+.holographic-glitch::before {
+  color: var(--holo-c1, #38bdf8);
+  transform: translate(3px, -2px);
+  mix-blend-mode: screen;
+  animation: holographic-glitch-anim 2s infinite alternate;
+}
+.holographic-glitch::after {
+  color: var(--holo-c2, #a855f7);
+  transform: translate(-3px, 2px);
+  mix-blend-mode: screen;
+  animation: holographic-glitch-anim 1.5s infinite alternate-reverse;
+}
+
+@keyframes holographic-glitch-anim {
+  0% {
+    clip-path: inset(0 0 70% 0);
+  }
+  25% {
+    clip-path: inset(20% 0 40% 0);
+  }
+  50% {
+    clip-path: inset(40% 0 20% 0);
+  }
+  75% {
+    clip-path: inset(10% 0 60% 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* holographic card */
+.holographic-card-wrapper {
+  perspective: 1000px;
+}
+
+.holographic-card {
+  border-radius: 28px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(16px);
+  /* The shadow colors use the default theme values, but fall back gracefully */
+  box-shadow:
+    0 0 50px rgba(56, 189, 248, 0.35),
+    inset 0 0 35px rgba(255, 255, 255, 0.15);
+  transform-style: preserve-3d;
+  animation: holographic-float 6s ease-in-out infinite;
+  position: relative;
+}
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    var(--holo-c1, #38bdf8),
+    var(--holo-c2, #a855f7),
+    var(--holo-c3, #22c55e),
+    transparent 80%
+  );
+  filter: blur(25px);
+  opacity: 0.4;
+  z-index: -1;
+  animation: holographic-holo 4s linear infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes holographic-holo {
+  to {
+    background-position: 400% 0;
+  }
+}
+
+@keyframes holographic-float {
+  0%,
+  100% {
+    transform: rotateX(12deg) rotateY(-10deg) translateY(0);
+  }
+  50% {
+    transform: rotateX(18deg) rotateY(12deg) translateY(-25px);
+  }
+}
+
+/* holographic button */
+.holographic-btn {
+  display: inline-block;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(
+    90deg,
+    var(--holo-c1, #38bdf8),
+    var(--holo-c2, #a855f7),
+    var(--holo-c3, #22c55e)
+  );
+  background-size: 300% 100%;
+  animation: holographic-holo 3s linear infinite;
+  /* Shadow color matches default c2 */
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+}

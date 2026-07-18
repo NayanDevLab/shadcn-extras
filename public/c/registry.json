@@ -60,6 +60,33 @@
       ]
     },
     {
+      "name": "holographic-card",
+      "type": "registry:ui",
+      "title": "Holographic Card",
+      "description": "A 3D floating card with holographic gradients and glitch text.",
+      "dependencies": [],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\holographic-card.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "\\components\\core\\holographic-card.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "\\components\\core\\holographic-card.css",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
       "name": "hexagon-grid",
       "type": "registry:ui",
       "title": "Hexagon Grid",

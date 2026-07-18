@@ -35,6 +35,7 @@ export const NAVIGATION: NavigationGroup[] = [
       { name: 'Hexagon Grid', href: '/docs/hexagon-grid', isNew: true },
       { name: 'Circular Gallery', href: '/docs/circular-gallery', isNew: true },
       { name: 'Enlarge Gallery', href: '/docs/enlarge-gallery', isNew: true },
+      { name: 'Holographic Card', href: '/docs/holographic-card', isNew: true },
       {
         name: 'Animated Icons',
         href: '/docs/icons',

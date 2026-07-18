@@ -57,6 +57,27 @@ export const examples: ExampleDefinition[] = [
     ],
   },
   {
+    name: 'holographic-card-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/holographic-card/holographic-card-basic.tsx'
+    ),
+    description: 'Basic Holographic Card.',
+    componentName: 'holographic-card-basic',
+    files: [
+      {
+        name: 'holographic-card.css',
+        path: path.join(__dirname, '../components/core/holographic-card.css'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'holographic-card.tsx',
+        path: path.join(__dirname, '../components/core/holographic-card.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'hexagon-grid-basic',
     path: path.join(
       __dirname,
