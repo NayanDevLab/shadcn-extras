@@ -10,8 +10,10 @@ export interface CircularGalleryItemProps {
   title: string;
 }
 
-export interface CircularGalleryProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, 'title'> {
+export interface CircularGalleryProps extends Omit<
+  React.HTMLAttributes<HTMLElement>,
+  'title'
+> {
   items: CircularGalleryItemProps[];
   title?: React.ReactNode;
   radius?: string;

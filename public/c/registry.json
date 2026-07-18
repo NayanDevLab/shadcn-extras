@@ -31,6 +31,35 @@
       ]
     },
     {
+      "name": "enlarge-gallery",
+      "type": "registry:ui",
+      "title": "Enlarge Gallery",
+      "description": "A cinematic, full-screen image gallery with expanding thumbnails.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\enlarge-gallery.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "\\components\\core\\enlarge-gallery.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "\\components\\core\\enlarge-gallery.css",
+          "type": "registry:ui"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
       "name": "hexagon-grid",
       "type": "registry:ui",
       "title": "Hexagon Grid",

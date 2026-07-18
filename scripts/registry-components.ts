@@ -42,6 +42,26 @@ export const components: ComponentDefinition[] = [
     ],
   },
   {
+    name: 'enlarge-gallery',
+    path: path.join(__dirname, '../components/core/enlarge-gallery.tsx'),
+    registryDependencies: [],
+    dependencies: ['lucide-react'],
+    description:
+      'A cinematic, full-screen image gallery with expanding thumbnails.',
+    files: [
+      {
+        name: 'enlarge-gallery.tsx',
+        path: path.join(__dirname, '../components/core/enlarge-gallery.tsx'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'enlarge-gallery.css',
+        path: path.join(__dirname, '../components/core/enlarge-gallery.css'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'hexagon-grid',
     path: path.join(__dirname, '../components/core/hexagon-grid.tsx'),
     registryDependencies: [],

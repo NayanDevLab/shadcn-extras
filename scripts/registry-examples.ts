@@ -36,6 +36,27 @@ export const examples: ExampleDefinition[] = [
     ],
   },
   {
+    name: 'enlarge-gallery-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/enlarge-gallery/enlarge-gallery-basic.tsx'
+    ),
+    description: 'Basic Enlarge Gallery.',
+    componentName: 'enlarge-gallery-basic',
+    files: [
+      {
+        name: 'enlarge-gallery.css',
+        path: path.join(__dirname, '../components/core/enlarge-gallery.css'),
+        type: 'registry:ui',
+      },
+      {
+        name: 'enlarge-gallery.tsx',
+        path: path.join(__dirname, '../components/core/enlarge-gallery.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'hexagon-grid-basic',
     path: path.join(
       __dirname,

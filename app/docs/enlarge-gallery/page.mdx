@@ -1,0 +1,73 @@
+export const metadata = {
+  title: 'Enlarge Gallery - Shadcn-Extras',
+  description:
+    'A cinematic, full-screen image gallery with expanding thumbnails.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { EnlargeGalleryBasic } from './enlarge-gallery-basic';
+
+# Enlarge Gallery
+
+A cinematic, full-screen image gallery that displays a large background image with text content, and a row of smaller thumbnail images at the bottom. Clicking a thumbnail makes it "grow" into the main image.
+
+## Showcase
+
+<ComponentCodePreview
+  component={<EnlargeGalleryBasic />}
+  filePath='app/docs/enlarge-gallery/enlarge-gallery-basic.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value='cli'>CLI</TabsTrigger>
+    <TabsTrigger value='manual'>Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='enlarge-gallery' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Add the `enlarge-gallery.css` file</Step>
+      <CodeBlock filePath='components/core/enlarge-gallery.css' />
+      <Step>Add the `enlarge-gallery.tsx` component</Step>
+      <CodeBlock filePath='components/core/enlarge-gallery.tsx' />
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Usage
+
+```tsx
+import { EnlargeGallery } from '@/components/core/enlarge-gallery';
+
+export function Example() {
+  const items = [
+    {
+      id: 1,
+      src: '/image-1.jpg',
+      title: 'Forest',
+      description: 'A beautiful forest.',
+    },
+    // ...
+  ];
+
+  // Note: the component takes 100% height of its parent.
+  // Make sure to wrap it in a container with a defined height!
+  return (
+    <div className='h-[600px] w-full'>
+      <EnlargeGallery items={items} />
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop    | Type                   | Default  | Description                                                                     |
+| ------- | ---------------------- | -------- | ------------------------------------------------------------------------------- |
+| `items` | `EnlargeGalleryItem[]` | required | Array of items with `id`, `src`, `title`, and optional `description` and `alt`. |
