@@ -36,7 +36,7 @@ function Button({
 
 function Header() {
   return (
-    <header className='relative top-0 z-10 bg-white px-6 py-5 dark:border-white/10 dark:bg-zinc-950 lg:z-10 lg:flex lg:h-16 lg:items-center lg:px-8 lg:py-0'>
+    <header className='relative top-0 z-10 bg-white px-6 py-5 lg:z-10 lg:flex lg:h-16 lg:items-center lg:px-8 lg:py-0 dark:border-white/10 dark:bg-zinc-950'>
       <div className='mx-auto flex w-full items-center justify-between md:max-w-7xl'>
         <a href='/' className='relative flex items-center space-x-2'>
           <SELogo className='h-6 w-auto' />
@@ -63,7 +63,7 @@ function Header() {
               StoryBook
             </Link>
           </nav>
-          <div className='hidden h-8 w-[0.5px] bg-zinc-200 dark:bg-zinc-800 sm:flex' />
+          <div className='hidden h-8 w-[0.5px] bg-zinc-200 sm:flex dark:bg-zinc-800' />
           <nav className='flex items-center space-x-2'>
             <a
               href='https://www.linkedin.com/in/nayanradadiya/'

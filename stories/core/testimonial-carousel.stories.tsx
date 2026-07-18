@@ -52,7 +52,7 @@ const baseItems: TestimonialData[] = [
           You can render anything here—charts, stats, or rich content. The
           carousel still handles focus, arrows, dots, and transitions.
         </p>
-        <p className='mt-3 text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400'>
+        <p className='mt-3 text-xs font-semibold tracking-wider text-amber-600 uppercase dark:text-amber-400'>
           Product Designer
         </p>
       </div>

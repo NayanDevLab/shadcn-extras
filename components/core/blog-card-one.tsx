@@ -204,7 +204,7 @@ export function BlogCardOne({
               )}
               {dateLabel && (
                 <>
-                  <span className='select-none text-zinc-400'>|</span>
+                  <span className='text-zinc-400 select-none'>|</span>
                   <time dateTime={dateISO}>{dateLabel}</time>
                 </>
               )}

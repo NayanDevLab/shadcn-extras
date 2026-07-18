@@ -77,7 +77,7 @@ export function ShieldCheckIcon({
   return (
     <div
       className={cn(
-        'relative flex cursor-pointer select-none items-center justify-center',
+        'relative flex cursor-pointer items-center justify-center select-none',
         className
       )}
       onMouseEnter={() => setIsHovered(true)}

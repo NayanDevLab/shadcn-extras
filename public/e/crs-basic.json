@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "crs-basic.tsx",
-      "content": "'use client';\nimport { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinner';\n\nexport function CrsBasic() {\n  return (\n    <div className='min-h-64 flex items-center justify-center rounded-xl bg-black'>\n      <ConcentricRingsSpinner className='text-white' />\n    </div>\n  );\n}\n",
+      "content": "'use client';\nimport { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinner';\n\nexport function CrsBasic() {\n  return (\n    <div className='flex min-h-64 items-center justify-center rounded-xl bg-black'>\n      <ConcentricRingsSpinner className='text-white' />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     },
     {

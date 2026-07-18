@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "rds-slow-blue.tsx",
-      "content": "'use client';\nimport { RadialDotsSpinner } from '@/components/core/radial-dots-spinner';\n\nexport function RdsSlowBlue() {\n  return (\n    <div className='min-h-64 flex items-center justify-center rounded-xl bg-zinc-50 dark:bg-zinc-900'>\n      <RadialDotsSpinner\n        size={160}\n        spokes={16}\n        dotsPerSpoke={12}\n        className='text-blue-600 dark:text-blue-400'\n        speed={2.4}\n      />\n    </div>\n  );\n}\n",
+      "content": "'use client';\nimport { RadialDotsSpinner } from '@/components/core/radial-dots-spinner';\n\nexport function RdsSlowBlue() {\n  return (\n    <div className='flex min-h-64 items-center justify-center rounded-xl bg-zinc-50 dark:bg-zinc-900'>\n      <RadialDotsSpinner\n        size={160}\n        spokes={16}\n        dotsPerSpoke={12}\n        className='text-blue-600 dark:text-blue-400'\n        speed={2.4}\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     },
     {

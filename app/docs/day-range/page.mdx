@@ -1,0 +1,55 @@
+export const metadata = {
+  title: 'Day Range - Shadcn-Extras',
+  description:
+    'A component to visualize a current value between a low and high range.',
+};
+
+import ComponentCodePreview from '@/components/website/component-code-preview';
+import { DayRangeBasic } from './day-range-basic';
+
+# Day Range
+
+A component to visualize a current value relative to a low and high range, perfect for stock prices, temperature ranges, or goal tracking.
+
+## Examples
+
+### Basic
+
+<ComponentCodePreview
+  component={<DayRangeBasic />}
+  filePath='app/docs/day-range/day-range-basic.tsx'
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+  <TabsList>
+    <TabsTrigger value='cli'>CLI</TabsTrigger>
+    <TabsTrigger value='manual'>Manual</TabsTrigger>
+  </TabsList>
+
+<TabsContent value='cli'>
+  <InstallationCli value='day-range' />
+</TabsContent>
+
+  <TabsContent value="manual">
+    <Steps>
+      <Step>Copy and paste the component into <code>components/core/day-range.tsx</code>.</Step>
+      <CodeBlock filePath='components/core/day-range.tsx' />
+    </Steps>
+  </TabsContent>
+</Tabs>
+
+## Props
+
+The `DayRange` component accepts the following props:
+
+| Prop             | Type                        | Default          | Description                                 |
+| :--------------- | :-------------------------- | :--------------- | :------------------------------------------ |
+| `low`            | `number`                    | **Required**     | The minimum value of the range.             |
+| `high`           | `number`                    | **Required**     | The maximum value of the range.             |
+| `current`        | `number`                    | **Required**     | The current value to indicate on the range. |
+| `currencySymbol` | `string`                    | `'₹'`            | The symbol to prepend to the values.        |
+| `lowLabel`       | `string`                    | `'Today's low'`  | The label above the low value.              |
+| `highLabel`      | `string`                    | `'Today's high'` | The label above the high value.             |
+| `formatValue`    | `(value: number) => string` | `undefined`      | A custom formatter function for the values. |

@@ -142,7 +142,7 @@ export function BlogCardTwo({
               e.preventDefault();
               onLike?.();
             }}
-            className='hover:bg-black/35 rounded-full bg-black/25 p-2 backdrop-blur'
+            className='rounded-full bg-black/25 p-2 backdrop-blur hover:bg-black/35'
           >
             <Heart className='h-4 w-4' aria-hidden />
           </button>
@@ -153,7 +153,7 @@ export function BlogCardTwo({
               e.preventDefault();
               onBookmark?.();
             }}
-            className='hover:bg-black/35 rounded-full bg-black/25 p-2 backdrop-blur'
+            className='rounded-full bg-black/25 p-2 backdrop-blur hover:bg-black/35'
           >
             <Bookmark className='h-4 w-4' aria-hidden />
           </button>
@@ -174,7 +174,7 @@ function MetaPill({
     <Comp className='inline-flex items-center gap-2 text-white/95' {...props}>
       {icon}
       <span className='font-medium'>{children}</span>
-      <span className='mx-2 select-none opacity-60'>|</span>
+      <span className='mx-2 opacity-60 select-none'>|</span>
     </Comp>
   );
 }

@@ -165,7 +165,7 @@ export function NoiseGenerator() {
                     type='color'
                     value={bgColor}
                     onChange={(e) => setBgColor(e.target.value)}
-                    className='absolute -left-[50%] -top-[50%] h-[200%] w-[200%] cursor-pointer border-0 bg-transparent p-0 [appearance:none]'
+                    className='absolute -top-[50%] -left-[50%] h-[200%] w-[200%] cursor-pointer [appearance:none] border-0 bg-transparent p-0'
                   />
                 </div>
                 <Input
@@ -220,7 +220,7 @@ export function NoiseGenerator() {
             onClick={handleCopy}
           >
             <pre className='text-xs'>{generateCode()}</pre>
-            <div className='absolute right-2 top-2 opacity-0 transition-opacity group-hover:opacity-100'>
+            <div className='absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100'>
               {copied ? (
                 <Check className='h-4 w-4 text-green-500' />
               ) : (

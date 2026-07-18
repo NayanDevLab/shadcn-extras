@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "rds-basic.tsx",
-      "content": "'use client';\nimport { RadialDotsSpinner } from '@/components/core/radial-dots-spinner';\n\nexport function RdsBasic() {\n  return (\n    <div className='min-h-64 flex items-center justify-center rounded-xl bg-black'>\n      <RadialDotsSpinner className='text-white' size={180} />\n    </div>\n  );\n}\n",
+      "content": "'use client';\nimport { RadialDotsSpinner } from '@/components/core/radial-dots-spinner';\n\nexport function RdsBasic() {\n  return (\n    <div className='flex min-h-64 items-center justify-center rounded-xl bg-black'>\n      <RadialDotsSpinner className='text-white' size={180} />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     },
     {

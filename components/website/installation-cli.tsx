@@ -95,7 +95,7 @@ export function InstallationCli({ value, className }: InstallationCliProps) {
           />
           <CheckIcon
             className={cn(
-              'size-4 absolute transition-all',
+              'absolute size-4 transition-all',
               isCopied ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
             )}
           />
@@ -105,7 +105,7 @@ export function InstallationCli({ value, className }: InstallationCliProps) {
         <TabsContent
           key={command.label}
           value={command.label}
-          className='mb-0 mt-0 border-none'
+          className='mt-0 mb-0 border-none'
         >
           <pre
             className='not-prose p-4 font-mono text-sm text-zinc-50'

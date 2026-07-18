@@ -4,6 +4,27 @@
   "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/docs/",
   "items": [
     {
+      "name": "day-range",
+      "type": "registry:ui",
+      "title": "Day Range",
+      "description": "A component to visualize a current value between a low and high range.",
+      "dependencies": [
+        "motion"
+      ],
+      "devDependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "\\components\\core\\day-range.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "categories": [
+        "ui",
+        "shadcn-extras"
+      ]
+    },
+    {
       "name": "kpi-card",
       "type": "registry:ui",
       "title": "Kpi Card",

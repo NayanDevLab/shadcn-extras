@@ -92,7 +92,7 @@ export function BlogCardFour({
       >
         <h3
           className={cn(
-            'mb-2 text-[17px] font-semibold leading-snug text-zinc-900 dark:text-zinc-50',
+            'mb-2 text-[17px] leading-snug font-semibold text-zinc-900 dark:text-zinc-50',
             'group-hover:underline',
             titleClassName
           )}

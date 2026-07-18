@@ -96,7 +96,7 @@ export function BlogCardThree({
         {/* title */}
         <h3
           className={cn(
-            'line-clamp-2 text-[17px] font-semibold leading-snug text-zinc-900 group-hover:underline dark:text-zinc-50',
+            'line-clamp-2 text-[17px] leading-snug font-semibold text-zinc-900 group-hover:underline dark:text-zinc-50',
             titleClassName
           )}
         >

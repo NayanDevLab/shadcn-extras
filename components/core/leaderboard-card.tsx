@@ -158,7 +158,7 @@ export function LeaderboardCard({
             )}
           </div>
           {typeof rank === 'number' && (
-            <span className='absolute -bottom-1 -right-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-yellow-400 text-[11px] font-bold text-yellow-950 ring-2 ring-white dark:ring-zinc-900'>
+            <span className='absolute -right-1 -bottom-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-yellow-400 text-[11px] font-bold text-yellow-950 ring-2 ring-white dark:ring-zinc-900'>
               {rank}
             </span>
           )}

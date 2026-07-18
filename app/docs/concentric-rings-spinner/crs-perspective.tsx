@@ -3,7 +3,7 @@ import { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinn
 
 export function CrsPerspective() {
   return (
-    <div className='min-h-64 flex items-center justify-center rounded-xl bg-zinc-900'>
+    <div className='flex min-h-64 items-center justify-center rounded-xl bg-zinc-900'>
       <ConcentricRingsSpinner
         size={220}
         rings={18}

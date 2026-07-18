@@ -9,14 +9,7 @@ import { Copy, Plus, Trash2, Check, RefreshCw } from 'lucide-react';
 
 type GradientType = 'linear' | 'radial' | 'conic';
 type GradientDirection =
-  | 'to-t'
-  | 'to-tr'
-  | 'to-r'
-  | 'to-br'
-  | 'to-b'
-  | 'to-bl'
-  | 'to-l'
-  | 'to-tl';
+  'to-t' | 'to-tr' | 'to-r' | 'to-br' | 'to-b' | 'to-bl' | 'to-l' | 'to-tl';
 
 const DIRECTIONS: { value: GradientDirection; label: string; angle: string }[] =
   [
@@ -188,7 +181,7 @@ export function GradientGenerator() {
                     type='color'
                     value={color}
                     onChange={(e) => updateColor(index, e.target.value)}
-                    className='absolute left-1 top-1/2 h-8 w-8 -translate-y-1/2 cursor-pointer rounded border-0 bg-transparent p-0'
+                    className='absolute top-1/2 left-1 h-8 w-8 -translate-y-1/2 cursor-pointer rounded border-0 bg-transparent p-0'
                   />
                   <Input
                     value={color}
@@ -226,11 +219,11 @@ export function GradientGenerator() {
         <div className='space-y-2'>
           <Label>Tailwind CSS (Click to copy)</Label>
           <div
-            className='bg-muted hover:bg-muted/80 group relative cursor-pointer break-all rounded-lg p-4 font-mono text-sm transition-colors'
+            className='bg-muted hover:bg-muted/80 group relative cursor-pointer rounded-lg p-4 font-mono text-sm break-all transition-colors'
             onClick={handleCopy}
           >
             {generatedCode}
-            <div className='absolute right-2 top-2 opacity-0 transition-opacity group-hover:opacity-100'>
+            <div className='absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100'>
               {copied ? (
                 <Check className='h-4 w-4 text-green-500' />
               ) : (
@@ -242,7 +235,7 @@ export function GradientGenerator() {
 
         <div className='space-y-2'>
           <Label>CSS Style</Label>
-          <div className='bg-muted text-muted-foreground select-all overflow-x-auto rounded-lg p-4 font-mono text-sm'>
+          <div className='bg-muted text-muted-foreground overflow-x-auto rounded-lg p-4 font-mono text-sm select-all'>
             background: {getBackgroundStyle()};
           </div>
         </div>

@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "crs-dense.tsx",
-      "content": "'use client';\nimport { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinner';\n\nexport function CrsDense() {\n  return (\n    <div className='min-h-64 flex items-center justify-center rounded-xl bg-zinc-950'>\n      <ConcentricRingsSpinner\n        size={240}\n        rings={16}\n        dotsPerRing={42}\n        ringGap={8}\n        dotRadius={{ inner: 2.5, outer: 4.5 }}\n        className='text-white/95'\n        speed={2.6}\n      />\n    </div>\n  );\n}\n",
+      "content": "'use client';\nimport { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinner';\n\nexport function CrsDense() {\n  return (\n    <div className='flex min-h-64 items-center justify-center rounded-xl bg-zinc-950'>\n      <ConcentricRingsSpinner\n        size={240}\n        rings={16}\n        dotsPerRing={42}\n        ringGap={8}\n        dotRadius={{ inner: 2.5, outer: 4.5 }}\n        className='text-white/95'\n        speed={2.6}\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     },
     {

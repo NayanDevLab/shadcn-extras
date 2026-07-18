@@ -3,7 +3,7 @@ import { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinn
 
 export function CrsDense() {
   return (
-    <div className='min-h-64 flex items-center justify-center rounded-xl bg-zinc-950'>
+    <div className='flex min-h-64 items-center justify-center rounded-xl bg-zinc-950'>
       <ConcentricRingsSpinner
         size={240}
         rings={16}

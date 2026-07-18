@@ -163,7 +163,7 @@ export default function PricingCardTwo({
       {/* colored frame */}
       <div className={cn('rounded-3xl p-[3px]', t.frame)}>
         {/* card surface */}
-        <div className='rounded-[22px] bg-zinc-50 px-8 pb-8 pt-10 shadow-sm ring-1 ring-zinc-200 dark:bg-zinc-900 dark:ring-zinc-800'>
+        <div className='rounded-[22px] bg-zinc-50 px-8 pt-10 pb-8 shadow-sm ring-1 ring-zinc-200 dark:bg-zinc-900 dark:ring-zinc-800'>
           {/* icon */}
           {icon && (
             <div
@@ -200,7 +200,7 @@ export default function PricingCardTwo({
 
           {/* price */}
           <div className={cn('mt-6 text-center', t.accent, priceClassName)}>
-            <span className='text-5xl font-bold leading-none'>{pp.main}</span>
+            <span className='text-5xl leading-none font-bold'>{pp.main}</span>
             <span
               className={cn(
                 'ml-1 text-zinc-500 dark:text-zinc-400',

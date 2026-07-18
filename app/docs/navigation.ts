@@ -62,6 +62,11 @@ export const NAVIGATION: NavigationGroup[] = [
         href: '/docs/leaderboard-card',
         isUpdated: true,
       },
+      {
+        name: 'Day Range',
+        href: '/docs/day-range',
+        isNew: true,
+      },
     ],
   },
   {

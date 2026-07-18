@@ -154,7 +154,7 @@ export default function PricingCardOne({
   const priceText =
     typeof price === 'number' ? (
       <>
-        <span className='text-5xl font-bold leading-none'>
+        <span className='text-5xl leading-none font-bold'>
           {currency}
           {price}
         </span>
@@ -164,7 +164,7 @@ export default function PricingCardOne({
       </>
     ) : (
       <>
-        <span className='text-5xl font-bold leading-none'>{price}</span>
+        <span className='text-5xl leading-none font-bold'>{price}</span>
         <span className='ml-1 text-zinc-500 dark:text-zinc-400'>
           {periodLabel}
         </span>
@@ -180,7 +180,7 @@ export default function PricingCardOne({
       {recommended && (
         <span
           className={cn(
-            'absolute right-4 top-4 inline-flex items-center rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white shadow-sm',
+            'absolute top-4 right-4 inline-flex items-center rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white shadow-sm',
             badgeClassName
           )}
         >

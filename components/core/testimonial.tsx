@@ -125,7 +125,7 @@ export function TestimonialCarousel({
             type='button'
             onClick={() => go(-1)}
             aria-label='Previous testimonial'
-            className='absolute left-3 top-1/2 -translate-y-1/2 rounded-full p-2 text-zinc-500 ring-1 ring-zinc-200 transition hover:bg-zinc-100 hover:text-zinc-800 dark:text-zinc-300 dark:ring-zinc-700 dark:hover:bg-zinc-800'
+            className='absolute top-1/2 left-3 -translate-y-1/2 rounded-full p-2 text-zinc-500 ring-1 ring-zinc-200 transition hover:bg-zinc-100 hover:text-zinc-800 dark:text-zinc-300 dark:ring-zinc-700 dark:hover:bg-zinc-800'
           >
             <ChevronLeft className='h-5 w-5' />
           </button>
@@ -133,7 +133,7 @@ export function TestimonialCarousel({
             type='button'
             onClick={() => go(1)}
             aria-label='Next testimonial'
-            className='absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-2 text-zinc-500 ring-1 ring-zinc-200 transition hover:bg-zinc-100 hover:text-zinc-800 dark:text-zinc-300 dark:ring-zinc-700 dark:hover:bg-zinc-800'
+            className='absolute top-1/2 right-3 -translate-y-1/2 rounded-full p-2 text-zinc-500 ring-1 ring-zinc-200 transition hover:bg-zinc-100 hover:text-zinc-800 dark:text-zinc-300 dark:ring-zinc-700 dark:hover:bg-zinc-800'
           >
             <ChevronRight className='h-5 w-5' />
           </button>
@@ -257,7 +257,7 @@ function DefaultCard({
           )}
           {/* decorative quote badge */}
           <span
-            className='absolute -left-2 -top-2 grid h-7 w-7 place-items-center rounded-full text-white shadow-sm'
+            className='absolute -top-2 -left-2 grid h-7 w-7 place-items-center rounded-full text-white shadow-sm'
             style={{ backgroundColor: accent }}
             aria-hidden
           >
@@ -277,7 +277,7 @@ function DefaultCard({
       {item.role && (
         <p
           className={cn(
-            'mb-3 text-xs font-semibold uppercase tracking-wider text-[color:var(--role-color,#4f46e5)]',
+            'mb-3 text-xs font-semibold tracking-wider text-[color:var(--role-color,#4f46e5)] uppercase',
             roleClassName
           )}
           style={{ ['--role-color' as any]: accent }}
@@ -290,7 +290,7 @@ function DefaultCard({
       {item.quote && (
         <p
           className={cn(
-            'text-balance max-w-2xl text-sm leading-7 text-zinc-600 dark:text-zinc-300',
+            'max-w-2xl text-sm leading-7 text-balance text-zinc-600 dark:text-zinc-300',
             quoteClassName
           )}
         >

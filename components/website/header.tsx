@@ -33,7 +33,7 @@ export function Header() {
               StoryBook
             </Link>
           </nav>
-          <div className='hidden h-8 w-[0.5px] bg-zinc-200 dark:bg-zinc-800 sm:flex' />
+          <div className='hidden h-8 w-[0.5px] bg-zinc-200 sm:flex dark:bg-zinc-800' />
           <nav className='flex items-center space-x-2'>
             <a
               href='https://www.linkedin.com/in/nayanradadiya/'

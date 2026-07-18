@@ -93,7 +93,7 @@ export default function TimelineRail({
       {/* Rail */}
       <div
         aria-hidden
-        className={cn('absolute left-0 right-0', railClassName)}
+        className={cn('absolute right-0 left-0', railClassName)}
         style={{
           top: 0,
           height: lineThickness,
@@ -105,7 +105,7 @@ export default function TimelineRail({
         {/* Emphasized segment up to last active */}
         {emphasizeActiveTrail && lastActive >= 0 && (
           <div
-            className='absolute left-0 top-0 h-full rounded-full bg-zinc-900 dark:bg-zinc-100'
+            className='absolute top-0 left-0 h-full rounded-full bg-zinc-900 dark:bg-zinc-100'
             style={{
               width: `${items.length > 1 ? (lastActive / (items.length - 1)) * 100 : 0}%`,
             }}
@@ -138,7 +138,7 @@ export default function TimelineRail({
               {item.label && (
                 <span
                   className={cn(
-                    'absolute -top-3 -translate-y-full select-none text-[11px] text-zinc-500 dark:text-zinc-400',
+                    'absolute -top-3 -translate-y-full text-[11px] text-zinc-500 select-none dark:text-zinc-400',
                     labelClassName
                   )}
                   style={{
@@ -156,7 +156,7 @@ export default function TimelineRail({
                 <a
                   href={item.href}
                   className={cn(
-                    'relative rounded-full ring-2 ring-black/5 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600',
+                    'relative rounded-full ring-2 ring-black/5 transition-transform focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none',
                     isActive ? dotActiveClass : dotClass
                   )}
                   style={{ width: dotSize, height: dotSize }}
@@ -169,7 +169,7 @@ export default function TimelineRail({
                   type='button'
                   onClick={item.onClick}
                   className={cn(
-                    'relative rounded-full ring-2 ring-black/5 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600',
+                    'relative rounded-full ring-2 ring-black/5 transition-transform focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none',
                     isActive ? dotActiveClass : dotClass
                   )}
                   style={{ width: dotSize, height: dotSize }}
@@ -183,7 +183,7 @@ export default function TimelineRail({
               {item.caption && (
                 <span
                   className={cn(
-                    'absolute select-none text-xs text-zinc-600 dark:text-zinc-300',
+                    'absolute text-xs text-zinc-600 select-none dark:text-zinc-300',
                     captionClassName
                   )}
                   style={{ transform: `translateY(${captionOffset}px)` }}

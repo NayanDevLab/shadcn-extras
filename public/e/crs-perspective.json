@@ -6,7 +6,7 @@
   "files": [
     {
       "path": "crs-perspective.tsx",
-      "content": "'use client';\nimport { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinner';\n\nexport function CrsPerspective() {\n  return (\n    <div className='min-h-64 flex items-center justify-center rounded-xl bg-zinc-900'>\n      <ConcentricRingsSpinner\n        size={220}\n        rings={18}\n        dotsPerRing={30}\n        ringGap={7}\n        fadeCenter={0.0}\n        fadeEdge={0.55}\n        dotRadius={{ inner: 4, outer: 2.2 }}\n        alternate={true}\n        speed={2.2}\n        className='text-white'\n      />\n    </div>\n  );\n}\n",
+      "content": "'use client';\nimport { ConcentricRingsSpinner } from '@/components/core/concentric-rings-spinner';\n\nexport function CrsPerspective() {\n  return (\n    <div className='flex min-h-64 items-center justify-center rounded-xl bg-zinc-900'>\n      <ConcentricRingsSpinner\n        size={220}\n        rings={18}\n        dotsPerRing={30}\n        ringGap={7}\n        fadeCenter={0.0}\n        fadeEdge={0.55}\n        dotRadius={{ inner: 4, outer: 2.2 }}\n        alternate={true}\n        speed={2.2}\n        className='text-white'\n      />\n    </div>\n  );\n}\n",
       "type": "registry:component"
     },
     {

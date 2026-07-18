@@ -120,7 +120,7 @@ export function PatternGenerator() {
           <Label className='text-base font-semibold'>Colors</Label>
           <div className='grid grid-cols-1 gap-4 sm:grid-cols-2'>
             <div className='space-y-2'>
-              <Label className='text-muted-foreground text-xs uppercase tracking-wider'>
+              <Label className='text-muted-foreground text-xs tracking-wider uppercase'>
                 Pattern
               </Label>
               <div className='flex items-center gap-2'>
@@ -129,7 +129,7 @@ export function PatternGenerator() {
                     type='color'
                     value={color}
                     onChange={(e) => setColor(e.target.value)}
-                    className='absolute -left-[50%] -top-[50%] h-[200%] w-[200%] cursor-pointer border-0 bg-transparent p-0 [appearance:none]'
+                    className='absolute -top-[50%] -left-[50%] h-[200%] w-[200%] cursor-pointer [appearance:none] border-0 bg-transparent p-0'
                   />
                 </div>
                 <Input
@@ -141,7 +141,7 @@ export function PatternGenerator() {
               </div>
             </div>
             <div className='space-y-2'>
-              <Label className='text-muted-foreground text-xs uppercase tracking-wider'>
+              <Label className='text-muted-foreground text-xs tracking-wider uppercase'>
                 Background
               </Label>
               <div className='flex items-center gap-2'>
@@ -157,7 +157,7 @@ export function PatternGenerator() {
                       type='color'
                       value={bgColor}
                       onChange={(e) => setBgColor(e.target.value)}
-                      className='absolute -left-[50%] -top-[50%] h-[200%] w-[200%] cursor-pointer border-0 bg-transparent p-0 [appearance:none]'
+                      className='absolute -top-[50%] -left-[50%] h-[200%] w-[200%] cursor-pointer [appearance:none] border-0 bg-transparent p-0'
                     />
                   )}
                 </div>
@@ -257,7 +257,7 @@ export function PatternGenerator() {
             onClick={handleCopy}
           >
             <pre>{generateCode()}</pre>
-            <div className='absolute right-2 top-2 opacity-0 transition-opacity group-hover:opacity-100'>
+            <div className='absolute top-2 right-2 opacity-0 transition-opacity group-hover:opacity-100'>
               {copied ? (
                 <Check className='h-4 w-4 text-green-500' />
               ) : (

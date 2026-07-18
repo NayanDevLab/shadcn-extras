@@ -35,7 +35,7 @@ export default function ComponentPreview({
         className
       )}
     >
-      <div className='absolute right-4 top-3'>
+      <div className='absolute top-3 right-4'>
         <div className='flex items-center gap-3 opacity-0 transition-opacity group-hover:opacity-100'>
           <OpenInV0Button url={registryUrl} />
           {hasReTrigger && (

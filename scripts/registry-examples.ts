@@ -15,6 +15,19 @@ type ExampleDefinition = {
 
 export const examples: ExampleDefinition[] = [
   {
+    name: 'day-range-basic',
+    path: path.join(__dirname, '../app/docs/day-range/day-range-basic.tsx'),
+    description: 'Basic Day Range.',
+    componentName: 'day-range-basic',
+    files: [
+      {
+        name: 'day-range.tsx',
+        path: path.join(__dirname, '../components/core/day-range.tsx'),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'kpi-basic',
     path: path.join(__dirname, '../app/docs/kpi-card/kpi-basic.tsx'),
     description: 'Basic KPI Card.',

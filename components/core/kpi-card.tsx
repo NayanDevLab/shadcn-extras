@@ -128,8 +128,8 @@ export function KpiCard({
       )}
     >
       {/* subtle corner pulse like your screenshot */}
-      <span className='pointer-events-none absolute -right-6 -top-6 inline-flex h-16 w-16 rounded-full bg-black/5 dark:bg-white/5' />
-      <span className='pointer-events-none absolute -right-2 -top-2 inline-flex h-8 w-8 rounded-full bg-black/5 dark:bg-white/5' />
+      <span className='pointer-events-none absolute -top-6 -right-6 inline-flex h-16 w-16 rounded-full bg-black/5 dark:bg-white/5' />
+      <span className='pointer-events-none absolute -top-2 -right-2 inline-flex h-8 w-8 rounded-full bg-black/5 dark:bg-white/5' />
 
       <div className='flex items-start justify-between gap-3'>
         <div className='space-y-1'>
@@ -181,7 +181,7 @@ export function KpiCard({
       </div>
 
       {/* tiny baseline bar (optional – matches screenshot) */}
-      <div className='bg-current/40 mt-3 h-0.5 w-16 rounded opacity-60' />
+      <div className='mt-3 h-0.5 w-16 rounded bg-current/40 opacity-60' />
     </div>
   );
 }

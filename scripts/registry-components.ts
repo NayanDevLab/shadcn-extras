@@ -23,6 +23,14 @@ type ComponentDefinition = Partial<
 
 export const components: ComponentDefinition[] = [
   {
+    name: 'day-range',
+    path: path.join(__dirname, '../components/core/day-range.tsx'),
+    registryDependencies: [],
+    dependencies: ['motion'],
+    description:
+      'A component to visualize a current value between a low and high range.',
+  },
+  {
     name: 'kpi-card',
     path: path.join(__dirname, '../components/core/kpi-card.tsx'),
     registryDependencies: [],
