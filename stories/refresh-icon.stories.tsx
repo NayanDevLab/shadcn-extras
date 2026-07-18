@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { RefreshIcon } from '../components/core/refresh-icon';
 
 const meta = {
-  title: 'Core/RefreshIcon',
+  title: 'Core/Icons/RefreshIcon',
   component: RefreshIcon,
   parameters: {
     layout: 'centered',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { UserIcon } from '../components/core/user-icon';
 
 const meta = {
-  title: 'Core/UserIcon',
+  title: 'Core/Icons/UserIcon',
   component: UserIcon,
   parameters: {
     layout: 'centered',

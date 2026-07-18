@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BalanceIcon } from '../components/core/balance-icon';
 
 const meta = {
-  title: 'Core/BalanceIcon',
+  title: 'Core/Icons/BalanceIcon',
   component: BalanceIcon,
   parameters: {
     layout: 'centered',

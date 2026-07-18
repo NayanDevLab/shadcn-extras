@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { GlobalIcon } from '../components/core/global-icon';
 
 const meta = {
-  title: 'Core/GlobalIcon',
+  title: 'Core/Icons/GlobalIcon',
   component: GlobalIcon,
   parameters: {
     layout: 'centered',

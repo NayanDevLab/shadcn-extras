@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { HeartIcon } from '../components/core/heart-icon';
 
 const meta = {
-  title: 'Core/HeartIcon',
+  title: 'Core/Icons/HeartIcon',
   component: HeartIcon,
   parameters: {
     layout: 'centered',

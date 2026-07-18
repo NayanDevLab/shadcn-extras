@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TrashIcon } from '../components/core/trash-icon';
 
 const meta = {
-  title: 'Core/TrashIcon',
+  title: 'Core/Icons/TrashIcon',
   component: TrashIcon,
   parameters: {
     layout: 'centered',

@@ -39,6 +39,9 @@
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --runInBand"
   },
+  "overrides": {
+    "webpack": "5.101.2"
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings=0 --fix",

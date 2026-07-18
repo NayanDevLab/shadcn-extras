@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MailStackIcon } from '../components/core/mail-stack-icon';
 
 const meta = {
-  title: 'Core/MailStackIcon',
+  title: 'Core/Icons/MailStackIcon',
   component: MailStackIcon,
   parameters: {
     layout: 'centered',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BulbIcon } from '../components/core/bulb-icon';
 
 const meta = {
-  title: 'Core/BulbIcon',
+  title: 'Core/Icons/BulbIcon',
   component: BulbIcon,
   parameters: {
     layout: 'centered',

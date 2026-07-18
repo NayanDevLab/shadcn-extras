@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ToolsIcon } from '../components/core/tools-icon';
 
 const meta = {
-  title: 'Core/ToolsIcon',
+  title: 'Core/Icons/ToolsIcon',
   component: ToolsIcon,
   parameters: {
     layout: 'centered',

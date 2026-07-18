@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MobileStoreIcon } from '../components/core/mobile-store-icon';
 
 const meta = {
-  title: 'Core/MobileStoreIcon',
+  title: 'Core/Icons/MobileStoreIcon',
   component: MobileStoreIcon,
   parameters: {
     layout: 'centered',

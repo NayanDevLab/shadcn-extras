@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TrophyIcon } from '../components/core/trophy-icon';
 
 const meta = {
-  title: 'Core/TrophyIcon',
+  title: 'Core/Icons/TrophyIcon',
   component: TrophyIcon,
   parameters: {
     layout: 'centered',

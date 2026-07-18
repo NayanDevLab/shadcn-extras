@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { GlobalSearchIcon } from '../components/core/global-search-icon';
 
 const meta = {
-  title: 'Core/GlobalSearchIcon',
+  title: 'Core/Icons/GlobalSearchIcon',
   component: GlobalSearchIcon,
   parameters: {
     layout: 'centered',

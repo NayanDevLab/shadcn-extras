@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MoneyIcon } from '../components/core/money-icon';
 
 const meta = {
-  title: 'Core/MoneyIcon',
+  title: 'Core/Icons/MoneyIcon',
   component: MoneyIcon,
   parameters: {
     layout: 'centered',

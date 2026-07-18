@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { NetworkIcon } from '../components/core/network-icon';
 
 const meta = {
-  title: 'Core/NetworkIcon',
+  title: 'Core/Icons/NetworkIcon',
   component: NetworkIcon,
   parameters: {
     layout: 'centered',

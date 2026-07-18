@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { PaperPlaneIcon } from '../components/core/paper-plane-icon';
 
 const meta = {
-  title: 'Core/PaperPlaneIcon',
+  title: 'Core/Icons/PaperPlaneIcon',
   component: PaperPlaneIcon,
   parameters: {
     layout: 'centered',

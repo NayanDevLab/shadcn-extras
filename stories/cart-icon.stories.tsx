@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { CartIcon } from '../components/core/cart-icon';
 
 const meta = {
-  title: 'Core/CartIcon',
+  title: 'Core/Icons/CartIcon',
   component: CartIcon,
   parameters: {
     layout: 'centered',

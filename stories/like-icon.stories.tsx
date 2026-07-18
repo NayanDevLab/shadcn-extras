@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { LikeIcon } from '../components/core/like-icon';
 
 const meta = {
-  title: 'Core/LikeIcon',
+  title: 'Core/Icons/LikeIcon',
   component: LikeIcon,
   parameters: {
     layout: 'centered',

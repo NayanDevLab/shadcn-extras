@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TruckIcon } from '../components/core/truck-icon';
 
 const meta = {
-  title: 'Core/TruckIcon',
+  title: 'Core/Icons/TruckIcon',
   component: TruckIcon,
   parameters: {
     layout: 'centered',

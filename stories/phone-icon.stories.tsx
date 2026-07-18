@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { PhoneIcon } from '../components/core/phone-icon';
 
 const meta = {
-  title: 'Core/PhoneIcon',
+  title: 'Core/Icons/PhoneIcon',
   component: PhoneIcon,
   parameters: {
     layout: 'centered',

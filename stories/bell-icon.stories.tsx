@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BellIcon } from '../components/core/bell-icon';
 
 const meta = {
-  title: 'Core/BellIcon',
+  title: 'Core/Icons/BellIcon',
   component: BellIcon,
   parameters: {
     layout: 'centered',

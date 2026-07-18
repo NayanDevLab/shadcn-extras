@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { RocketIcon } from '../components/core/rocket-icon';
 
 const meta = {
-  title: 'Core/RocketIcon',
+  title: 'Core/Icons/RocketIcon',
   component: RocketIcon,
   parameters: {
     layout: 'centered',

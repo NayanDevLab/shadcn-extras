@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ClockIcon } from '../components/core/clock-icon';
 
 const meta = {
-  title: 'Core/ClockIcon',
+  title: 'Core/Icons/ClockIcon',
   component: ClockIcon,
   parameters: {
     layout: 'centered',

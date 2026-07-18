@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ShieldCheckIcon } from '../components/core/shield-check-icon';
 
 const meta = {
-  title: 'Core/ShieldCheckIcon',
+  title: 'Core/Icons/ShieldCheckIcon',
   component: ShieldCheckIcon,
   parameters: {
     layout: 'centered',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MicrophoneIcon } from '../components/core/microphone-icon';
 
 const meta = {
-  title: 'Core/MicrophoneIcon',
+  title: 'Core/Icons/MicrophoneIcon',
   component: MicrophoneIcon,
   parameters: {
     layout: 'centered',

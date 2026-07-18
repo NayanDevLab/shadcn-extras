@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ShareIcon } from '../components/core/share-icon';
 
 const meta = {
-  title: 'Core/ShareIcon',
+  title: 'Core/Icons/ShareIcon',
   component: ShareIcon,
   parameters: {
     layout: 'centered',
