@@ -113,7 +113,7 @@ export function GridNewspaperBasic() {
         <a href='#'>
           <h4 className='mb-2'>How To Make Chocolate Frogs</h4>
           <p>
-            Everybody loves chocolate frogs. It's impossible to not love them,
+            Everybody loves chocolate frogs. It&apos;s impossible to not love them,
             so The Daily Prophet offers its reader with its recipe. So hold you
             frorgs tight as you read this
           </p>
@@ -128,7 +128,7 @@ export function GridNewspaperBasic() {
           <h4 className='mb-2'>Quidditch world cup nearing!</h4>
           <p>
             Quidditch fans around the world are exited as the world cup is
-            nearing. So we, decided to fill those who don't know about Qudditch
+            nearing. So we, decided to fill those who don&apos;t know about Qudditch
             in with information.
           </p>
         </a>
