@@ -27,6 +27,12 @@ export function Header() {
               Components
             </Link>
             <Link
+              href='/themes'
+              className='text-sm font-medium text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
+            >
+              Themes
+            </Link>
+            <Link
               href='/theme-generator'
               className='flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300'
             >
