@@ -26,6 +26,12 @@ export function Header() {
             >
               Components
             </Link>
+            <Link
+              href='/theme-generator'
+              className='flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300'
+            >
+              AI Themes <span className="relative flex h-2 w-2"><span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span></span>
+            </Link>
             <a
               href='https://NayanDevLab.github.io/shadcn-extras/storybook/'
               target='_blank'
