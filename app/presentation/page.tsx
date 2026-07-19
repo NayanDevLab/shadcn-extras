@@ -2,8 +2,20 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Code2, Sparkles, Wand2, MonitorPlay, Terminal, BookOpen, Blocks, Zap } from 'lucide-react';
+import { ArrowRight, Code2, Sparkles, Wand2, MonitorPlay, Terminal, BookOpen, Blocks, Zap, Image as ImageIcon, MousePointerClick, LayoutDashboard, Layers, PieChart } from 'lucide-react';
 import { motion } from 'framer-motion';
+
+import { CircularGallery } from '@/components/core/circular-gallery';
+import { RocketIcon } from '@/components/core/rocket-icon';
+import { KpiCard } from '@/components/core/kpi-card';
+import { HolographicCard } from '@/components/core/holographic-card';
+
+const galleryItems = [
+  { id: '1', title: 'Image 1', imageSrc: 'https://picsum.photos/id/27/600/600' },
+  { id: '2', title: 'Image 2', imageSrc: 'https://picsum.photos/id/25/600/600' },
+  { id: '3', title: 'Image 3', imageSrc: 'https://picsum.photos/id/372/600/600' },
+  { id: '4', title: 'Image 4', imageSrc: 'https://picsum.photos/id/380/600/600' },
+];
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -132,7 +144,120 @@ export default function PresentationPage() {
         </motion.div>
       </section>
 
-      {/* SLIDE 4: INSTALLATION */}
+      {/* SLIDE 4: WHAT IS INSIDE (CATEGORIES) */}
+      <section className="flex h-screen w-full snap-start flex-col justify-center p-10 md:p-24 bg-transparent">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.4 }}
+          variants={staggerContainer}
+          className="max-w-6xl mx-auto space-y-12 w-full"
+        >
+          <div className="flex flex-col items-center text-center space-y-4">
+            <motion.div variants={fadeInUp} className="flex items-center gap-4 text-pink-500">
+              <Layers className="h-8 w-8" />
+              <h2 className="text-3xl font-semibold uppercase tracking-wider">What's Inside?</h2>
+            </motion.div>
+            <motion.h3 variants={fadeInUp} className="text-5xl font-bold md:text-6xl">
+              An expanding library of components
+            </motion.h3>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+            <motion.div variants={fadeInUp} className="bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center text-center space-y-4 hover:shadow-xl transition-shadow">
+              <ImageIcon className="h-12 w-12 text-blue-500" />
+              <h4 className="text-2xl font-bold">3D Galleries</h4>
+              <p className="text-zinc-600 dark:text-zinc-400">Infinite parallax galleries and circular swipers for stunning media displays.</p>
+            </motion.div>
+            
+            <motion.div variants={fadeInUp} className="bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center text-center space-y-4 hover:shadow-xl transition-shadow">
+              <MousePointerClick className="h-12 w-12 text-emerald-500" />
+              <h4 className="text-2xl font-bold">Animated Icons</h4>
+              <p className="text-zinc-600 dark:text-zinc-400">Micro-interactions on hover and click to make your UI feel alive and responsive.</p>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center text-center space-y-4 hover:shadow-xl transition-shadow">
+              <LayoutDashboard className="h-12 w-12 text-orange-500" />
+              <h4 className="text-2xl font-bold">Dashboard UI</h4>
+              <p className="text-zinc-600 dark:text-zinc-400">Beautiful KPI cards, leaderboards, and data visualization elements.</p>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col items-center text-center space-y-4 hover:shadow-xl transition-shadow">
+              <Blocks className="h-12 w-12 text-purple-500" />
+              <h4 className="text-2xl font-bold">Interactive Cards</h4>
+              <p className="text-zinc-600 dark:text-zinc-400">Holographic cards, premium pricing tables, and elegant blog layouts.</p>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* SLIDE 5: EXAMPLES */}
+      <section className="flex min-h-screen w-full snap-start flex-col justify-center p-10 md:p-24 bg-zinc-950 text-white overflow-hidden">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={staggerContainer}
+          className="max-w-7xl mx-auto w-full space-y-8"
+        >
+          <div className="text-center space-y-4 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold">See them in action</h2>
+            <p className="text-xl text-zinc-400">Interact with the actual components right here.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-[65vh]">
+            
+            {/* Circular Gallery */}
+            <motion.div variants={fadeInUp} className="relative rounded-3xl overflow-hidden bg-[#101828] border border-zinc-800 group">
+              <div className="absolute top-4 left-4 z-10 bg-black/50 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-medium border border-zinc-700">3D Galleries</div>
+              <div className="absolute inset-0 scale-[0.65] origin-center -translate-y-8">
+                <CircularGallery items={galleryItems} title="Galleries" radius="30vmin" />
+              </div>
+            </motion.div>
+
+            {/* Holographic Card */}
+            <motion.div variants={fadeInUp} className="relative rounded-3xl overflow-hidden bg-black border border-zinc-800 flex items-center justify-center p-8">
+              <div className="absolute top-4 left-4 z-10 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-medium border border-zinc-700">Interactive Cards</div>
+              <div className="scale-75 origin-center">
+                <HolographicCard
+                  title="Hologram"
+                  description="A beautiful 3D floating card effect."
+                  buttonText="Hover Me"
+                  buttonHref="#"
+                />
+              </div>
+            </motion.div>
+
+            {/* Animated Icons */}
+            <motion.div variants={fadeInUp} className="relative rounded-3xl overflow-hidden bg-zinc-900 border border-zinc-800 flex flex-col items-center justify-center p-8 group">
+              <div className="absolute top-4 left-4 z-10 bg-black/50 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-medium border border-zinc-700">Animated Icons</div>
+              <div className="cursor-pointer p-8 rounded-full bg-zinc-800/50 hover:bg-zinc-800 transition-colors">
+                <RocketIcon size={64} className="text-orange-500" />
+              </div>
+              <p className="mt-4 text-zinc-400 font-mono text-sm">Hover the icon</p>
+            </motion.div>
+
+            {/* Dashboard UI */}
+            <motion.div variants={fadeInUp} className="relative rounded-3xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 flex items-center justify-center p-8">
+              <div className="absolute top-4 left-4 z-10 bg-white/50 dark:bg-black/50 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-medium border border-zinc-200 dark:border-zinc-700 text-black dark:text-white">Dashboard UI</div>
+              <div className="w-full max-w-sm">
+                <KpiCard
+                  label='Weekly Sessions'
+                  value={14209}
+                  delta={340}
+                  trend='up'
+                  caption='vs Last Week'
+                  tone='primary'
+                  icon={<PieChart className='h-4 w-4 text-blue-600 dark:text-blue-400' />}
+                />
+              </div>
+            </motion.div>
+
+          </div>
+        </motion.div>
+      </section>
+
+      {/* SLIDE 6: INSTALLATION */}
       <section className="flex h-screen w-full snap-start flex-col justify-center p-10 md:p-24 bg-white/40 dark:bg-zinc-900/40 backdrop-blur-sm">
         <motion.div 
           initial="hidden"
@@ -171,7 +296,7 @@ export default function PresentationPage() {
         </motion.div>
       </section>
 
-      {/* SLIDE 5: STORYBOOK */}
+      {/* SLIDE 7: STORYBOOK */}
       <section className="flex h-screen w-full snap-start flex-col justify-center p-10 md:p-24">
         <motion.div 
           initial="hidden"
@@ -204,7 +329,7 @@ export default function PresentationPage() {
         </motion.div>
       </section>
 
-      {/* SLIDE 6: OUTRO */}
+      {/* SLIDE 8: OUTRO */}
       <section className="relative flex h-screen w-full snap-start flex-col items-center justify-center p-10 text-center bg-gradient-to-t from-indigo-950 via-zinc-900 to-black text-white">
         <motion.div 
           initial="hidden"
