@@ -86,6 +86,21 @@ export const NAVIGATION: NavigationGroup[] = [
     ],
   },
   {
+    name: 'Generators',
+    children: [
+      { name: 'Button Generator', href: '/docs/tools/button', isNew: true },
+      { name: 'Input Generator', href: '/docs/tools/input', isNew: true },
+      { name: 'Shadow Generator', href: '/docs/tools/shadow', isNew: true },
+      { name: 'Card Generator', href: '/docs/tools/card', isNew: true },
+      { name: 'Table Generator', href: '/docs/tools/table', isNew: true },
+      { name: 'Badge Generator', href: '/docs/tools/badge', isNew: true },
+      { name: 'Text Gradient', href: '/docs/tools/text-gradient', isNew: true },
+      { name: 'Glassmorphism', href: '/docs/tools/glassmorphism', isNew: true },
+      { name: 'Skeleton Loader', href: '/docs/tools/skeleton', isNew: true },
+      { name: 'Scrollbar', href: '/docs/tools/scrollbar', isNew: true },
+    ],
+  },
+  {
     name: 'Backgrounds',
     children: [
       { name: 'Gradient Generator', href: '/docs/backgrounds/gradient' },
