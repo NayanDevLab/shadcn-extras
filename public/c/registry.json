@@ -85,36 +85,6 @@
       ]
     },
     {
-      "name": "timed-cards",
-      "type": "registry:ui",
-      "title": "Timed Cards",
-      "description": "A cinematic timed cards gallery with GSAP animations.",
-      "dependencies": [
-        "gsap",
-        "lucide-react"
-      ],
-      "devDependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "\\components\\core\\timed-cards.tsx",
-          "type": "registry:component"
-        },
-        {
-          "path": "\\components\\core\\timed-cards.tsx",
-          "type": "registry:ui"
-        },
-        {
-          "path": "\\components\\core\\timed-cards.css",
-          "type": "registry:ui"
-        }
-      ],
-      "categories": [
-        "ui",
-        "shadcn-extras"
-      ]
-    },
-    {
       "name": "grid-newspaper",
       "type": "registry:ui",
       "title": "Grid Newspaper",

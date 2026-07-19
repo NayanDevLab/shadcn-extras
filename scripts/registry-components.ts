@@ -81,25 +81,7 @@ export const components: ComponentDefinition[] = [
       },
     ],
   },
-  {
-    name: 'timed-cards',
-    path: path.join(__dirname, '../components/core/timed-cards.tsx'),
-    registryDependencies: [],
-    dependencies: ['gsap', 'lucide-react'],
-    description: 'A cinematic timed cards gallery with GSAP animations.',
-    files: [
-      {
-        name: 'timed-cards.tsx',
-        path: path.join(__dirname, '../components/core/timed-cards.tsx'),
-        type: 'registry:ui',
-      },
-      {
-        name: 'timed-cards.css',
-        path: path.join(__dirname, '../components/core/timed-cards.css'),
-        type: 'registry:ui',
-      },
-    ],
-  },
+
   {
     name: 'grid-newspaper',
     path: path.join(__dirname, '../components/core/grid-newspaper.tsx'),

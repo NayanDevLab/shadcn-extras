@@ -21,11 +21,7 @@ export const NAVIGATION: NavigationGroup[] = [
   {
     name: 'Galleries & Layouts',
     children: [
-      {
-        name: 'Timed Cards',
-        href: '/docs/timed-cards',
-        isNew: true,
-      },
+
       {
         name: 'Infinite Parallax Gallery',
         href: '/docs/infinite-parallax-gallery',
