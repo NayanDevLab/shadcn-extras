@@ -308,7 +308,7 @@ export default function PresentationPage() {
                 <Sparkles className="h-12 w-12 text-blue-500" />
                 <h4 className="text-2xl font-bold">AI Theme Generator</h4>
                 <p className="text-zinc-600 dark:text-zinc-400 flex-1">
-                  Describe any aesthetic and Gemini generates a complete theme — previewed instantly on real components in light and dark mode.
+                  Describe any aesthetic — or upload an image — and Gemini generates a complete theme, previewed instantly on real components in light and dark mode.
                 </p>
                 <span className="inline-flex items-center gap-1 text-sm font-semibold text-blue-500 group-hover:gap-2 transition-all">
                   Try it live <ArrowRight className="h-4 w-4" />

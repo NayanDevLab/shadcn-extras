@@ -290,8 +290,8 @@ export default function Motion() {
                 AI Theme Generator
               </h3>
               <p className='mb-4 flex-1 text-sm text-zinc-600 dark:text-zinc-400'>
-                Describe any aesthetic and AI generates a complete shadcn theme
-                — live preview on real components, light and dark.
+                Describe any aesthetic — or upload a logo, screenshot or photo
+                — and AI generates a complete shadcn theme with live preview.
               </p>
               <span className='inline-flex items-center gap-1 text-sm font-semibold text-blue-500 transition-all group-hover:gap-2'>
                 Generate a theme <ArrowRight className='h-4 w-4' />

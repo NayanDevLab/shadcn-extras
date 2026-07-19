@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { Loader2, Sparkles, Wand2 } from 'lucide-react';
+import { ImagePlus, Loader2, Sparkles, Wand2, X } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
@@ -25,8 +25,10 @@ export default function ThemeGeneratorPage() {
   const [prompt, setPrompt] = useState(
     'Cyberpunk neon with hot pinks and electric blues'
   );
+  const [imageDataUrl, setImageDataUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [preset, setPreset] = useState<ThemePreset | null>(null);
   const [mode, setMode] = useState<PreviewMode>('light');
   const [modeSynced, setModeSynced] = useState(false);
@@ -41,15 +43,49 @@ export default function ThemeGeneratorPage() {
     }
   }, [resolvedTheme, modeSynced]);
 
+  // Downscale to max 1024px and re-encode as JPEG to keep the payload small
+  const handleFile = (file: File) => {
+    if (!file.type.startsWith('image/')) {
+      setError('Please choose an image file (PNG, JPG or WebP).');
+      return;
+    }
+    setError('');
+    const objectUrl = URL.createObjectURL(file);
+    const img = new window.Image();
+    img.onload = () => {
+      const scale = Math.min(1, 1024 / Math.max(img.width, img.height));
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(img.width * scale);
+      canvas.height = Math.round(img.height * scale);
+      canvas.getContext('2d')?.drawImage(img, 0, 0, canvas.width, canvas.height);
+      setImageDataUrl(canvas.toDataURL('image/jpeg', 0.85));
+      URL.revokeObjectURL(objectUrl);
+    };
+    img.onerror = () => {
+      setError('Could not read that image. Please try another file.');
+      URL.revokeObjectURL(objectUrl);
+    };
+    img.src = objectUrl;
+  };
+
   const generateTheme = async () => {
-    if (!prompt.trim() || isLoading) return;
+    if ((!prompt.trim() && !imageDataUrl) || isLoading) return;
     setError('');
     setIsLoading(true);
     try {
+      const image = imageDataUrl
+        ? {
+            mimeType: imageDataUrl.substring(
+              imageDataUrl.indexOf(':') + 1,
+              imageDataUrl.indexOf(';')
+            ),
+            data: imageDataUrl.substring(imageDataUrl.indexOf(',') + 1),
+          }
+        : undefined;
       const response = await fetch('/api/generate-theme', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ prompt, image }),
       });
       const data = await response.json();
       if (!response.ok) {
@@ -82,12 +118,13 @@ export default function ThemeGeneratorPage() {
             AI Theme Generator
           </div>
           <h1 className='text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl dark:text-zinc-50'>
-            Describe it, and AI themes it
+            Describe it — or show it — and AI themes it
           </h1>
           <p className='text-zinc-600 dark:text-zinc-400'>
-            Describe an aesthetic and Gemini generates a complete shadcn/ui
-            theme — colors, fonts, radius and shadows — previewed live on real
-            components in light and dark mode.
+            Describe an aesthetic, or upload any image — a logo, screenshot or
+            photo — and Gemini generates a complete shadcn/ui theme: colors,
+            fonts, radius and shadows, previewed live on real components in
+            light and dark mode.
           </p>
         </div>
 
@@ -104,6 +141,61 @@ export default function ThemeGeneratorPage() {
               rows={3}
               className='resize-none border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950'
             />
+          </div>
+
+          <div className='space-y-2'>
+            <Label className='text-sm font-semibold'>
+              Or generate from an image
+            </Label>
+            <input
+              ref={fileInputRef}
+              type='file'
+              accept='image/png,image/jpeg,image/webp'
+              className='hidden'
+              onChange={(event) => {
+                const file = event.target.files?.[0];
+                if (file) handleFile(file);
+                event.target.value = '';
+              }}
+            />
+            {imageDataUrl ? (
+              <div className='flex items-center gap-4 rounded-lg border border-zinc-200 bg-zinc-50 p-3 dark:border-zinc-800 dark:bg-zinc-950'>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={imageDataUrl}
+                  alt='Theme source'
+                  className='h-16 w-16 rounded-md border border-zinc-200 object-cover dark:border-zinc-800'
+                />
+                <div className='flex-1 text-sm text-zinc-600 dark:text-zinc-400'>
+                  AI will extract colors and mood from this image. Add an
+                  optional hint in the description above.
+                </div>
+                <button
+                  type='button'
+                  onClick={() => setImageDataUrl(null)}
+                  aria-label='Remove image'
+                  className='rounded-full p-1.5 text-zinc-500 transition-colors hover:bg-zinc-200 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-100'
+                >
+                  <X className='size-4' />
+                </button>
+              </div>
+            ) : (
+              <button
+                type='button'
+                onClick={() => fileInputRef.current?.click()}
+                onDragOver={(event) => event.preventDefault()}
+                onDrop={(event) => {
+                  event.preventDefault();
+                  const file = event.dataTransfer.files?.[0];
+                  if (file) handleFile(file);
+                }}
+                className='flex w-full items-center justify-center gap-3 rounded-lg border border-dashed border-zinc-300 p-5 text-sm text-zinc-500 transition-colors hover:border-blue-400 hover:text-zinc-700 dark:border-zinc-700 dark:text-zinc-400 dark:hover:border-blue-500 dark:hover:text-zinc-200'
+              >
+                <ImagePlus className='size-5' />
+                Click or drop a logo, screenshot or photo — AI extracts the
+                palette
+              </button>
+            )}
           </div>
 
           <div className='flex flex-wrap gap-2'>
@@ -128,7 +220,7 @@ export default function ThemeGeneratorPage() {
           <Button
             className='h-11 w-full gap-2 bg-blue-600 text-white hover:bg-blue-700 sm:w-auto sm:px-8'
             onClick={generateTheme}
-            disabled={isLoading || !prompt.trim()}
+            disabled={isLoading || (!prompt.trim() && !imageDataUrl)}
           >
             {isLoading ? (
               <Loader2 className='size-4 animate-spin' />

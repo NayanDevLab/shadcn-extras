@@ -70,13 +70,34 @@ export async function POST(request: Request) {
   }
 
   let prompt: unknown;
+  let image: unknown;
   try {
-    ({ prompt } = await request.json());
+    ({ prompt, image } = await request.json());
   } catch {
     return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 });
   }
-  if (typeof prompt !== 'string' || !prompt.trim()) {
-    return NextResponse.json({ error: 'Prompt is required.' }, { status: 400 });
+
+  const hasPrompt = typeof prompt === 'string' && prompt.trim().length > 0;
+
+  const imageInput = image as { data?: unknown; mimeType?: unknown } | undefined;
+  const hasImage =
+    imageInput &&
+    typeof imageInput.data === 'string' &&
+    imageInput.data.length > 0 &&
+    typeof imageInput.mimeType === 'string' &&
+    ['image/png', 'image/jpeg', 'image/webp'].includes(imageInput.mimeType);
+
+  if (!hasPrompt && !hasImage) {
+    return NextResponse.json(
+      { error: 'A prompt or an image is required.' },
+      { status: 400 }
+    );
+  }
+  if (hasImage && (imageInput.data as string).length > 8_000_000) {
+    return NextResponse.json(
+      { error: 'Image is too large. Please use an image under ~5MB.' },
+      { status: 400 }
+    );
   }
 
   try {
@@ -86,7 +107,31 @@ export async function POST(request: Request) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt.trim().slice(0, 500) }] }],
+          contents: [
+            {
+              parts: [
+                ...(hasImage
+                  ? [
+                      {
+                        inline_data: {
+                          mime_type: imageInput.mimeType,
+                          data: imageInput.data,
+                        },
+                      },
+                    ]
+                  : []),
+                {
+                  text: hasImage
+                    ? `Extract a beautiful, cohesive shadcn theme from this image. Capture its dominant colors, mood and style — primary/accent from the standout colors, background/muted from the softer tones. Pick fonts and radius matching the vibe.${
+                        hasPrompt
+                          ? ` Additional direction: ${(prompt as string).trim().slice(0, 500)}`
+                          : ''
+                      }`
+                    : (prompt as string).trim().slice(0, 500),
+                },
+              ],
+            },
+          ],
           systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
           generationConfig: {
             temperature: 0.8,
