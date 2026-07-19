@@ -3,13 +3,16 @@ import React from 'react';
 import XIcon from '@/components/website/icons/x';
 import GitHubIcon from '@/components/website/icons/github';
 import ThemeSwitch from '@/components/website/theme-switch';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Zap, Layers, Code2, Paintbrush } from 'lucide-react';
 import { CardExampleLanding } from '@/components/website/card-example-landing';
 import { SELogo } from '@/components/website/icons/shadcn-extras-logo';
 import LinkedinIcon from '@/components/website/icons/LinkedinIcon';
-import { LbFirst } from './docs/leaderboard-card/lb-first';
-import { CrsBasic } from './docs/concentric-rings-spinner/crs-basic';
-import { KpiNegative } from './docs/kpi-card/kpi-negative';
+
+// Showcase Components
+import { InfiniteParallaxGalleryBasic } from './docs/infinite-parallax-gallery/infinite-parallax-gallery-basic';
+import { HolographicCardBasic } from './docs/holographic-card/holographic-card-basic';
+import { GridNewspaperBasic } from './docs/grid-newspaper/grid-newspaper-basic';
+import { CircularGalleryBasic } from './docs/circular-gallery/circular-gallery-basic';
 
 function Button({
   children,
@@ -20,14 +23,14 @@ function Button({
 }) {
   const buttonVariants = {
     primary:
-      'bg-zinc-50 border border-zinc-100 text-zinc-950 hover:bg-zinc-100 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:text-zinc-50 dark:border-zinc-900',
+      'bg-zinc-950 border border-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:hover:bg-zinc-200 dark:text-zinc-950 dark:border-zinc-100',
     secondary:
-      'bg-zinc-900 text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:hover:bg-zinc-300 dark:text-zinc-950',
+      'bg-zinc-100 text-zinc-950 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800 dark:text-zinc-50 border border-zinc-200 dark:border-zinc-800',
   };
 
   return (
     <button
-      className={`inline-flex items-center rounded-md px-2.5 py-1.5 text-sm ${buttonVariants[variant]}`}
+      className={`inline-flex items-center rounded-md px-4 py-2 text-sm font-medium transition-colors ${buttonVariants[variant]}`}
     >
       {children}
     </button>
@@ -36,40 +39,39 @@ function Button({
 
 function Header() {
   return (
-    <header className='relative top-0 z-10 bg-white px-6 py-5 lg:z-10 lg:flex lg:h-16 lg:items-center lg:px-8 lg:py-0 dark:border-white/10 dark:bg-zinc-950'>
+    <header className='border-border/40 bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b px-6 py-3 backdrop-blur lg:px-8'>
       <div className='mx-auto flex w-full items-center justify-between md:max-w-7xl'>
         <a href='/' className='relative flex items-center space-x-2'>
           <SELogo className='h-6 w-auto' />
-          <div className='text-sm font-medium text-zinc-950 dark:text-white'>
+          <div className='text-sm font-bold text-zinc-950 dark:text-white'>
             shadcn-extras
           </div>
-          {/* <span className='mb-4 ml-0 rounded-sm bg-zinc-800 px-1.5 py-0.5 text-[10px] font-medium text-zinc-50 select-none'>
-            beta
-          </span> */}
         </a>
 
         <div className='flex items-center space-x-6'>
           <nav className='hidden items-center space-x-6 sm:flex'>
             <Link
-              href='/docs/kpi-card'
-              className='text-sm font-medium text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
+              href='/docs/infinite-parallax-gallery'
+              className='text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
             >
               Components
             </Link>
-            <Link
-              href='/docs/storybook'
-              className='text-sm font-medium text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
+            <a
+              href='https://nayanrdeveloper.github.io/shadcn-extras/storybook/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
             >
               StoryBook
-            </Link>
+            </a>
           </nav>
-          <div className='hidden h-8 w-[0.5px] bg-zinc-200 sm:flex dark:bg-zinc-800' />
+          <div className='hidden h-6 w-px bg-zinc-200 sm:flex dark:bg-zinc-800' />
           <nav className='flex items-center space-x-2'>
             <a
               href='https://www.linkedin.com/in/nayanradadiya/'
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-flex h-9 w-9 items-center justify-center'
+              className='inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800'
             >
               <LinkedinIcon className='h-4 w-4 fill-zinc-950 dark:fill-white' />
             </a>
@@ -77,7 +79,7 @@ function Header() {
               href='https://x.com/nayan_radadiya6'
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-flex h-9 w-9 items-center justify-center'
+              className='inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800'
             >
               <XIcon className='h-4 w-4 fill-zinc-950 dark:fill-white' />
             </a>
@@ -85,7 +87,7 @@ function Header() {
               href='https://github.com/nayanrdeveloper/shadcn-extras'
               target='_blank'
               rel='noopener noreferrer'
-              className='inline-flex h-9 w-9 items-center justify-center'
+              className='inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800'
             >
               <GitHubIcon className='h-4 w-4 fill-zinc-950 dark:fill-white' />
             </a>
@@ -99,79 +101,251 @@ function Header() {
 
 export default function Motion() {
   return (
-    <>
+    <div className='relative flex min-h-screen flex-col bg-white dark:bg-zinc-950'>
       <Header />
-      <div className='px-6 py-4 pb-20'>
-        <section className='flex h-full flex-col items-center justify-center pt-20'>
-          <div className='flex w-full max-w-lg flex-col items-center justify-center text-center'>
-            <h1 className='relative mb-4 text-4xl font-medium text-zinc-950 dark:text-zinc-50'>
-              Animated UI components for modern web apps.
+
+      <main className='flex-1'>
+        {/* HERO SECTION */}
+        <section className='relative flex flex-col items-center justify-center overflow-hidden px-6 pt-24 pb-16 md:pt-32 md:pb-24'>
+          {/* Background Gradients */}
+          <div className='absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))]' />
+
+          <div className='flex w-full max-w-4xl flex-col items-center justify-center text-center'>
+            <div className='mb-6 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-sm font-medium text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100'>
+              <span className='mr-2 inline-block h-2 w-2 rounded-full bg-emerald-500'></span>
+              Now with WebGL Parallax & Advanced Masonry Layouts
+            </div>
+
+            <h1 className='text-5xl font-extrabold tracking-tight text-balance text-zinc-950 sm:text-7xl dark:text-zinc-50'>
+              The missing complex UI library for shadcn.
             </h1>
-            <p className='text-center text-zinc-600 dark:text-zinc-200'>
-              Reusable motion-powered components with Tailwind CSS. Easy to
-              install. Fully customizable. Open source.
+
+            <p className='mx-auto mt-6 max-w-2xl text-lg text-balance text-zinc-600 sm:text-xl dark:text-zinc-400'>
+              While shadcn/ui provides the basic building blocks,{' '}
+              <strong className='text-zinc-900 dark:text-white'>
+                shadcn-extras
+              </strong>{' '}
+              gives you fully-realized, jaw-dropping components. Build high-end,
+              production-ready layouts that WOW your users instantly.
+            </p>
+
+            <div className='mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row'>
+              <Link href='/docs/infinite-parallax-gallery'>
+                <Button>
+                  Explore Components
+                  <ChevronRight className='ml-1.5 h-4 w-4' />
+                </Button>
+              </Link>
+              <a
+                href='https://github.com/nayanrdeveloper/shadcn-extras'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <Button variant='secondary'>
+                  <GitHubIcon className='mr-1.5 h-4 w-4 fill-zinc-950 dark:fill-white' />
+                  Star on GitHub
+                </Button>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* COMPARISON SECTION */}
+        <section className='mx-auto max-w-5xl px-6 py-16 md:py-24'>
+          <div className='grid gap-8 md:grid-cols-2'>
+            {/* Shadcn/ui Box */}
+            <div className='flex flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-8 dark:border-zinc-800 dark:bg-zinc-900/50'>
+              <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-200 dark:bg-zinc-800'>
+                <Code2 className='h-6 w-6 text-zinc-700 dark:text-zinc-300' />
+              </div>
+              <h3 className='mb-2 text-2xl font-bold text-zinc-950 dark:text-white'>
+                shadcn/ui
+              </h3>
+              <p className='mb-6 text-zinc-600 dark:text-zinc-400'>
+                Perfect for simple primitives. Gives you buttons, inputs,
+                modals, and dropdowns. Great for standard dashboards.
+              </p>
+              <ul className='mt-auto space-y-3 text-sm text-zinc-600 dark:text-zinc-400'>
+                <li className='flex items-center'>
+                  <ChevronRight className='mr-2 h-4 w-4 text-zinc-400' /> Basic
+                  DOM Elements
+                </li>
+                <li className='flex items-center'>
+                  <ChevronRight className='mr-2 h-4 w-4 text-zinc-400' />{' '}
+                  Standard Flexbox
+                </li>
+                <li className='flex items-center'>
+                  <ChevronRight className='mr-2 h-4 w-4 text-zinc-400' />{' '}
+                  Functional focused
+                </li>
+              </ul>
+            </div>
+
+            {/* Shadcn-extras Box */}
+            <div className='relative flex flex-col rounded-2xl border border-zinc-950 bg-zinc-950 p-8 text-white dark:border-zinc-800 dark:bg-zinc-900'>
+              <div className='absolute -top-4 -right-4 rounded-full bg-indigo-500 px-4 py-1 text-sm font-bold shadow-lg'>
+                Built for Impact
+              </div>
+              <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800'>
+                <Zap className='h-6 w-6 text-yellow-400' />
+              </div>
+              <h3 className='mb-2 text-2xl font-bold text-white'>
+                shadcn-extras
+              </h3>
+              <p className='mb-6 text-zinc-300'>
+                The WOW factor. Drag and drop WebGL physics, advanced CSS Grid
+                layouts, and hardware-accelerated animations into your project
+                in seconds.
+              </p>
+              <ul className='mt-auto space-y-3 text-sm text-zinc-300'>
+                <li className='flex items-center'>
+                  <Paintbrush className='mr-2 h-4 w-4 text-indigo-400' /> WebGL
+                  (Three.js) Integrations
+                </li>
+                <li className='flex items-center'>
+                  <Layers className='mr-2 h-4 w-4 text-indigo-400' /> Advanced
+                  CSS Grid Masonry
+                </li>
+                <li className='flex items-center'>
+                  <Zap className='mr-2 h-4 w-4 text-indigo-400' />{' '}
+                  Device-orientation Holographics
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* SHOWCASE SECTION */}
+        <section className='mx-auto max-w-5xl px-6 py-16 md:py-24'>
+          <div className='mb-16 text-center'>
+            <h2 className='text-3xl font-bold text-zinc-950 md:text-5xl dark:text-white'>
+              Build things that stand out.
+            </h2>
+            <p className='mt-4 text-lg text-zinc-600 dark:text-zinc-400'>
+              Check out a few of the high-end components you can add to your
+              project right now.
             </p>
           </div>
-          <div className='flex items-center space-x-4 py-6'>
-            <Link href='/docs'>
+
+          <div className='flex flex-col space-y-32'>
+            {/* Showcase 1 */}
+            <div className='group relative'>
+              <div className='mb-6 flex items-center justify-between'>
+                <div>
+                  <h3 className='text-2xl font-bold text-zinc-950 dark:text-white'>
+                    Infinite Parallax Gallery
+                  </h3>
+                  <p className='text-zinc-500 dark:text-zinc-400'>
+                    A highly performant, WebGL-powered 3D infinite scrolling
+                    gallery with interactive drag physics.
+                  </p>
+                </div>
+                <Link
+                  href='/docs/infinite-parallax-gallery'
+                  className='hidden text-sm font-medium text-indigo-500 hover:underline md:block'
+                >
+                  View Source &rarr;
+                </Link>
+              </div>
+              <CardExampleLanding hasReTrigger={false}>
+                <InfiniteParallaxGalleryBasic />
+              </CardExampleLanding>
+            </div>
+
+            {/* Showcase 2 */}
+            <div className='group relative'>
+              <div className='mb-6 flex items-center justify-between'>
+                <div>
+                  <h3 className='text-2xl font-bold text-zinc-950 dark:text-white'>
+                    Grid Newspaper Layout
+                  </h3>
+                  <p className='text-zinc-500 dark:text-zinc-400'>
+                    An advanced CSS Grid-based vintage newspaper layout with
+                    masonry column spans.
+                  </p>
+                </div>
+                <Link
+                  href='/docs/grid-newspaper'
+                  className='hidden text-sm font-medium text-indigo-500 hover:underline md:block'
+                >
+                  View Source &rarr;
+                </Link>
+              </div>
+              <CardExampleLanding hasReTrigger={false}>
+                <GridNewspaperBasic />
+              </CardExampleLanding>
+            </div>
+
+            {/* Showcase 3 */}
+            <div className='group relative'>
+              <div className='mb-6 flex items-center justify-between'>
+                <div>
+                  <h3 className='text-2xl font-bold text-zinc-950 dark:text-white'>
+                    Holographic Card
+                  </h3>
+                  <p className='text-zinc-500 dark:text-zinc-400'>
+                    A stunning holographic trading card that reacts to device
+                    orientation and mouse movement.
+                  </p>
+                </div>
+                <Link
+                  href='/docs/holographic-card'
+                  className='hidden text-sm font-medium text-indigo-500 hover:underline md:block'
+                >
+                  View Source &rarr;
+                </Link>
+              </div>
+              <CardExampleLanding hasReTrigger={false}>
+                <div className='flex items-center justify-center p-12'>
+                  <HolographicCardBasic />
+                </div>
+              </CardExampleLanding>
+            </div>
+
+            {/* Showcase 4 */}
+            <div className='group relative'>
+              <div className='mb-6 flex items-center justify-between'>
+                <div>
+                  <h3 className='text-2xl font-bold text-zinc-950 dark:text-white'>
+                    Circular Gallery
+                  </h3>
+                  <p className='text-zinc-500 dark:text-zinc-400'>
+                    A scroll-driven infinite circular wheel of images.
+                  </p>
+                </div>
+                <Link
+                  href='/docs/circular-gallery'
+                  className='hidden text-sm font-medium text-indigo-500 hover:underline md:block'
+                >
+                  View Source &rarr;
+                </Link>
+              </div>
+              <CardExampleLanding hasReTrigger={false}>
+                <CircularGalleryBasic />
+              </CardExampleLanding>
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER CTA */}
+        <section className='border-t border-zinc-200 bg-zinc-50 px-6 py-24 text-center dark:border-zinc-900 dark:bg-zinc-950/50'>
+          <h2 className='text-3xl font-bold text-zinc-950 dark:text-white'>
+            Ready to impress your users?
+          </h2>
+          <p className='mt-4 text-zinc-600 dark:text-zinc-400'>
+            Start adding shadcn-extras to your project today. It takes less than
+            a minute.
+          </p>
+          <div className='mt-8'>
+            <Link href='/docs/infinite-parallax-gallery'>
               <Button>
-                Explore Docs
+                Get Started
                 <ChevronRight className='ml-1.5 h-4 w-4' />
               </Button>
             </Link>
-            <a
-              href='https://github.com/nayanrdeveloper/shadcn-extras'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Button variant='secondary'>
-                <GitHubIcon className='mr-1.5 h-4 w-4 fill-white dark:fill-zinc-950' />
-                Star on GitHub
-              </Button>
-            </a>
-            <a
-              href='https://nayanrdeveloper.github.io/shadcn-extras/storybook/'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Button aria-label='Visit Storybook'>
-                <svg
-                  viewBox='0 0 256 256'
-                  className='mr-1.5 h-4 w-4'
-                  fill='currentColor'
-                  aria-hidden
-                >
-                  <path d='M210.6 18.6 208 56a8 8 0 0 1-8 8h-24a8 8 0 0 1-8-8V32H72a16 16 0 0 0-16 16v168a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16V24a8 8 0 0 0-8.4-8.4ZM168 32v16h16.8l1.1-16Z' />
-                  <path d='M176 96a24 24 0 1 0-24 24 24 24 0 0 0 24-24Zm-48 72h48a8 8 0 0 0 0-16h-40v-8h32a8 8 0 0 0 0-16h-32v-8h40a8 8 0 0 0 0-16h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8Z' />
-                </svg>
-                Visit Storybook
-                <ChevronRight className='ml-1.5 h-4 w-4' />
-              </Button>
-            </a>
           </div>
-          <span className='mt-2 text-center text-sm text-zinc-500 dark:text-zinc-400'>
-            Free updates and new components released regularly.
-          </span>
         </section>
-        <section className='mx-auto max-w-3xl py-32'>
-          <CardExampleLanding hasReTrigger>
-            <CrsBasic />
-          </CardExampleLanding>
-        </section>
-        <section className='mx-auto max-w-3xl py-32'>
-          <CardExampleLanding hasReTrigger>
-            <KpiNegative />
-          </CardExampleLanding>
-        </section>
-        <section className='mx-auto max-w-3xl py-32'>
-          <CardExampleLanding>
-            <LbFirst />
-          </CardExampleLanding>
-        </section>
-        <div className='text-center text-sm text-zinc-500 dark:text-zinc-400'>
-          <Link href='/docs'>and more...</Link>
-        </div>
-      </div>
-    </>
+      </main>
+    </div>
   );
 }
