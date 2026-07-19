@@ -27,6 +27,12 @@ export function Header() {
               Components
             </Link>
             <Link
+              href='/tools'
+              className='text-sm font-medium text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
+            >
+              Tools
+            </Link>
+            <Link
               href='/themes'
               className='text-sm font-medium text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
             >

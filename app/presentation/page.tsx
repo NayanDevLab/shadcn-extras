@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Code2, Sparkles, Wand2, MonitorPlay, Terminal, BookOpen, Blocks, Zap, Image as ImageIcon, MousePointerClick, LayoutDashboard, Layers, PieChart } from 'lucide-react';
+import { ArrowRight, Code2, Sparkles, Wand2, MonitorPlay, Terminal, BookOpen, Blocks, Zap, Image as ImageIcon, MousePointerClick, LayoutDashboard, Layers, PieChart, Palette, Wrench, Paintbrush } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import { CircularGallery } from '@/components/core/circular-gallery';
@@ -56,7 +56,17 @@ export default function PresentationPage() {
           <motion.p variants={fadeInUp} className="mx-auto max-w-2xl text-xl text-zinc-600 dark:text-zinc-400 md:text-3xl leading-relaxed">
             A premium collection of beautifully crafted, highly animated React components.
           </motion.p>
-          
+
+          <motion.div variants={fadeInUp} className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-4 text-sm md:text-base font-semibold text-zinc-500 dark:text-zinc-400">
+            <span>25+ Components</span>
+            <span className="text-zinc-300 dark:text-zinc-700">•</span>
+            <span>11 Themes</span>
+            <span className="text-zinc-300 dark:text-zinc-700">•</span>
+            <span>14 Visual Tools</span>
+            <span className="text-zinc-300 dark:text-zinc-700">•</span>
+            <span className="text-blue-500">AI Powered</span>
+          </motion.div>
+
           <motion.div variants={fadeInUp} className="pt-12 animate-bounce text-zinc-400">
             <span className="text-sm font-semibold uppercase tracking-widest">Scroll Down</span>
           </motion.div>
@@ -117,7 +127,7 @@ export default function PresentationPage() {
               </div>
               <h4 className="text-2xl font-bold">Save Massive Time</h4>
               <p className="text-lg text-zinc-600 dark:text-zinc-400">
-                Don't waste hours writing complex CSS Grids or Framer Motion timelines from scratch. The hard work is already done.
+                Don&apos;t waste hours writing complex CSS Grids or Framer Motion timelines from scratch. The hard work is already done.
               </p>
             </motion.div>
             
@@ -137,7 +147,7 @@ export default function PresentationPage() {
               </div>
               <h4 className="text-2xl font-bold">Premium Aesthetics</h4>
               <p className="text-lg text-zinc-600 dark:text-zinc-400">
-                Instantly upgrade your website's look. Impress your clients and users with an agency-level experience out of the box.
+                Instantly upgrade your website&apos;s look. Impress your clients and users with an agency-level experience out of the box.
               </p>
             </motion.div>
           </div>
@@ -156,7 +166,7 @@ export default function PresentationPage() {
           <div className="flex flex-col items-center text-center space-y-4">
             <motion.div variants={fadeInUp} className="flex items-center gap-4 text-pink-500">
               <Layers className="h-8 w-8" />
-              <h2 className="text-3xl font-semibold uppercase tracking-wider">What's Inside?</h2>
+              <h2 className="text-3xl font-semibold uppercase tracking-wider">What&apos;s Inside?</h2>
             </motion.div>
             <motion.h3 variants={fadeInUp} className="text-5xl font-bold md:text-6xl">
               An expanding library of components
@@ -257,7 +267,85 @@ export default function PresentationPage() {
         </motion.div>
       </section>
 
-      {/* SLIDE 6: INSTALLATION */}
+      {/* SLIDE 6: THE TOOLKIT (THEMES, AI, TOOLS) */}
+      <section className="flex min-h-screen w-full snap-start flex-col justify-center p-10 md:p-24 bg-transparent">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+          variants={staggerContainer}
+          className="max-w-6xl mx-auto space-y-12 w-full"
+        >
+          <div className="flex flex-col items-center text-center space-y-4">
+            <motion.div variants={fadeInUp} className="flex items-center gap-4 text-blue-500">
+              <Wrench className="h-8 w-8" />
+              <h2 className="text-3xl font-semibold uppercase tracking-wider">Beyond Components</h2>
+            </motion.div>
+            <motion.h3 variants={fadeInUp} className="text-5xl font-bold md:text-6xl">
+              A complete design toolkit
+            </motion.h3>
+            <motion.p variants={fadeInUp} className="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl">
+              Not just a component library — themes, AI generation and visual tools. Click any card to try it live.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+            <motion.div variants={fadeInUp}>
+              <Link href="/themes" className="group flex h-full flex-col bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4 hover:shadow-xl hover:border-violet-500 transition-all">
+                <Palette className="h-12 w-12 text-violet-500" />
+                <h4 className="text-2xl font-bold">Theme Gallery</h4>
+                <p className="text-zinc-600 dark:text-zinc-400 flex-1">
+                  11 hand-crafted themes with personality — Glassmorphism, Newspaper, Gaming, Nature. Colors, fonts, radius and effects, not just color swaps.
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-violet-500 group-hover:gap-2 transition-all">
+                  Try it live <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/theme-generator" className="group flex h-full flex-col bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4 hover:shadow-xl hover:border-blue-500 transition-all">
+                <Sparkles className="h-12 w-12 text-blue-500" />
+                <h4 className="text-2xl font-bold">AI Theme Generator</h4>
+                <p className="text-zinc-600 dark:text-zinc-400 flex-1">
+                  Describe any aesthetic and Gemini generates a complete theme — previewed instantly on real components in light and dark mode.
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-blue-500 group-hover:gap-2 transition-all">
+                  Try it live <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/tools" className="group flex h-full flex-col bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4 hover:shadow-xl hover:border-emerald-500 transition-all">
+                <Wrench className="h-12 w-12 text-emerald-500" />
+                <h4 className="text-2xl font-bold">14 Visual Generators</h4>
+                <p className="text-zinc-600 dark:text-zinc-400 flex-1">
+                  Buttons, inputs, cards, tables, shadows, glassmorphism, skeletons and more — tweak live, then copy Tailwind or CSS.
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-500 group-hover:gap-2 transition-all">
+                  Try it live <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Link href="/tools#gradient" className="group flex h-full flex-col bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm space-y-4 hover:shadow-xl hover:border-orange-500 transition-all">
+                <Paintbrush className="h-12 w-12 text-orange-500" />
+                <h4 className="text-2xl font-bold">Background Studio</h4>
+                <p className="text-zinc-600 dark:text-zinc-400 flex-1">
+                  Gradient, mesh, pattern and noise generators for stunning page backgrounds — with Tailwind-ready output.
+                </p>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-orange-500 group-hover:gap-2 transition-all">
+                  Try it live <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* SLIDE 7: INSTALLATION */}
       <section className="flex h-screen w-full snap-start flex-col justify-center p-10 md:p-24 bg-white/40 dark:bg-zinc-900/40 backdrop-blur-sm">
         <motion.div 
           initial="hidden"
@@ -296,7 +384,7 @@ export default function PresentationPage() {
         </motion.div>
       </section>
 
-      {/* SLIDE 7: STORYBOOK */}
+      {/* SLIDE 8: STORYBOOK */}
       <section className="flex h-screen w-full snap-start flex-col justify-center p-10 md:p-24">
         <motion.div 
           initial="hidden"
@@ -329,7 +417,7 @@ export default function PresentationPage() {
         </motion.div>
       </section>
 
-      {/* SLIDE 8: OUTRO */}
+      {/* SLIDE 9: OUTRO */}
       <section className="relative flex h-screen w-full snap-start flex-col items-center justify-center p-10 text-center bg-gradient-to-t from-indigo-950 via-zinc-900 to-black text-white">
         <motion.div 
           initial="hidden"
@@ -343,7 +431,7 @@ export default function PresentationPage() {
           </motion.div>
           
           <motion.h2 variants={fadeInUp} className="text-5xl font-bold md:text-7xl">
-            Let's build something amazing.
+            Let&apos;s build something amazing.
           </motion.h2>
           
           <motion.p variants={fadeInUp} className="text-2xl text-zinc-400 max-w-2xl">
@@ -355,6 +443,18 @@ export default function PresentationPage() {
               <span className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-xl font-bold text-black transition-transform hover:scale-105 active:scale-95">
                 View the Docs <ArrowRight className="h-6 w-6" />
               </span>
+            </Link>
+          </motion.div>
+
+          <motion.div variants={fadeInUp} className="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <Link href="/themes" className="inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/60 px-5 py-2.5 text-sm font-semibold text-zinc-200 transition-colors hover:border-violet-500 hover:text-white">
+              <Palette className="h-4 w-4 text-violet-400" /> Theme Gallery
+            </Link>
+            <Link href="/theme-generator" className="inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/60 px-5 py-2.5 text-sm font-semibold text-zinc-200 transition-colors hover:border-blue-500 hover:text-white">
+              <Sparkles className="h-4 w-4 text-blue-400" /> AI Themes
+            </Link>
+            <Link href="/tools" className="inline-flex items-center gap-2 rounded-full border border-zinc-700 bg-zinc-900/60 px-5 py-2.5 text-sm font-semibold text-zinc-200 transition-colors hover:border-emerald-500 hover:text-white">
+              <Wrench className="h-4 w-4 text-emerald-400" /> Developer Tools
             </Link>
           </motion.div>
         </motion.div>

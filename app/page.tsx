@@ -3,7 +3,17 @@ import React from 'react';
 import XIcon from '@/components/website/icons/x';
 import GitHubIcon from '@/components/website/icons/github';
 import ThemeSwitch from '@/components/website/theme-switch';
-import { ChevronRight, Zap, Layers, Code2, Paintbrush } from 'lucide-react';
+import {
+  ChevronRight,
+  Zap,
+  Layers,
+  Code2,
+  Paintbrush,
+  Palette,
+  Sparkles,
+  Wrench,
+  ArrowRight,
+} from 'lucide-react';
 import { CardExampleLanding } from '@/components/website/card-example-landing';
 import { SELogo } from '@/components/website/icons/shadcn-extras-logo';
 import LinkedinIcon from '@/components/website/icons/LinkedinIcon';
@@ -55,6 +65,28 @@ function Header() {
               className='text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
             >
               Components
+            </Link>
+            <Link
+              href='/tools'
+              className='text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
+            >
+              Tools
+            </Link>
+            <Link
+              href='/themes'
+              className='text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
+            >
+              Themes
+            </Link>
+            <Link
+              href='/theme-generator'
+              className='flex items-center gap-1.5 text-sm font-medium text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300'
+            >
+              AI Themes
+              <span className='relative flex h-2 w-2'>
+                <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75'></span>
+                <span className='relative inline-flex h-2 w-2 rounded-full bg-blue-500'></span>
+              </span>
             </Link>
             <a
               href='https://NayanDevLab.github.io/shadcn-extras/storybook/'
@@ -113,7 +145,7 @@ export default function Motion() {
           <div className='flex w-full max-w-4xl flex-col items-center justify-center text-center'>
             <div className='mb-6 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-1.5 text-sm font-medium text-zinc-900 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100'>
               <span className='mr-2 inline-block h-2 w-2 rounded-full bg-emerald-500'></span>
-              Now with WebGL Parallax & Advanced Masonry Layouts
+              New: AI Theme Generator, Theme Gallery & 14 Visual Tools
             </div>
 
             <h1 className='text-5xl font-extrabold tracking-tight text-balance text-zinc-950 sm:text-7xl dark:text-zinc-50'>
@@ -212,6 +244,97 @@ export default function Motion() {
                 </li>
               </ul>
             </div>
+          </div>
+        </section>
+
+        {/* TOOLKIT SECTION */}
+        <section className='mx-auto max-w-5xl px-6 py-16 md:py-24'>
+          <div className='mb-12 text-center'>
+            <h2 className='text-3xl font-bold text-zinc-950 md:text-5xl dark:text-white'>
+              More than components. A full toolkit.
+            </h2>
+            <p className='mt-4 text-lg text-zinc-600 dark:text-zinc-400'>
+              Themes, AI generation and visual tools — everything you need to
+              design faster.
+            </p>
+          </div>
+
+          <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-4'>
+            <Link
+              href='/themes'
+              className='group flex flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-6 transition-all hover:-translate-y-1 hover:border-violet-500 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900/50'
+            >
+              <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-violet-100 dark:bg-violet-900/40'>
+                <Palette className='h-6 w-6 text-violet-600 dark:text-violet-400' />
+              </div>
+              <h3 className='mb-2 text-lg font-bold text-zinc-950 dark:text-white'>
+                Theme Gallery
+              </h3>
+              <p className='mb-4 flex-1 text-sm text-zinc-600 dark:text-zinc-400'>
+                11 full-style themes — Glassmorphism, Newspaper, Gaming, Nature
+                — with fonts, radius and effects. Copy or download the CSS.
+              </p>
+              <span className='inline-flex items-center gap-1 text-sm font-semibold text-violet-500 transition-all group-hover:gap-2'>
+                Browse themes <ArrowRight className='h-4 w-4' />
+              </span>
+            </Link>
+
+            <Link
+              href='/theme-generator'
+              className='group flex flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-6 transition-all hover:-translate-y-1 hover:border-blue-500 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900/50'
+            >
+              <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/40'>
+                <Sparkles className='h-6 w-6 text-blue-600 dark:text-blue-400' />
+              </div>
+              <h3 className='mb-2 text-lg font-bold text-zinc-950 dark:text-white'>
+                AI Theme Generator
+              </h3>
+              <p className='mb-4 flex-1 text-sm text-zinc-600 dark:text-zinc-400'>
+                Describe any aesthetic and AI generates a complete shadcn theme
+                — live preview on real components, light and dark.
+              </p>
+              <span className='inline-flex items-center gap-1 text-sm font-semibold text-blue-500 transition-all group-hover:gap-2'>
+                Generate a theme <ArrowRight className='h-4 w-4' />
+              </span>
+            </Link>
+
+            <Link
+              href='/tools'
+              className='group flex flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-6 transition-all hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900/50'
+            >
+              <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/40'>
+                <Wrench className='h-6 w-6 text-emerald-600 dark:text-emerald-400' />
+              </div>
+              <h3 className='mb-2 text-lg font-bold text-zinc-950 dark:text-white'>
+                14 Visual Generators
+              </h3>
+              <p className='mb-4 flex-1 text-sm text-zinc-600 dark:text-zinc-400'>
+                Buttons, inputs, cards, tables, shadows, glassmorphism,
+                skeletons and more — tweak live, copy Tailwind or CSS.
+              </p>
+              <span className='inline-flex items-center gap-1 text-sm font-semibold text-emerald-500 transition-all group-hover:gap-2'>
+                Open the tools <ArrowRight className='h-4 w-4' />
+              </span>
+            </Link>
+
+            <Link
+              href='/tools#gradient'
+              className='group flex flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-6 transition-all hover:-translate-y-1 hover:border-orange-500 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900/50'
+            >
+              <div className='mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 dark:bg-orange-900/40'>
+                <Paintbrush className='h-6 w-6 text-orange-600 dark:text-orange-400' />
+              </div>
+              <h3 className='mb-2 text-lg font-bold text-zinc-950 dark:text-white'>
+                Background Studio
+              </h3>
+              <p className='mb-4 flex-1 text-sm text-zinc-600 dark:text-zinc-400'>
+                Gradient, mesh, pattern and noise generators for stunning page
+                backgrounds — Tailwind-ready output.
+              </p>
+              <span className='inline-flex items-center gap-1 text-sm font-semibold text-orange-500 transition-all group-hover:gap-2'>
+                Design a background <ArrowRight className='h-4 w-4' />
+              </span>
+            </Link>
           </div>
         </section>
 
@@ -336,11 +459,17 @@ export default function Motion() {
             Start adding shadcn-extras to your project today. It takes less than
             a minute.
           </p>
-          <div className='mt-8'>
+          <div className='mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row'>
             <Link href='/docs/infinite-parallax-gallery'>
               <Button>
                 Get Started
                 <ChevronRight className='ml-1.5 h-4 w-4' />
+              </Button>
+            </Link>
+            <Link href='/tools'>
+              <Button variant='secondary'>
+                <Wrench className='mr-1.5 h-4 w-4' />
+                Explore the Tools
               </Button>
             </Link>
           </div>
