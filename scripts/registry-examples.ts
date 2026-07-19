@@ -114,6 +114,25 @@ export const examples: ExampleDefinition[] = [
     ],
   },
   {
+    name: 'timed-cards-basic',
+    path: path.join(
+      __dirname,
+      '../app/docs/timed-cards/timed-cards-basic.tsx'
+    ),
+    description: 'Basic Timed Cards Gallery.',
+    componentName: 'timed-cards-basic',
+    files: [
+      {
+        name: 'timed-cards.tsx',
+        path: path.join(
+          __dirname,
+          '../components/core/timed-cards.tsx'
+        ),
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'grid-newspaper-basic',
     path: path.join(
       __dirname,
