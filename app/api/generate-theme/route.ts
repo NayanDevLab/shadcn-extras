@@ -61,7 +61,7 @@ function normalizeShadow(value: unknown): string | undefined {
 }
 
 export async function POST(request: Request) {
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = "AQ.Ab8RN6L1QHVlqTUjEuAaQL2N2qKNHgNXXHhKhHwrDNkTiZ6M7g";
   if (!apiKey) {
     return NextResponse.json(
       { error: 'GEMINI_API_KEY is not configured. Add it to .env.local.' },
