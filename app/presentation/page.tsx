@@ -20,7 +20,7 @@ const staggerContainer = {
 
 export default function PresentationPage() {
   return (
-    <div className="h-screen w-full snap-y snap-mandatory overflow-y-scroll bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 font-sans selection:bg-blue-500/30">
+    <div className="h-screen w-full snap-y snap-mandatory overflow-y-scroll bg-gradient-to-br from-indigo-50 via-white to-cyan-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-indigo-950 text-zinc-900 dark:text-zinc-50 font-sans selection:bg-blue-500/30">
       
       {/* SLIDE 1: TITLE */}
       <section className="relative flex h-screen w-full snap-start flex-col items-center justify-center p-10 text-center overflow-hidden">
@@ -52,7 +52,7 @@ export default function PresentationPage() {
       </section>
 
       {/* SLIDE 2: WHAT IS IT & USE CASES */}
-      <section className="flex h-screen w-full snap-start flex-col justify-center p-10 md:p-24 bg-zinc-50 dark:bg-zinc-900/50">
+      <section className="flex h-screen w-full snap-start flex-col justify-center p-10 md:p-24 bg-transparent">
         <motion.div 
           initial="hidden"
           whileInView="visible"
@@ -133,7 +133,7 @@ export default function PresentationPage() {
       </section>
 
       {/* SLIDE 4: INSTALLATION */}
-      <section className="flex h-screen w-full snap-start flex-col justify-center p-10 md:p-24 bg-zinc-50 dark:bg-zinc-900/50">
+      <section className="flex h-screen w-full snap-start flex-col justify-center p-10 md:p-24 bg-white/40 dark:bg-zinc-900/40 backdrop-blur-sm">
         <motion.div 
           initial="hidden"
           whileInView="visible"
@@ -205,7 +205,7 @@ export default function PresentationPage() {
       </section>
 
       {/* SLIDE 6: OUTRO */}
-      <section className="relative flex h-screen w-full snap-start flex-col items-center justify-center p-10 text-center bg-black text-white">
+      <section className="relative flex h-screen w-full snap-start flex-col items-center justify-center p-10 text-center bg-gradient-to-t from-indigo-950 via-zinc-900 to-black text-white">
         <motion.div 
           initial="hidden"
           whileInView="visible"
