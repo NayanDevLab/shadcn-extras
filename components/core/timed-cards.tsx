@@ -20,7 +20,7 @@ export interface TimedCardsProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const TimedCards = React.forwardRef<HTMLDivElement, TimedCardsProps>(
   ({ data, className, ...props }, ref) => {
-    const containerRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
