@@ -14,12 +14,12 @@
   "author": "Nayan Radadiya",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nayanrdeveloper/shadcn-extras"
+    "url": "https://github.com/NayanDevLab/shadcn-extras"
   },
   "bugs": {
-    "url": "https://github.com/nayanrdeveloper/shadcn-extras/issues"
+    "url": "https://github.com/NayanDevLab/shadcn-extras/issues"
   },
-  "homepage": "https://nayanrdeveloper.github.io/shadcn-extras/",
+  "homepage": "https://NayanDevLab.github.io/shadcn-extras/",
   "license": "MIT",
   "private": true,
   "scripts": {

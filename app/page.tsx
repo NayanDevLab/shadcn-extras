@@ -57,7 +57,7 @@ function Header() {
               Components
             </Link>
             <a
-              href='https://nayanrdeveloper.github.io/shadcn-extras/storybook/'
+              href='https://NayanDevLab.github.io/shadcn-extras/storybook/'
               target='_blank'
               rel='noopener noreferrer'
               className='text-sm font-medium text-zinc-700 transition-colors hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-white'
@@ -84,7 +84,7 @@ function Header() {
               <XIcon className='h-4 w-4 fill-zinc-950 dark:fill-white' />
             </a>
             <a
-              href='https://github.com/nayanrdeveloper/shadcn-extras'
+              href='https://github.com/NayanDevLab/shadcn-extras'
               target='_blank'
               rel='noopener noreferrer'
               className='inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800'
@@ -137,7 +137,7 @@ export default function Motion() {
                 </Button>
               </Link>
               <a
-                href='https://github.com/nayanrdeveloper/shadcn-extras'
+                href='https://github.com/NayanDevLab/shadcn-extras'
                 target='_blank'
                 rel='noopener noreferrer'
               >
