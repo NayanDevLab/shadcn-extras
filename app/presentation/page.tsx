@@ -2,12 +2,22 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Code2, Sparkles, Wand2, MonitorPlay, Terminal, BookOpen, Blocks, Zap, Image as ImageIcon, MousePointerClick, LayoutDashboard, Layers, PieChart, Palette, Wrench, Paintbrush } from 'lucide-react';
-import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Blocks,
+  BookOpen,
+  Image as ImageIcon,
+  Layers,
+  MonitorPlay,
+  Palette,
+  Sparkles,
+  Terminal,
+  Wand2,
+  Wrench,
+} from 'lucide-react';
+import { motion } from 'motion/react';
 
 import { CircularGallery } from '@/components/core/circular-gallery';
-import { RocketIcon } from '@/components/core/rocket-icon';
-import { KpiCard } from '@/components/core/kpi-card';
 import { HolographicCard } from '@/components/core/holographic-card';
 
 const galleryItems = [
@@ -243,7 +253,7 @@ export default function PresentationPage() {
                  <span className="font-medium">Prompt-to-Theme</span>
                </div>
                <div className="bg-zinc-100 dark:bg-zinc-900 rounded-lg p-4 font-mono text-sm text-zinc-600 dark:text-zinc-400 mb-4">
-                 "Matcha green tea aesthetic"
+                 &ldquo;Matcha green tea aesthetic&rdquo;
                </div>
                <div className="h-2 bg-blue-500 rounded w-1/3 mb-2 animate-pulse" />
                <div className="h-2 bg-zinc-200 dark:bg-zinc-800 rounded w-2/3" />
@@ -276,7 +286,7 @@ export default function PresentationPage() {
               <li className="flex items-center gap-3"><span className="text-blue-500">✓</span> Generates colors, fonts, radius, and shadows</li>
               <li className="flex items-center gap-3"><span className="text-blue-500">✓</span> Applies live on real shadcn components</li>
               <li className="flex items-center gap-3"><span className="text-blue-500">✓</span> Perfect brand matching in seconds</li>
-              <li className="flex items-center gap-3"><span className="text-blue-500">✓</span> Even shadcn's official website cannot do this</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500">✓</span> Even shadcn&apos;s official website cannot do this</li>
             </ul>
           </div>
         </motion.div>
